@@ -1,0 +1,126 @@
+# System Zarzadzania Biblioteka (In-Memory)
+
+## 1) Proponowana struktura katalogow (monorepo)
+
+```txt
+projekt-zespolowy/
+  client/                     # React + TypeScript (Vite)
+    src/
+      modules/
+        dashboard/
+        readers/
+        catalog/
+        loans/
+  server/                     # Node.js + Express + TypeScript
+    src/
+      api/
+        routes/
+        controllers/
+      db/
+        structures/           # autorskie struktury danych (AVL/BST/LinkedList/HashMap)
+        DatabaseService.ts    # singleton silnika in-memory + persystencja JSON
+      services/               # logika biznesowa (opcjonalnie)
+      shared/                 # DTO/API contracts po stronie backendu (opcjonalnie)
+      app.ts
+      server.ts
+    data/                     # pliki JSON z migawka stanu
+      books.json
+      readers.json
+      loans.json
+  shared/                     # wspolne typy miedzy client/server
+    src/
+      models.ts
+```
+
+## 2) Podzial prac (2 osoby)
+
+- Osoba 1 (Czytelnicy + statystyki + dashboard):
+  - Encja `Reader`, indeksy i CRUD czytelnikow.
+  - Raporty globalne i alerty przetrzyman.
+  - UI: dashboard + zarzadzanie czytelnikami.
+- Osoba 2 (Katalog + wypozyczenia + logika):
+  - Encja `Book` + indeksowanie katalogu.
+  - Encja `Loan` + procesy wypozycz/zwroc.
+  - UI: katalog i operacje wypozyczen.
+
+## 3) Analiza struktur danych (ambitna algorytmicznie)
+
+### Reader
+- `HashMap` (`Map<string, Reader>`) po `readerId`: O(1) odczyt, edycja, usuniecie.
+- `DoublyLinkedList<string>` dla kolejnosci rejestracji / paginacji bez kosztow przesuniec tablicy.
+- `HashMap<string, Set<string>>` dla indeksu po emailu i statusie (aktywny/zablokowany).
+
+### Book
+- `HashMap` (`Map<string, Book>`) po `bookId`: O(1) operacje krytyczne biznesowo.
+- `AVL/BST` po `title` (klucz znormalizowany): O(log n) wyszukiwanie i zakresy alfabetyczne.
+- `HashMap<string, Set<string>>` dla indeksu po autorze, kategorii i ISBN.
+
+### Loan
+- `HashMap` (`Map<string, Loan>`) po `loanId`: szybki dostep.
+- `HashMap<string, Set<string>>` indeks po `readerId` i `bookId`.
+- `AVL/BST` po `dueDate` dla alertow przetrzyman i raportow terminowych.
+
+### Integralnosc relacyjna (manualna)
+- Blokada usuniecia czytelnika, gdy ma aktywne wypozyczenia.
+- Blokada usuniecia ksiazki, gdy istnieja aktywne wypozyczenia tej ksiazki.
+- Walidacja dostepnych egzemplarzy przy wypozyczeniu/zwrocie.
+
+## 4) Proponowane endpointy API
+
+- `GET /api/readers`, `POST /api/readers`, `DELETE /api/readers/:id`
+- `GET /api/books`, `POST /api/books`, `DELETE /api/books/:id`
+- `POST /api/loans/borrow`, `POST /api/loans/return`
+- `GET /api/reports/overview`
+- `GET /api/reports/overdue`
+
+## 5) Persystencja i spojnosc
+
+- Start aplikacji: `DatabaseService.loadAll()`.
+- Modyfikacja danych: zapis atomowy (`*.tmp` -> rename) przez `saveAll()`.
+- Snapshot trzymany w `server/data/*.json`.
+- Zalecenie: prosty write-lock (`isSaving`) z kolejka zapisow, aby unikac race condition.
+
+## 6) Status implementacji (stan biezacy)
+
+- Frontend (`client/`) utworzony przez Vite (React + TypeScript).
+- Frontend ma juz pierwszy ekran systemowy: Dashboard (bez landing page).
+- Dashboard zostal podzielony na mniejsze komponenty i dostal lewy sidebar nawigacyjny.
+- Backend (`server/`) utworzony jako Node.js + Express + TypeScript.
+- Wspolne modele domenowe znajduja sie w `shared/src/models.ts`.
+- Silnik in-memory (`DatabaseService`) jest podlaczony do API i persystencji JSON.
+- Dodane endpointy:
+  - `GET/POST /api/books`
+  - `GET/POST/DELETE /api/readers`
+  - `GET /api/loans`, `POST /api/loans/borrow`, `POST /api/loans/return`
+  - `GET /api/reports/overview`, `GET /api/reports/overdue`
+
+## 7) Uruchamianie projektu
+
+1. Backend:
+   - `cd server`
+   - `npm install`
+   - `npm run dev`
+2. Frontend:
+   - `cd client`
+   - `npm install`
+   - `npm run dev`
+
+Domyslne porty:
+- Backend: `http://localhost:4000`
+- Frontend: `http://localhost:5173`
+
+## 8) Dziennik zmian
+
+### 2026-03-23
+- Dodano monorepo z katalogami `client`, `server`, `shared`.
+- Wygenerowano frontend Vite React+TS.
+- Podmieniono starter Vite na makiete Dashboardu biblioteki (statystyki, alerty, aktywnosc).
+- Dodano modul dashboardu z mock danymi i osobnym stylem.
+- Dodano lewy sidebar nawigacyjny (`Dashboard`, `Czytelnicy`, `Katalog`, `Wypozyczenia`).
+- Rozbito ekran Dashboard na komponenty: naglowek, siatka KPI, panel alertow, panel aktywnosci.
+- Skonfigurowano backend Express+TS (`tsconfig`, skrypty npm, app/server bootstrap).
+- Dodano kontrolery i routing API dla ksiazek, czytelnikow, wypozyczen i raportow.
+- Dodano puste snapshoty danych `server/data/*.json`.
+- Zweryfikowano build:
+  - `server`: `npm run typecheck` oraz `npm run build`.
+  - `client`: `npm run build`.

@@ -1,0 +1,363 @@
+:root {
+  --bg-main: #f5f1e9;
+  --bg-soft: #fffdf8;
+  --ink-main: #1f1d1a;
+  --ink-soft: #4e4a44;
+  --line: #ddd2c0;
+  --accent: #0c6b58;
+  --accent-soft: #dff5ee;
+  --warn: #a33c16;
+  --warn-soft: #ffe9dd;
+  --shadow: 0 16px 32px rgba(44, 32, 18, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(12, 107, 88, 0.08), transparent 30%),
+    radial-gradient(circle at 86% 22%, rgba(163, 60, 22, 0.1), transparent 28%),
+    var(--bg-main);
+  color: var(--ink-main);
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(1240px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 1.2rem 0 2rem;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.app-sidebar {
+  position: sticky;
+  top: 1rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 0.9rem;
+}
+
+.brand-box {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fff8ef 0%, #f6efe1 100%);
+  padding: 0.75rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.brand-mark {
+  margin: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.brand-name {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.brand-sub {
+  margin: 0.1rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
+.sidebar-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sidebar-link {
+  width: 100%;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  padding: 0.65rem 0.7rem;
+  cursor: pointer;
+  color: var(--ink-main);
+  display: grid;
+  gap: 0.1rem;
+}
+
+.sidebar-link:hover {
+  background: #f7efe2;
+  border-color: #e8dbc8;
+}
+
+.sidebar-link.is-active {
+  background: var(--accent-soft);
+  border-color: rgba(12, 107, 88, 0.24);
+}
+
+.sidebar-label {
+  font-weight: 700;
+}
+
+.sidebar-note {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.dash {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0 1.4rem;
+  display: grid;
+  gap: 1.2rem;
+  animation: page-in 420ms ease;
+}
+
+.dash-header h1 {
+  margin: 0.2rem 0 0.7rem;
+  font-size: clamp(1.7rem, 2.6vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+.dash-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-soft);
+}
+
+.dash-subtitle {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.kpi-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  transform: translateY(8px);
+  opacity: 0;
+  animation: rise 500ms ease forwards;
+}
+
+.kpi-card:nth-child(2) {
+  animation-delay: 60ms;
+}
+
+.kpi-card:nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.kpi-card:nth-child(4) {
+  animation-delay: 180ms;
+}
+
+.kpi-label {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.kpi-value {
+  margin: 0.35rem 0;
+  font-size: 2rem;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.kpi-trend {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.kpi-good {
+  border-left: 5px solid var(--accent);
+}
+
+.kpi-warning {
+  border-left: 5px solid var(--warn);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 0.9rem;
+}
+
+.panel {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 1.06rem;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+.panel-badge {
+  min-width: 2rem;
+  text-align: center;
+  background: var(--warn-soft);
+  color: var(--warn);
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+}
+
+.alerts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.alert-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--warn-soft), transparent);
+}
+
+.alert-reader {
+  margin: 0;
+  font-weight: 700;
+}
+
+.alert-book {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.alert-days {
+  margin: 0;
+  font-weight: 800;
+  color: var(--warn);
+}
+
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.activity-table th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding: 0.5rem;
+}
+
+.activity-table td {
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    width: min(1240px, 100% - 1rem);
+    padding-top: 0.8rem;
+  }
+
+  .app-sidebar {
+    position: static;
+  }
+
+  .sidebar-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .dash {
+    padding-top: 0.2rem;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-table {
+    font-size: 0.88rem;
+  }
+}

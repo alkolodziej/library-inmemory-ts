@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.readersRouter = void 0;
+const express_1 = require("express");
+const readersController_1 = require("../controllers/readersController");
+exports.readersRouter = (0, express_1.Router)();
+exports.readersRouter.get("/", readersController_1.listReaders);
+exports.readersRouter.post("/", readersController_1.createReader);
+exports.readersRouter.delete("/:id", readersController_1.deleteReader);
