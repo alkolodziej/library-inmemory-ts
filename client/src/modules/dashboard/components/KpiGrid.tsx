@@ -2,9 +2,24 @@ import type { KpiCard } from "../data";
 
 type KpiGridProps = {
   cards: KpiCard[];
+  isLoading?: boolean;
 };
 
-export function KpiGrid({ cards }: KpiGridProps) {
+export function KpiGrid({ cards, isLoading = false }: KpiGridProps) {
+  if (isLoading) {
+    return (
+      <section className="kpi-grid" aria-label="Statystyki kluczowe w trakcie ladowania">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <article key={`kpi-skeleton-${index}`} className="kpi-card">
+            <div className="skeleton skeleton-line skeleton-label" />
+            <div className="skeleton skeleton-line skeleton-value" />
+            <div className="skeleton skeleton-line skeleton-trend" />
+          </article>
+        ))}
+      </section>
+    );
+  }
+
   return (
     <section className="kpi-grid" aria-label="Statystyki kluczowe">
       {cards.map((card) => (

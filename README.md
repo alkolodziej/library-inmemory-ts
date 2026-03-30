@@ -85,6 +85,8 @@ projekt-zespolowy/
 - Frontend (`client/`) utworzony przez Vite (React + TypeScript).
 - Frontend ma juz pierwszy ekran systemowy: Dashboard (bez landing page).
 - Dashboard zostal podzielony na mniejsze komponenty i dostal lewy sidebar nawigacyjny.
+- Frontend posiada wspolny layout aplikacji i dzialajacy sidebar miedzy podstronami (`Dashboard`, `Czytelnicy`, `Katalog`, `Wypozyczenia`).
+- Dodano responsywny tryb mobilny sidebara (przycisk `Menu` + panel wysuwany + backdrop).
 - Backend (`server/`) utworzony jako Node.js + Express + TypeScript.
 - Wspolne modele domenowe znajduja sie w `shared/src/models.ts`.
 - Silnik in-memory (`DatabaseService`) jest podlaczony do API i persystencji JSON.
@@ -110,6 +112,26 @@ Domyslne porty:
 - Frontend: `http://localhost:5173`
 
 ## 8) Dziennik zmian
+
+### 2026-03-30
+- Dodano wspolny layout frontendu, wykorzystywany na kazdej podstronie.
+- Sidebar stal sie dzialajaca nawigacja miedzy widokami: `Dashboard`, `Czytelnicy`, `Katalog`, `Wypozyczenia`.
+- Dodano lekkie widoki MVP dla podstron `Czytelnicy`, `Katalog`, `Wypozyczenia`.
+- Dodano UX mobilny sidebara: przycisk otwarcia menu, wysuwany panel i zamykanie przez klik w backdrop lub klawisz `Escape`.
+- Wdrozono redesign "Command Center": pelna kolumna sidebara bez efektu lewitowania i lepsze wykorzystanie szerokosci ekranu.
+- Dodano breadcrumbs i pasek kontekstowy (sekcja, opis, szybkie akcje) dla wygodniejszej nawigacji.
+- Odswiezono palete i komponenty UI na bardziej nowoczesny, profesjonalny styl z zachowaniem responsywnosci.
+- Poprawiono mobilny layout: usunieto nadmiarowa pusta przestrzen u gory ekranu.
+- Przeprojektowano top bar na czysty panel (bez ucietego border-fade), aby wygladal bardziej premium i spojnie.
+- Dodano tokeny typografii i ujednolicono skale tekstu dla lepszej spojnosci interfejsu.
+- Dodano "focused content width" w obszarze roboczym dla bardziej ergonomicznego czytania tresci na szerokich ekranach.
+- Dodano nowoczesny panel "Szybkie akcje" (sheet) z mikrointerakcjami i responsywnym zachowaniem.
+- Dodano stany puste (empty states) dla paneli alertow i aktywnosci, aby interfejs byl czytelny takze bez danych.
+- Dodano przełącznik "Tryb skupienia" poprawiajacy czytelnosc tabel i list na desktopie.
+- Rozszerzono mikrointerakcje premium: hover/press/focus-visible dla kart, paneli, tabel i przyciskow.
+- Dodano system ikon Lucide w sidebarze oraz akcjach, aby interfejs byl bardziej czytelny i nowoczesny.
+- Dodano skeleton loading podczas zmiany sekcji oraz placeholdery dla kart, list i tabel.
+- Ujednolicono motion design przez wspolne tokeny animacji i dodano wsparcie `prefers-reduced-motion`.
 
 ### 2026-03-23
 - Dodano monorepo z katalogami `client`, `server`, `shared`.

@@ -3,23 +3,21 @@ import { ActivityPanel } from "./components/ActivityPanel";
 import { AlertsPanel } from "./components/AlertsPanel";
 import { DashboardHeader } from "./components/DashboardHeader";
 import { KpiGrid } from "./components/KpiGrid";
-import { Sidebar } from "./components/Sidebar";
-import "./dashboard.css";
 
-export function DashboardPage() {
+type DashboardPageProps = {
+  isLoading?: boolean;
+};
+
+export function DashboardPage({ isLoading = false }: DashboardPageProps) {
   return (
-    <div className="app-shell">
-      <Sidebar activeItem="dashboard" />
+    <section className="dash" aria-label="Dashboard biblioteki">
+      <DashboardHeader />
+      <KpiGrid cards={kpiCards} isLoading={isLoading} />
 
-      <main className="dash">
-        <DashboardHeader />
-        <KpiGrid cards={kpiCards} />
-
-        <section className="content-grid">
-          <AlertsPanel alerts={overdueAlerts} />
-          <ActivityPanel rows={recentActivity} />
-        </section>
-      </main>
-    </div>
+      <section className="content-grid">
+        <AlertsPanel alerts={overdueAlerts} isLoading={isLoading} />
+        <ActivityPanel rows={recentActivity} isLoading={isLoading} />
+      </section>
+    </section>
   );
 }
