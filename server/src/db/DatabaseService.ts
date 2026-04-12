@@ -11,6 +11,7 @@ import {
   ReturnBookCommand,
 } from "../../../shared/src/models";
 import { DoublyLinkedList } from "./structures/DoublyLinkedList";
+import { AVLTree } from "./structures/AVLTree";
 
 const DEFAULT_SNAPSHOT: DatabaseSnapshot = {
   books: [],
@@ -33,13 +34,21 @@ export class DatabaseService {
   private readonly loanIdsByReaderId = new Map<string, Set<string>>();
   private readonly loanIdsByBookId = new Map<string, Set<string>>();
 
+  private readonly readersByEmail = new Map<string, Set<string>>();
+  private readonly readersByStatus = new Map<string, Set<string>>();
+  private readonly booksByAuthor = new Map<string, Set<string>>();
+  private readonly booksByCategory = new Map<string, Set<string>>();
+  
+  public readonly booksByTitle = new AVLTree<string, string>((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+  public readonly loansByDueDate = new AVLTree<string, string>((a, b) => a.localeCompare(b));
+
   // Linked list for reader registration order (pagination/reporting)
   private readonly readerOrder = new DoublyLinkedList<string>();
 
   private isSaving = false;
 
   private constructor(dataDir?: string) {
-    this.dataDir = dataDir ?? path.resolve(process.cwd(), "server/data");
+    this.dataDir = dataDir ?? path.resolve(__dirname, "../../data");
   }
 
   public static getInstance(dataDir?: string): DatabaseService {
@@ -84,6 +93,59 @@ export class DatabaseService {
     return Array.from(this.loansById.values());
   }
 
+  public getBook(id: string): Book | undefined {
+    return this.booksById.get(id);
+  }
+
+  public getReader(id: string): Reader | undefined {
+    return this.readersById.get(id);
+  }
+
+  public getLoan(id: string): Loan | undefined {
+    return this.loansById.get(id);
+  }
+
+  public searchBooksByAuthor(author: string): Set<string> {
+    return this.booksByAuthor.get(author) ?? new Set<string>();
+  }
+
+  public searchBooksByAuthorPrefix(prefix: string): Set<string> {
+    const result = new Set<string>();
+    const lower = prefix.toLowerCase();
+    for (const [author, ids] of this.booksByAuthor.entries()) {
+      if (author.toLowerCase().includes(lower)) {
+        for (const id of ids) result.add(id);
+      }
+    }
+    return result;
+  }
+
+  public searchBooksByCategory(category: string): Set<string> {
+    return this.booksByCategory.get(category) ?? new Set<string>();
+  }
+
+  public searchBooksByCategoryPrefix(prefix: string): Set<string> {
+    const result = new Set<string>();
+    const lower = prefix.toLowerCase();
+    for (const [cat, ids] of this.booksByCategory.entries()) {
+      if (cat.toLowerCase().includes(lower)) {
+        for (const id of ids) result.add(id);
+      }
+    }
+    return result;
+  }
+
+  public searchBooksByIsbnPrefix(prefix: string): Set<string> {
+    const result = new Set<string>();
+    const lower = prefix.toLowerCase();
+    for (const [isbn, ids] of this.bookIdsByIsbn.entries()) {
+      if (isbn.toLowerCase().includes(lower)) {
+        for (const id of ids) result.add(id);
+      }
+    }
+    return result;
+  }
+
   public addBook(input: Book): Book {
     if (this.booksById.has(input.id)) {
       throw new Error(`Book with id=${input.id} already exists.`);
@@ -95,8 +157,79 @@ export class DatabaseService {
 
     this.booksById.set(input.id, input);
     this.addToMultiIndex(this.bookIdsByIsbn, input.isbn, input.id);
+    for (const author of input.authors) {
+      this.addToMultiIndex(this.booksByAuthor, author, input.id);
+    }
+    for (const cat of input.categories) {
+      this.addToMultiIndex(this.booksByCategory, cat, input.id);
+    }
+    this.booksByTitle.insert(input.title, input.id);
 
     return input;
+  }
+
+  public updateBook(id: string, updates: Partial<Book>): Book {
+    const existing = this.booksById.get(id);
+    if (!existing) {
+      throw new Error(`Book with id=${id} not found.`);
+    }
+
+    // Remove old indexes
+    this.removeFromMultiIndex(this.bookIdsByIsbn, existing.isbn, id);
+    for (const author of existing.authors) {
+      this.removeFromMultiIndex(this.booksByAuthor, author, id);
+    }
+    for (const cat of existing.categories) {
+      this.removeFromMultiIndex(this.booksByCategory, cat, id);
+    }
+    this.booksByTitle.remove(existing.title, id);
+
+    // Prepare updated book
+    const updated: Book = { ...existing, ...updates, updatedAt: new Date().toISOString() };
+
+    if (updated.availableCopies > updated.totalCopies) {
+      throw new Error("availableCopies cannot exceed totalCopies.");
+    }
+
+    // Set new indexes
+    this.booksById.set(id, updated);
+    this.addToMultiIndex(this.bookIdsByIsbn, updated.isbn, id);
+    for (const author of updated.authors) {
+      this.addToMultiIndex(this.booksByAuthor, author, id);
+    }
+    for (const cat of updated.categories) {
+      this.addToMultiIndex(this.booksByCategory, cat, id);
+    }
+    this.booksByTitle.insert(updated.title, id);
+
+    return updated;
+  }
+
+  public removeBook(id: string): void {
+    const existing = this.booksById.get(id);
+    if (!existing) {
+      throw new Error(`Book with id=${id} not found.`);
+    }
+
+    // Block removal if any active / overdue loans exist for this book
+    const loanIds = this.loanIdsByBookId.get(id) ?? new Set<string>();
+    for (const loanId of loanIds) {
+      const loan = this.loansById.get(loanId);
+      if (loan && (loan.status === "ACTIVE" || loan.status === "OVERDUE")) {
+        throw new Error("Nie można usunąć książki, która ma aktywne wypożyczenia.");
+      }
+    }
+
+    // Remove from all indexes
+    this.removeFromMultiIndex(this.bookIdsByIsbn, existing.isbn, id);
+    for (const author of existing.authors) {
+      this.removeFromMultiIndex(this.booksByAuthor, author, id);
+    }
+    for (const cat of existing.categories) {
+      this.removeFromMultiIndex(this.booksByCategory, cat, id);
+    }
+    this.booksByTitle.remove(existing.title, id);
+    this.booksById.delete(id);
   }
 
   public addReader(input: Reader): Reader {
@@ -106,6 +239,8 @@ export class DatabaseService {
 
     this.readersById.set(input.id, input);
     this.readerOrder.push(input.id);
+    this.addToMultiIndex(this.readersByEmail, input.email, input.id);
+    this.addToMultiIndex(this.readersByStatus, input.status, input.id);
 
     return input;
   }
@@ -126,6 +261,8 @@ export class DatabaseService {
     }
 
     this.readersById.delete(readerId);
+    this.removeFromMultiIndex(this.readersByEmail, reader.email, readerId);
+    this.removeFromMultiIndex(this.readersByStatus, reader.status, readerId);
   }
 
   public borrowBook(command: BorrowBookCommand): Loan {
@@ -163,6 +300,7 @@ export class DatabaseService {
     this.loansById.set(loan.id, loan);
     this.addToMultiIndex(this.loanIdsByReaderId, loan.readerId, loan.id);
     this.addToMultiIndex(this.loanIdsByBookId, loan.bookId, loan.id);
+    this.loansByDueDate.insert(loan.dueAt, loan.id);
 
     book.availableCopies -= 1;
     this.booksById.set(book.id, book);
@@ -195,6 +333,7 @@ export class DatabaseService {
     };
 
     this.loansById.set(loan.id, updatedLoan);
+    this.loansByDueDate.remove(loan.dueAt, loan.id);
 
     return updatedLoan;
   }
@@ -233,20 +372,39 @@ export class DatabaseService {
     this.loanIdsByReaderId.clear();
     this.readerOrder.clear();
 
+    this.readersByEmail.clear();
+    this.readersByStatus.clear();
+    this.booksByAuthor.clear();
+    this.booksByCategory.clear();
+    this.booksByTitle.clear();
+    this.loansByDueDate.clear();
+
     for (const book of snapshot.books) {
       this.booksById.set(book.id, book);
       this.addToMultiIndex(this.bookIdsByIsbn, book.isbn, book.id);
+      for (const author of book.authors) {
+        this.addToMultiIndex(this.booksByAuthor, author, book.id);
+      }
+      for (const cat of book.categories) {
+        this.addToMultiIndex(this.booksByCategory, cat, book.id);
+      }
+      this.booksByTitle.insert(book.title, book.id);
     }
 
     for (const reader of snapshot.readers) {
       this.readersById.set(reader.id, reader);
       this.readerOrder.push(reader.id);
+      this.addToMultiIndex(this.readersByEmail, reader.email, reader.id);
+      this.addToMultiIndex(this.readersByStatus, reader.status, reader.id);
     }
 
     for (const loan of snapshot.loans) {
       this.loansById.set(loan.id, loan);
       this.addToMultiIndex(this.loanIdsByReaderId, loan.readerId, loan.id);
       this.addToMultiIndex(this.loanIdsByBookId, loan.bookId, loan.id);
+      if (loan.status !== "RETURNED") {
+        this.loansByDueDate.insert(loan.dueAt, loan.id);
+      }
     }
   }
 
@@ -285,7 +443,8 @@ export class DatabaseService {
     try {
       const raw = await fs.readFile(filePath, "utf8");
       return JSON.parse(raw) as T;
-    } catch {
+    } catch (error) {
+      console.error(`Error reading ${filePath}:`, error);
       return fallback;
     }
   }
@@ -302,5 +461,15 @@ export class DatabaseService {
     const existing = index.get(key) ?? new Set<string>();
     existing.add(value);
     index.set(key, existing);
+  }
+
+  private removeFromMultiIndex(index: Map<string, Set<string>>, key: string, value: string): void {
+    const existing = index.get(key);
+    if (existing) {
+      existing.delete(value);
+      if (existing.size === 0) {
+        index.delete(key);
+      }
+    }
   }
 }

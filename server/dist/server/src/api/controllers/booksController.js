@@ -4,7 +4,14 @@ exports.createBook = exports.listBooks = void 0;
 const node_crypto_1 = require("node:crypto");
 const DatabaseService_1 = require("../../db/DatabaseService");
 const db = DatabaseService_1.DatabaseService.getInstance();
-const listBooks = (_req, res) => {
+const listBooks = (req, res) => {
+    const { title } = req.query;
+    if (typeof title === "string" && title.trim() !== "") {
+        const bookIds = db.booksByTitle.search(title);
+        const books = Array.from(bookIds).map(id => db.getBook(id)).filter(Boolean);
+        res.status(200).json(books);
+        return;
+    }
     res.status(200).json(db.listBooks());
 };
 exports.listBooks = listBooks;

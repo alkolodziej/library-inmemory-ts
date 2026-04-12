@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "l1",
+    "bookId": "b1",
+    "readerId": "r1",
+    "borrowedAt": "2026-04-01T10:00:00.000Z",
+    "dueAt": "2026-04-15T10:00:00.000Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "l2",
+    "bookId": "b4",
+    "readerId": "r2",
+    "borrowedAt": "2026-04-10T11:00:00.000Z",
+    "dueAt": "2026-04-24T11:00:00.000Z",
+    "status": "ACTIVE"
+  }
+]

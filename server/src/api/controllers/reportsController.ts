@@ -8,10 +8,12 @@ export const getOverview = (_req: Request, res: Response): void => {
 };
 
 export const getOverdue = (_req: Request, res: Response): void => {
-  const now = Date.now();
-  const overdue = db
-    .listLoans()
-    .filter((loan) => loan.status !== "RETURNED" && new Date(loan.dueAt).getTime() < now);
+  const now = new Date().toISOString();
+  const overdueIds = db.loansByDueDate.getSmallerThan(now);
+  
+  const overdue = Array.from(overdueIds)
+    .map((id) => db.getLoan(id))
+    .filter((loan) => loan && loan.status !== "RETURNED");
 
   res.status(200).json(overdue);
 };

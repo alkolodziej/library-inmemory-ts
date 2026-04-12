@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "id": "b1",
+    "isbn": "978-83-7506-112-2",
+    "title": "Wiedźmin: Ostatnie życzenie",
+    "authors": [
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Fantasy",
+      "Powieść"
+    ],
+    "publishedYear": 1993,
+    "totalCopies": 5,
+    "availableCopies": 4,
+    "createdAt": "2026-01-01T10:00:00.000Z",
+    "updatedAt": "2026-01-01T10:00:00.000Z"
+  },
+  {
+    "id": "b2",
+    "isbn": "978-83-240-4228-3",
+    "title": "Solaris",
+    "authors": [
+      "Stanisław Lem"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Powieść"
+    ],
+    "publishedYear": 1961,
+    "totalCopies": 3,
+    "availableCopies": 3,
+    "createdAt": "2026-01-02T10:00:00.000Z",
+    "updatedAt": "2026-01-02T10:00:00.000Z"
+  },
+  {
+    "id": "b3",
+    "isbn": "978-83-08-05183-4",
+    "title": "Pani Jeziora",
+    "authors": [
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Fantasy",
+      "Powieść"
+    ],
+    "publishedYear": 1999,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2026-01-03T10:00:00.000Z",
+    "updatedAt": "2026-01-03T10:00:00.000Z"
+  },
+  {
+    "id": "b4",
+    "isbn": "978-83-01-00000-0",
+    "title": "Wprowadzenie do algorytmów",
+    "authors": [
+      "Thomas H. Cormen"
+    ],
+    "categories": [
+      "Informatyka",
+      "Edukacja"
+    ],
+    "publishedYear": 2001,
+    "totalCopies": 10,
+    "availableCopies": 9,
+    "createdAt": "2026-02-01T12:00:00.000Z",
+    "updatedAt": "2026-02-01T12:00:00.000Z"
+  }
+]

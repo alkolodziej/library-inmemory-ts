@@ -113,6 +113,22 @@ Domyslne porty:
 
 ## 8) Dziennik zmian
 
+### 2026-04-12
+- Wdrożono "Intelektualną Wyszukiwarkę Prefixową" w `AVLTree` (metoda `searchPrefix`) dla wyszukiwania po fragmencie tytułu w O(log N).
+- Dodano wyszukiwanie po autorze i kategorii z pomocą `.includes()` na Mapach pomocniczych (obsługa podciągów).
+- Dodano wyszukiwanie po ISBN (prefixowe, case-insensitive) zarówno w backendzie jak i UI.
+- Skonfigurowano proxy w `vite.config.ts` (przekierowanie `/api` → `localhost:4000`).
+- Zbudowano stronę Katalogu (`CatalogPage`) z dynamicznym filtrowaniem po tytule, autorze, ISBN i kategorii.
+- Kategorie w dropdownie są teraz pobierane dynamicznie z API (zamiast hardkodowanych wartości).
+- Dodano endpoint `PUT /api/books/:id` umożliwiający edycję istniejącej książki.
+- Wdrożono metodę `updateBook()` w `DatabaseService` – poprawnie usuwa stare indeksy z drzewa AVL i Map, a następnie rejestruje zaktualizowane klucze.
+- Dodano modal `BookFormModal` pozwalający na **dodawanie** nowych tytułów oraz **edycję** istniejących (tytuł, autor, kategorie, ISBN, rok, liczba egzemplarzy).
+- Przycisk ✏️ na karcie książki (`BookCard`) otwiera formularz edycji z wstępnie wypełnionymi polami.
+- Dodano endpoint `DELETE /api/books/:id` z blokadą usunięcia gdy istnieją aktywne/przeterminowane wypożyczenia.
+- Wdrożono metodę `removeBook()` w `DatabaseService` – czyści wszystkie indeksy (AVL + Map) przy usuwaniu.
+- Przycisk 🗑️ na karcie otwiera okienko potwierdzenia; błąd z API wyświetlany jest inline bez zamykania dialogu.
+- Dropdown kategorii pobiera unikalne wartości dynamicznie z API (odświeżany po każdej operacji CRUD).
+
 ### 2026-03-30
 - Dodano wspolny layout frontendu, wykorzystywany na kazdej podstronie.
 - Sidebar stal sie dzialajaca nawigacja miedzy widokami: `Dashboard`, `Czytelnicy`, `Katalog`, `Wypozyczenia`.

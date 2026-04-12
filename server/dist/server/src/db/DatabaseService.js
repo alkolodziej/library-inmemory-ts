@@ -8,6 +8,7 @@ const node_fs_1 = require("node:fs");
 const node_path_1 = __importDefault(require("node:path"));
 const node_crypto_1 = require("node:crypto");
 const DoublyLinkedList_1 = require("./structures/DoublyLinkedList");
+const AVLTree_1 = require("./structures/AVLTree");
 const DEFAULT_SNAPSHOT = {
     books: [],
     readers: [],
@@ -24,6 +25,12 @@ class DatabaseService {
     bookIdsByIsbn = new Map();
     loanIdsByReaderId = new Map();
     loanIdsByBookId = new Map();
+    readersByEmail = new Map();
+    readersByStatus = new Map();
+    booksByAuthor = new Map();
+    booksByCategory = new Map();
+    booksByTitle = new AVLTree_1.AVLTree((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+    loansByDueDate = new AVLTree_1.AVLTree((a, b) => a.localeCompare(b));
     // Linked list for reader registration order (pagination/reporting)
     readerOrder = new DoublyLinkedList_1.DoublyLinkedList();
     isSaving = false;
@@ -63,6 +70,15 @@ class DatabaseService {
     listLoans() {
         return Array.from(this.loansById.values());
     }
+    getBook(id) {
+        return this.booksById.get(id);
+    }
+    getReader(id) {
+        return this.readersById.get(id);
+    }
+    getLoan(id) {
+        return this.loansById.get(id);
+    }
     addBook(input) {
         if (this.booksById.has(input.id)) {
             throw new Error(`Book with id=${input.id} already exists.`);
@@ -72,6 +88,13 @@ class DatabaseService {
         }
         this.booksById.set(input.id, input);
         this.addToMultiIndex(this.bookIdsByIsbn, input.isbn, input.id);
+        for (const author of input.authors) {
+            this.addToMultiIndex(this.booksByAuthor, author, input.id);
+        }
+        for (const cat of input.categories) {
+            this.addToMultiIndex(this.booksByCategory, cat, input.id);
+        }
+        this.booksByTitle.insert(input.title, input.id);
         return input;
     }
     addReader(input) {
@@ -80,6 +103,8 @@ class DatabaseService {
         }
         this.readersById.set(input.id, input);
         this.readerOrder.push(input.id);
+        this.addToMultiIndex(this.readersByEmail, input.email, input.id);
+        this.addToMultiIndex(this.readersByStatus, input.status, input.id);
         return input;
     }
     removeReader(readerId) {
@@ -96,6 +121,8 @@ class DatabaseService {
             }
         }
         this.readersById.delete(readerId);
+        this.removeFromMultiIndex(this.readersByEmail, reader.email, readerId);
+        this.removeFromMultiIndex(this.readersByStatus, reader.status, readerId);
     }
     borrowBook(command) {
         const reader = this.readersById.get(command.readerId);
@@ -126,6 +153,7 @@ class DatabaseService {
         this.loansById.set(loan.id, loan);
         this.addToMultiIndex(this.loanIdsByReaderId, loan.readerId, loan.id);
         this.addToMultiIndex(this.loanIdsByBookId, loan.bookId, loan.id);
+        this.loansByDueDate.insert(loan.dueAt, loan.id);
         book.availableCopies -= 1;
         this.booksById.set(book.id, book);
         return loan;
@@ -150,6 +178,7 @@ class DatabaseService {
             returnedAt: new Date().toISOString(),
         };
         this.loansById.set(loan.id, updatedLoan);
+        this.loansByDueDate.remove(loan.dueAt, loan.id);
         return updatedLoan;
     }
     getOverviewStats() {
@@ -182,18 +211,36 @@ class DatabaseService {
         this.loanIdsByBookId.clear();
         this.loanIdsByReaderId.clear();
         this.readerOrder.clear();
+        this.readersByEmail.clear();
+        this.readersByStatus.clear();
+        this.booksByAuthor.clear();
+        this.booksByCategory.clear();
+        this.booksByTitle.clear();
+        this.loansByDueDate.clear();
         for (const book of snapshot.books) {
             this.booksById.set(book.id, book);
             this.addToMultiIndex(this.bookIdsByIsbn, book.isbn, book.id);
+            for (const author of book.authors) {
+                this.addToMultiIndex(this.booksByAuthor, author, book.id);
+            }
+            for (const cat of book.categories) {
+                this.addToMultiIndex(this.booksByCategory, cat, book.id);
+            }
+            this.booksByTitle.insert(book.title, book.id);
         }
         for (const reader of snapshot.readers) {
             this.readersById.set(reader.id, reader);
             this.readerOrder.push(reader.id);
+            this.addToMultiIndex(this.readersByEmail, reader.email, reader.id);
+            this.addToMultiIndex(this.readersByStatus, reader.status, reader.id);
         }
         for (const loan of snapshot.loans) {
             this.loansById.set(loan.id, loan);
             this.addToMultiIndex(this.loanIdsByReaderId, loan.readerId, loan.id);
             this.addToMultiIndex(this.loanIdsByBookId, loan.bookId, loan.id);
+            if (loan.status !== "RETURNED") {
+                this.loansByDueDate.insert(loan.dueAt, loan.id);
+            }
         }
     }
     createSnapshot() {
@@ -241,6 +288,15 @@ class DatabaseService {
         const existing = index.get(key) ?? new Set();
         existing.add(value);
         index.set(key, existing);
+    }
+    removeFromMultiIndex(index, key, value) {
+        const existing = index.get(key);
+        if (existing) {
+            existing.delete(value);
+            if (existing.size === 0) {
+                index.delete(key);
+            }
+        }
     }
 }
 exports.DatabaseService = DatabaseService;
