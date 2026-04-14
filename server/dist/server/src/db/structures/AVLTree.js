@@ -223,6 +223,35 @@ class AVLTree {
         return node;
     }
     // Pre-order traverse to get all items smaller than a certain key
+    searchPrefix(prefix) {
+        const result = new Set();
+        this.traversePrefix(this.root, prefix.toLowerCase(), result);
+        return result;
+    }
+    traversePrefix(node, prefix, result) {
+        if (!node)
+            return;
+        // Convert key to string to safely use startsWith, assuming string keys are mostly used here.
+        const nodeKeyStr = String(node.key).toLowerCase();
+        if (nodeKeyStr.startsWith(prefix)) {
+            node.values.forEach(v => result.add(v));
+            // Prexic match could extend to both left and right branches (e.g. "Wi" -> "W" is smaller, "Wj" is larger)
+            // Actually, if node starts with 'wi', children starting with 'wi' can be on both sides!
+            this.traversePrefix(node.left, prefix, result);
+            this.traversePrefix(node.right, prefix, result);
+        }
+        else {
+            // If the node string is strictly "smaller" alphabetically than the prefix,
+            // all matches MUST be on the right subtree.
+            if (nodeKeyStr.localeCompare(prefix) < 0) {
+                this.traversePrefix(node.right, prefix, result);
+            }
+            else {
+                // If node string is strictly "larger", matches MUST be on the left.
+                this.traversePrefix(node.left, prefix, result);
+            }
+        }
+    }
     getSmallerThan(key) {
         const result = new Set();
         this.traverseSmallerThan(this.root, key, result);

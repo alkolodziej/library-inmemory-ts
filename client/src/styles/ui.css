@@ -1,0 +1,209 @@
+:root {
+  --ui-radius-md: 10px;
+  --ui-radius-pill: 999px;
+  --ui-btn-height: 2.2rem;
+  --ui-btn-height-compact: 2rem;
+}
+
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: var(--ui-btn-height);
+  border: 1px solid var(--line);
+  border-radius: var(--ui-radius-md);
+  background: #ffffff;
+  color: var(--ink-main);
+  font-weight: 700;
+  padding: 0.42rem 0.84rem;
+  cursor: pointer;
+  transition: transform var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard),
+    background-color var(--motion-fast) var(--ease-standard),
+    color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-fast) var(--ease-standard);
+}
+
+.ui-btn:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.ui-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ui-btn--primary {
+  border-color: rgba(11, 110, 242, 0.35);
+  background: linear-gradient(180deg, #f8fbff 0%, #edf3ff 100%);
+  box-shadow: 0 4px 10px rgba(11, 110, 242, 0.08);
+}
+
+.ui-btn--secondary {
+  border-color: #d3dbe9;
+  background: #f7f9fc;
+}
+
+.ui-btn--ghost {
+  background: transparent;
+}
+
+.ui-btn--danger {
+  border-color: #efd0c2;
+  background: #fff6f1;
+  color: #94451b;
+}
+
+.ui-btn--pill {
+  border-radius: var(--ui-radius-pill);
+}
+
+.ui-btn--compact {
+  min-height: var(--ui-btn-height-compact);
+  padding: 0.35rem 0.62rem;
+  font-size: 0.78rem;
+}
+
+.ui-input,
+.ui-select {
+  width: 100%;
+  min-height: var(--ui-btn-height);
+  border: 1px solid var(--line);
+  border-radius: var(--ui-radius-md);
+  background: #ffffff;
+  color: var(--ink-main);
+  padding: 0.52rem 0.62rem;
+}
+
+.ui-input:focus-visible,
+.ui-select:focus-visible,
+.ui-btn:focus-visible {
+  outline: 2px solid rgba(11, 110, 242, 0.55);
+  outline-offset: 2px;
+}
+
+.smart-pagination {
+  border: 1px solid #d6deeb;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fbfdff 0%, #f6f9fe 100%);
+  padding: 0.65rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.smart-pagination-meta {
+  display: grid;
+  gap: 0.32rem;
+}
+
+.smart-pagination-meta p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.smart-pagination-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: #e6edf9;
+  overflow: hidden;
+}
+
+.smart-pagination-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0b6ef2, #5a9cff);
+  transition: width var(--motion-standard) var(--ease-standard);
+}
+
+.smart-pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.smart-pagination-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.smart-pagination-pages {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.smart-pagination-ellipsis {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  padding: 0 0.2rem;
+}
+
+.smart-pagination-size {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.smart-pagination-size .ui-select {
+  min-height: 2rem;
+  width: 72px;
+  padding-top: 0.36rem;
+  padding-bottom: 0.36rem;
+}
+
+.smart-pagination--compact {
+  padding: 0.55rem;
+  gap: 0.5rem;
+}
+
+.smart-pagination--compact .smart-pagination-meta p {
+  font-size: 0.82rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ui-btn:hover {
+    transform: translateY(-1px);
+    border-color: #c8d3e5;
+  }
+}
+
+@media (max-width: 760px) {
+  .smart-pagination-controls {
+    align-items: stretch;
+  }
+
+  .smart-pagination-nav,
+  .smart-pagination-pages {
+    width: 100%;
+  }
+
+  .smart-pagination-nav .ui-btn {
+    flex: 1 1 calc(50% - 0.35rem);
+  }
+
+  .smart-pagination-pages .ui-btn {
+    flex: 1 1 calc(25% - 0.28rem);
+  }
+
+  .smart-pagination-size {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-btn,
+  .smart-pagination-progress span {
+    transition: none !important;
+  }
+}

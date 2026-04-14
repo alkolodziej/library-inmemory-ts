@@ -113,6 +113,52 @@ Domyslne porty:
 
 ## 8) Dziennik zmian
 
+### 2026-04-13
+- Rozpoczeto realizacje zakresu Osoby 1 od sprintu "Dashboard live" (kolejnosc: 2 -> 1 -> 3).
+- Dashboard frontend podlaczono do API: `GET /api/reports/overview`, `GET /api/reports/overdue`, `GET /api/readers`, `GET /api/books`.
+- KPI na dashboardzie sa teraz wyliczane z danych backendowych (aktywne wypozyczenia, przetrzymania, nowi czytelnicy od poczatku tygodnia, dostepne egzemplarze).
+- Panel alertow przetrzyman korzysta z danych backendowych i mapuje identyfikatory na czytelne nazwy czytelnikow i ksiazek.
+- Panel aktywnosci dashboardu wykorzystuje dane o przetrzymaniach jako feed operacyjny.
+- Dodano obsluge `loading/empty/error` dla raportow live z bezpiecznym fallbackiem na ostatnio dostepne dane.
+- Zrealizowano sprint "Czytelnicy v1": widok podlaczony do `GET /api/readers`.
+- Dodano wyszukiwarke czytelnikow (nazwisko/email) oraz filtry statusu: `Wszyscy`, `Aktywni`, `Zawieszeni`.
+- Dodano panel podsumowania (liczba kont, aktywni, zawieszeni) i responsywny widok listy czytelnikow.
+- Dodano stany `loading/empty/error` dla modulu Czytelnicy z komunikatami UX.
+- Zrealizowano sprint "Czytelnicy v1.5": formularz dodawania czytelnika (`POST /api/readers`) z walidacja danych i komunikatami inline.
+- Dodano usuwanie czytelnika (`DELETE /api/readers/:id`) z potwierdzeniem akcji i obsluga bledow biznesowych bez zamykania widoku.
+- Dodano per-wiersz komunikaty bledow dla operacji usuwania (np. blokada usuniecia przy aktywnych/przeterminowanych wypozyczeniach).
+- Dodano edycje czytelnika w UI (tryb "Edytuj" w formularzu) z zapisem zmian przez `PUT /api/readers/:id`.
+- Rozszerzono backend o metode `updateReader()` z aktualizacja indeksow (`readersByEmail`, `readersByStatus`) i walidacja unikalnosci email.
+- Dodano szybkie soft action w kartach czytelnikow: jednoczesne przelaczanie statusu `Aktywny/Zawieszony` jednym kliknieciem (`PUT /api/readers/:id`) z obsluga bledow inline.
+- Uruchomiono Sprint A+B (UI audit + quick wins): poprawiono globalne osadzenie layoutu i zredukowano efekt "prawego marginesu".
+- Ujednolicono szerokosc i centrowanie glownego obszaru tresci (topbar + content frame) dla lepszej spojnosci desktop.
+- Dodano zabezpieczenie przed poziomym overflow (`overflow-x: clip`) oraz dopracowano paddings layoutu na mniejszych ekranach.
+- Ujednolicono wysokosci i zachowanie przyciskow w module Czytelnicy oraz poprawiono responsywne zawijanie grup akcji.
+- Dopracowano czytelnosc tabeli aktywnosci na mobile (lepsze paddings + plynne przewijanie).
+- Zrealizowano Sprint C (responsywnosc production-grade): dopracowano breakpoints i zachowanie topbara/quick-sheet dla tablet/mobile.
+- Dashboard dostal lepsze reguly adaptacyjne: inteligentne przelamanie siatki KPI i paneli, poprawiona czytelnosc alertow i tabel na waskich ekranach.
+- Modul Czytelnicy zostal utwardzony pod mobile: stabilne ukladanie toolbara, formularza i przyciskow akcji bez nachodzenia elementow.
+- Potwierdzono globalny zakres sprintow A-F dla calej aplikacji (Dashboard, Czytelnicy, Katalog, Wypozyczenia, layout wspolny).
+- Rozpoczeto globalna unifikacje (Sprint D/E): usunieto inline style z modulu Katalog i przeniesiono je do wspolnych klas CSS.
+- Ujednolicono przyciski, filtry, karty i modale Katalogu do tego samego systemu visual language co pozostale moduly.
+- Zrealizowano Sprint D globalnie: dodano wspolny system kontrolek (`client/src/styles/ui.css`) dla przyciskow i pol formularzy.
+- Podlaczono globalne klasy UI (`ui-btn`, `ui-input`, `ui-select`) w layoutcie, Czytelnikach, Katalogu i Wypozyczeniach.
+- Usunieto duplikacje styli interakcyjnych i ujednolicono stany hover/active/focus/disabled w calej aplikacji.
+- Zrealizowano Sprint E globalnie: dodano wspolny wzorzec stanu operacyjnego (`module-state-row`) z czytelnym komunikatem i szybkim CTA na ekranach Dashboard/Czytelnicy/Katalog/Wypozyczenia.
+- Dashboard otrzymal live-status synchronizacji z przyciskiem `Odswiez`, co przyspiesza workflow bez zmiany sekcji.
+- Katalog dostal usprawnienia produktywnosci: licznik wynikow, `Wyczysc filtry`, komunikat bledu API z akcja `Sprobuj ponownie`.
+- Czytelnicy dostali licznik dopasowan i `Reset filtrow`, a przyciski potwierdzenia usuniecia zostaly dopiete do globalnego systemu UI.
+- Wypozyczenia dostaly bardziej operacyjny układ MVP: strefe akcji, status gotowosci modulu i pusty stan przygotowany pod podpiecie API.
+- Zrealizowano Sprint F globalnie: dopracowano motion polish i mikrointerakcje na poziomie calej aplikacji (layout + dashboard + katalog + shared controls).
+- Dodano globalny stan przejscia sekcji (`isPageTransitioning`) dla płynniejszego i czytelniejszego przełączania widokow.
+- Ujednolicono zachowanie hover pod urzadzenia wskaznikowe (`hover: hover` / `pointer: fine`), aby uniknac sztucznych efektow na ekranach dotykowych.
+- Katalog otrzymal animacje wejscia dialogow i subtelny feedback kart/tagow z pelnym wsparciem `prefers-reduced-motion`.
+- Kolejny sprint (plan): globalna obsluga duzych zbiorow danych - decyzja `paginacja` vs `infinite loading` per moduł oraz standard zwięzłego prezentowania duzych list/tabel.
+- Zrealizowano kolejny sprint globalnie: wdrozono klasyczna, nowoczesna paginacje oparta o wspolny komponent `SmartPagination`.
+- Paginacja zostala podlaczona do kluczowych widokow z duza iloscia danych: `Czytelnicy`, `Katalog` oraz panele `Alerty` i `Aktywnosc` na dashboardzie.
+- Dodano UX premium paginacji: licznik zakresu (`od-do z calosci`), pasek postepu, nawigacje stron z elipsami oraz wybor rozmiaru strony.
+- Zachowano pelna responsywnosc i globalna spojność wizualna (mobile-first, wspolne klasy UI, wsparcie reduced-motion).
+
 ### 2026-04-12
 - Wdrożono "Intelektualną Wyszukiwarkę Prefixową" w `AVLTree` (metoda `searchPrefix`) dla wyszukiwania po fragmencie tytułu w O(log N).
 - Dodano wyszukiwanie po autorze i kategorii z pomocą `.includes()` na Mapach pomocniczych (obsługa podciągów).

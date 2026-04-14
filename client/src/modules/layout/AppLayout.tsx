@@ -6,6 +6,7 @@ import "./layout.css";
 type AppLayoutProps = {
   activeItem: SidebarItemId;
   onNavigate: (item: SidebarItemId) => void;
+  isPageTransitioning?: boolean;
   children: ReactNode;
 };
 
@@ -28,7 +29,7 @@ const sectionDetails: Record<SidebarItemId, { title: string; subtitle: string }>
   },
 };
 
-export function AppLayout({ activeItem, onNavigate, children }: AppLayoutProps) {
+export function AppLayout({ activeItem, onNavigate, isPageTransitioning = false, children }: AppLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isQuickSheetOpen, setIsQuickSheetOpen] = useState(false);
   const [isFocusMode, setIsFocusMode] = useState(false);
@@ -100,7 +101,7 @@ export function AppLayout({ activeItem, onNavigate, children }: AppLayoutProps) 
             <div className="context-actions" aria-label="Szybkie akcje">
               <button
                 type="button"
-                className={`context-action-toggle ${isFocusMode ? "is-active" : ""}`}
+                className={`ui-btn ui-btn--pill context-action-toggle ${isFocusMode ? "is-active" : ""}`}
                 onClick={() => setIsFocusMode((current) => !current)}
                 aria-pressed={isFocusMode}
               >
@@ -110,7 +111,7 @@ export function AppLayout({ activeItem, onNavigate, children }: AppLayoutProps) 
 
               <button
                 type="button"
-                className="context-action-primary"
+                className="ui-btn ui-btn--pill ui-btn--primary context-action-primary"
                 onClick={() => setIsQuickSheetOpen((current) => !current)}
                 aria-expanded={isQuickSheetOpen}
                 aria-controls="quick-sheet"
@@ -129,21 +130,25 @@ export function AppLayout({ activeItem, onNavigate, children }: AppLayoutProps) 
         >
           <header>
             <h2>Szybkie akcje</h2>
-            <button type="button" onClick={() => setIsQuickSheetOpen(false)} aria-label="Zamknij panel">
+            <button type="button" className="ui-btn ui-btn--pill ui-btn--compact" onClick={() => setIsQuickSheetOpen(false)} aria-label="Zamknij panel">
               <X size={14} strokeWidth={2.2} aria-hidden="true" />
               Zamknij
             </button>
           </header>
 
           <div className="quick-sheet-grid">
-            <button type="button"><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Nowe wypozyczenie</button>
-            <button type="button"><ScanLine size={15} strokeWidth={2.1} aria-hidden="true" />Skanuj zwrot</button>
-            <button type="button"><UserRoundPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj czytelnika</button>
-            <button type="button"><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj tytul</button>
+            <button type="button" className="ui-btn ui-btn--secondary"><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Nowe wypozyczenie</button>
+            <button type="button" className="ui-btn ui-btn--secondary"><ScanLine size={15} strokeWidth={2.1} aria-hidden="true" />Skanuj zwrot</button>
+            <button type="button" className="ui-btn ui-btn--secondary"><UserRoundPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj czytelnika</button>
+            <button type="button" className="ui-btn ui-btn--secondary"><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj tytul</button>
           </div>
         </section>
 
-        <div className={`content-frame ${isFocusMode ? "is-focus-mode" : ""}`}>{children}</div>
+        <div
+          className={`content-frame ${isFocusMode ? "is-focus-mode" : ""} ${isPageTransitioning ? "is-transitioning" : ""}`}
+        >
+          {children}
+        </div>
       </main>
     </div>
   );

@@ -6,4 +6,5 @@ const readersController_1 = require("../controllers/readersController");
 exports.readersRouter = (0, express_1.Router)();
 exports.readersRouter.get("/", readersController_1.listReaders);
 exports.readersRouter.post("/", readersController_1.createReader);
+exports.readersRouter.put("/:id", readersController_1.updateReader);
 exports.readersRouter.delete("/:id", readersController_1.deleteReader);

@@ -17,23 +17,6 @@
     "updatedAt": "2026-01-01T10:00:00.000Z"
   },
   {
-    "id": "b2",
-    "isbn": "978-83-240-4228-3",
-    "title": "Solaris",
-    "authors": [
-      "Stanisław Lem"
-    ],
-    "categories": [
-      "Sci-Fi",
-      "Powieść"
-    ],
-    "publishedYear": 1961,
-    "totalCopies": 3,
-    "availableCopies": 3,
-    "createdAt": "2026-01-02T10:00:00.000Z",
-    "updatedAt": "2026-01-02T10:00:00.000Z"
-  },
-  {
     "id": "b3",
     "isbn": "978-83-08-05183-4",
     "title": "Pani Jeziora",
@@ -66,5 +49,22 @@
     "availableCopies": 9,
     "createdAt": "2026-02-01T12:00:00.000Z",
     "updatedAt": "2026-02-01T12:00:00.000Z"
+  },
+  {
+    "id": "be284f24-4b15-40ab-b5f8-36a6bb95df7a",
+    "isbn": "123-123-123-123",
+    "title": "Kraina 123",
+    "authors": [
+      "Adam",
+      "Janusz"
+    ],
+    "categories": [
+      "Powieść"
+    ],
+    "publishedYear": 2026,
+    "totalCopies": 23,
+    "availableCopies": 23,
+    "createdAt": "2026-04-13T11:18:20.234Z",
+    "updatedAt": "2026-04-13T11:18:20.234Z"
   }
 ]

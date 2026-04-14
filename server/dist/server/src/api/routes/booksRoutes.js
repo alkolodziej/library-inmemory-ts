@@ -6,3 +6,5 @@ const booksController_1 = require("../controllers/booksController");
 exports.booksRouter = (0, express_1.Router)();
 exports.booksRouter.get("/", booksController_1.listBooks);
 exports.booksRouter.post("/", booksController_1.createBook);
+exports.booksRouter.put("/:id", booksController_1.updateBook);
+exports.booksRouter.delete("/:id", booksController_1.deleteBook);

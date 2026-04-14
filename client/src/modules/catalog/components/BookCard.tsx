@@ -27,100 +27,76 @@ export function BookCard({ book, onEdit, onDelete }: BookCardProps) {
 
   return (
     <>
-      <article className="module-card" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-        <header style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+      <article className="module-card catalog-book-card">
+        <header className="catalog-book-head">
           <div>
-            <h3 style={{ margin: "0 0 0.25rem 0" }}>{book.title}</h3>
-            <p style={{ margin: 0, color: "oklch(0.6 0 0)" }}>{book.authors.join(", ")}</p>
+            <h3 className="catalog-book-title">{book.title}</h3>
+            <p className="catalog-book-authors">{book.authors.join(", ")}</p>
           </div>
-          <div style={{ display: "flex", gap: "0.5rem" }}>
+          <div className="catalog-book-actions">
             <button
               onClick={() => onEdit && onEdit(book)}
               title="Edytuj"
-              style={{ cursor: "pointer", background: "none", border: "1px solid oklch(0.9 0 0)", borderRadius: "8px", padding: "4px 8px", fontSize: "0.75rem" }}
+              className="ui-btn ui-btn--compact ui-btn--secondary catalog-action-btn"
             >
               ✏️
             </button>
             <button
               onClick={() => setConfirmOpen(true)}
               title="Usuń"
-              style={{ cursor: "pointer", background: "none", border: "1px solid oklch(0.85 0.05 25)", borderRadius: "8px", padding: "4px 8px", fontSize: "0.75rem", color: "oklch(0.5 0.2 25)" }}
+              className="ui-btn ui-btn--compact ui-btn--danger catalog-action-btn is-danger"
             >
               🗑️
             </button>
           </div>
         </header>
 
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+        <div className="catalog-tags">
           {book.categories.map((c: string) => (
-            <span
-              key={c}
-              style={{
-                background: "oklch(0.95 0 0)",
-                padding: "2px 8px",
-                borderRadius: "12px",
-                fontSize: "0.75rem"
-              }}
-            >
+            <span key={c} className="catalog-tag">
               {c}
             </span>
           ))}
         </div>
 
-        <footer style={{
-          marginTop: "auto",
-          paddingTop: "1rem",
-          borderTop: "1px solid oklch(0.9 0 0)",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center"
-        }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <div style={{
-              width: 8,
-              height: 8,
-              borderRadius: "50%",
-              background: isAvailable ? "oklch(0.6 0.2 150)" : "oklch(0.6 0.2 25)"
-            }} />
-            <span style={{ fontSize: "0.875rem", fontWeight: 500 }}>
+        <footer className="catalog-book-foot">
+          <div className="catalog-stock">
+            <div className={`catalog-dot ${isAvailable ? "is-available" : ""}`} />
+            <span>
               {isAvailable ? `${book.availableCopies} / ${book.totalCopies} szt.` : "Brak egzemplarzy"}
             </span>
           </div>
-          <span style={{ fontSize: "0.75rem", color: "oklch(0.6 0 0)" }}>ISBN: {book.isbn}</span>
+          <span className="catalog-isbn">ISBN: {book.isbn}</span>
         </footer>
       </article>
 
       {/* Confirmation dialog */}
       {confirmOpen && (
-        <div style={{
-          position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: "rgba(0,0,0,0.45)", display: "flex", alignItems: "center", justifyContent: "center",
-          zIndex: 2000
-        }}>
-          <div className="module-card" style={{ maxWidth: "400px", width: "100%" }}>
-            <h3 style={{ marginTop: 0 }}>Usuń książkę</h3>
-            <p style={{ margin: "0 0 1rem" }}>
+        <div className="catalog-dialog-backdrop">
+          <div className="module-card catalog-dialog">
+            <h3 className="catalog-dialog-title">Usuń książkę</h3>
+            <p>
               Czy na pewno chcesz usunąć <strong>„{book.title}"</strong>?
             </p>
 
             {deleteError && (
-              <div style={{ padding: "0.5rem", backgroundColor: "oklch(0.95 0.05 25)", color: "oklch(0.4 0.2 25)", borderRadius: "0.4rem", marginBottom: "1rem", fontSize: "0.875rem" }}>
+              <div className="catalog-dialog-error">
                 ⚠️ {deleteError}
               </div>
             )}
 
-            <div style={{ display: "flex", justifyContent: "flex-end", gap: "0.75rem" }}>
+            <div className="catalog-dialog-actions">
               <button
                 onClick={() => { setConfirmOpen(false); setDeleteError(""); }}
                 disabled={isDeleting}
-                style={{ padding: "0.5rem 1rem", border: "1px solid #ccc", background: "transparent", borderRadius: "0.5rem", cursor: "pointer" }}
+                className="ui-btn ui-btn--secondary catalog-dialog-btn"
               >
                 Anuluj
               </button>
               <button
                 onClick={handleDeleteConfirm}
                 disabled={isDeleting}
-                style={{ padding: "0.5rem 1rem", background: "oklch(0.55 0.2 25)", color: "white", border: "none", borderRadius: "0.5rem", cursor: "pointer" }}
+                className="ui-btn ui-btn--danger catalog-dialog-btn is-danger"
               >
                 {isDeleting ? "Usuwanie..." : "Usuń"}
               </button>

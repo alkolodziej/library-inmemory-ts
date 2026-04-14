@@ -1,4 +1,7 @@
+import { useMemo, useState } from "react";
 import type { AlertItem } from "../data";
+import { SmartPagination } from "../../../components/pagination/SmartPagination";
+import { paginateItems } from "../../../components/pagination/paginationUtils";
 import { EmptyState } from "./EmptyState";
 
 type AlertsPanelProps = {
@@ -7,6 +10,10 @@ type AlertsPanelProps = {
 };
 
 export function AlertsPanel({ alerts, isLoading = false }: AlertsPanelProps) {
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(4);
+  const pagedAlerts = useMemo(() => paginateItems(alerts, page, pageSize), [alerts, page, pageSize]);
+
   if (isLoading) {
     return (
       <article className="panel alerts-panel" aria-busy="true">
@@ -40,17 +47,33 @@ export function AlertsPanel({ alerts, isLoading = false }: AlertsPanelProps) {
       </div>
 
       {hasAlerts ?
-        <ul className="alerts-list">
-          {alerts.map((alert) => (
-            <li key={alert.id} className="alert-row">
-              <div>
-                <p className="alert-reader">{alert.reader}</p>
-                <p className="alert-book">{alert.book}</p>
-              </div>
-              <p className="alert-days">{alert.lateDays} dni</p>
-            </li>
-          ))}
-        </ul>
+        <>
+          <ul className="alerts-list">
+            {pagedAlerts.map((alert) => (
+              <li key={alert.id} className="alert-row">
+                <div>
+                  <p className="alert-reader">{alert.reader}</p>
+                  <p className="alert-book">{alert.book}</p>
+                </div>
+                <p className="alert-days">{alert.lateDays} dni</p>
+              </li>
+            ))}
+          </ul>
+
+          <SmartPagination
+            compact
+            label="Alerty"
+            totalItems={alerts.length}
+            page={page}
+            pageSize={pageSize}
+            onPageChange={setPage}
+            onPageSizeChange={(next) => {
+              setPageSize(next);
+              setPage(1);
+            }}
+            pageSizeOptions={[4, 8, 12]}
+          />
+        </>
       :
         <EmptyState
           title="Brak alertow"

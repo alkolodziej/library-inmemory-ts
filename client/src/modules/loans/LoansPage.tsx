@@ -24,13 +24,30 @@ export function LoansPage({ isLoading = false }: LoansPageProps) {
         <p>Widok MVP pod codzienna prace bibliotekarza: ruch ksiazek i terminowosc zwrotow.</p>
       </header>
 
+      <div className="module-state-row" role="status" aria-live="polite">
+        <p>Modul jest gotowy do kolejnego sprintu funkcjonalnego. UI akcji jest juz zgodne z reszta aplikacji.</p>
+        <button type="button" className="ui-btn ui-btn--compact ui-btn--ghost">Przejdz do planu MVP</button>
+      </div>
+
       <article className="module-card">
-        <h2>Co dalej w tym module</h2>
+        <h2>Strefa operacyjna</h2>
+        <p className="dash-subtitle">Najczestsze akcje sa juz zgrupowane. Kolejny krok to podpiecie ich do endpointow wypozyczen.</p>
+        <div className="context-actions" role="group" aria-label="Akcje wypozyczen">
+          <button type="button" className="ui-btn ui-btn--primary ui-btn--pill">Nowe wypozyczenie</button>
+          <button type="button" className="ui-btn ui-btn--secondary ui-btn--pill">Skanuj zwrot</button>
+          <button type="button" className="ui-btn ui-btn--ghost ui-btn--pill">Historia operacji</button>
+        </div>
         <ul>
           <li>formularz wypozyczenia i zwrotu,</li>
           <li>historia operacji dla czytelnika,</li>
           <li>alerty przekroczonych terminow.</li>
         </ul>
+      </article>
+
+      <article className="empty-state" role="status" aria-live="polite">
+        <span className="empty-state-icon" aria-hidden="true">○</span>
+        <h3>Brak transakcji w podgladzie</h3>
+        <p>Po podpieciu API lista ostatnich wypozyczen i zwrotow pojawi sie tutaj wraz z szybkim filtrem statusu.</p>
       </article>
     </section>
   );

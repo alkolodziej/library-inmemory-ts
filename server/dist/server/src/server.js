@@ -10,6 +10,8 @@ const bootstrap = async () => {
     app.listen(PORT, () => {
         // eslint-disable-next-line no-console
         console.log(`Server listening on http://localhost:${PORT}`);
+        console.log(`Backend restarted at ${new Date().toISOString()}`);
+        console.log("Trigger restart v2");
     });
 };
 bootstrap().catch((error) => {

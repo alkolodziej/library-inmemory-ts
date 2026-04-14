@@ -42,3 +42,19 @@ export const deleteReader = async (req: Request, res: Response): Promise<void> =
     res.status(400).json({ error: (error as Error).message });
   }
 };
+
+export const updateReader = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const updated = db.updateReader(String(req.params.id), {
+      firstName: req.body.firstName !== undefined ? String(req.body.firstName) : undefined,
+      lastName: req.body.lastName !== undefined ? String(req.body.lastName) : undefined,
+      email: req.body.email !== undefined ? String(req.body.email) : undefined,
+      status: req.body.status,
+    });
+
+    await db.saveAll();
+    res.status(200).json(updated);
+  } catch (error) {
+    res.status(400).json({ error: (error as Error).message });
+  }
+};

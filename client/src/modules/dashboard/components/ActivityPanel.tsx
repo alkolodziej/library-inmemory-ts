@@ -1,4 +1,7 @@
+import { useMemo, useState } from "react";
 import type { ActivityItem } from "../data";
+import { SmartPagination } from "../../../components/pagination/SmartPagination";
+import { paginateItems } from "../../../components/pagination/paginationUtils";
 import { EmptyState } from "./EmptyState";
 
 type ActivityPanelProps = {
@@ -7,6 +10,10 @@ type ActivityPanelProps = {
 };
 
 export function ActivityPanel({ rows, isLoading = false }: ActivityPanelProps) {
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(4);
+  const pagedRows = useMemo(() => paginateItems(rows, page, pageSize), [rows, page, pageSize]);
+
   if (isLoading) {
     return (
       <article className="panel activity-panel" aria-busy="true">
@@ -47,26 +54,42 @@ export function ActivityPanel({ rows, isLoading = false }: ActivityPanelProps) {
       </div>
 
       {hasRows ?
-        <div className="activity-scroll">
-          <table className="activity-table">
-            <thead>
-              <tr>
-                <th>Operacja</th>
-                <th>Uzytkownik</th>
-                <th>Godzina</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.action}</td>
-                  <td>{item.actor}</td>
-                  <td>{item.time}</td>
+        <>
+          <div className="activity-scroll">
+            <table className="activity-table">
+              <thead>
+                <tr>
+                  <th>Operacja</th>
+                  <th>Uzytkownik</th>
+                  <th>Godzina</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {pagedRows.map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.action}</td>
+                    <td>{item.actor}</td>
+                    <td>{item.time}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <SmartPagination
+            compact
+            label="Aktywnosc"
+            totalItems={rows.length}
+            page={page}
+            pageSize={pageSize}
+            onPageChange={setPage}
+            onPageSizeChange={(next) => {
+              setPageSize(next);
+              setPage(1);
+            }}
+            pageSizeOptions={[4, 8, 12]}
+          />
+        </>
       :
         <EmptyState
           title="Brak aktywnosci"

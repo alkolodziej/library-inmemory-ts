@@ -4,7 +4,6 @@ import {
   Handshake,
   type LucideIcon,
   UserRound,
-  Wifi,
 } from "lucide-react";
 
 export type SidebarItemId = "dashboard" | "readers" | "catalog" | "loans";

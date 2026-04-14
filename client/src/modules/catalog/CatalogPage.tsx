@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import { BookCard } from "./components/BookCard";
 import { BookFormModal } from "./components/BookFormModal";
 import { apiClient } from "../../api/apiClient";
+import { SmartPagination } from "../../components/pagination/SmartPagination";
+import { getTotalPages, paginateItems } from "../../components/pagination/paginationUtils";
 import type { Book } from "../../../../shared/src/models";
+import "./catalog.css";
 
 type CatalogPageProps = {
   isLoading?: boolean;
@@ -11,18 +14,44 @@ type CatalogPageProps = {
 export function CatalogPage({ isLoading = false }: CatalogPageProps) {
   const [books, setBooks] = useState<Book[]>([]);
   const [isFetching, setIsFetching] = useState(isLoading);
+  const [apiError, setApiError] = useState<string | null>(null);
   const [allCategories, setAllCategories] = useState<string[]>([]);
 
   const [titleQuery, setTitleQuery] = useState("");
   const [authorQuery, setAuthorQuery] = useState("");
   const [categoryQuery, setCategoryQuery] = useState("");
   const [isbnQuery, setIsbnQuery] = useState("");
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(8);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingBook, setEditingBook] = useState<Book | null>(null);
 
+  const hasActiveFilters = Boolean(titleQuery || authorQuery || categoryQuery || isbnQuery);
+  const totalPages = getTotalPages(books.length, pageSize);
+  const pagedBooks = paginateItems(books, page, pageSize);
+
+  const clearFilters = () => {
+    setTitleQuery("");
+    setAuthorQuery("");
+    setCategoryQuery("");
+    setIsbnQuery("");
+  };
+
+  const refreshCategories = async () => {
+    try {
+      const all = await apiClient.books.list({});
+      const cats = [...new Set(all.flatMap((book) => book.categories))].sort();
+      setAllCategories(cats);
+    } catch {
+      // Categories are supplementary. Keep current list if refresh fails.
+    }
+  };
+
   const fetchBooks = async () => {
     setIsFetching(true);
+    setApiError(null);
+
     try {
       const data = await apiClient.books.list({
         title: titleQuery,
@@ -33,6 +62,7 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
       setBooks(data);
     } catch (error) {
       console.error("Failed to fetch books", error);
+      setApiError("Nie udalo sie pobrac listy ksiazek. Sprawdz polaczenie z API i sprobuj ponownie.");
     } finally {
       setIsFetching(false);
     }
@@ -40,16 +70,23 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
 
   // Load all categories for the dropdown once on mount
   useEffect(() => {
-    apiClient.books.list({}).then(all => {
-      const cats = [...new Set(all.flatMap(b => b.categories))].sort();
-      setAllCategories(cats);
-    }).catch(() => { });
+    refreshCategories();
   }, []);
 
   useEffect(() => {
     fetchBooks();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [titleQuery, authorQuery, categoryQuery, isbnQuery]);
+
+  useEffect(() => {
+    setPage(1);
+  }, [titleQuery, authorQuery, categoryQuery, isbnQuery]);
+
+  useEffect(() => {
+    if (page > totalPages) {
+      setPage(totalPages);
+    }
+  }, [page, totalPages]);
 
   const handleSaveBook = async (data: Partial<Book>) => {
     if (editingBook) {
@@ -58,20 +95,13 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
       await apiClient.books.create(data);
     }
     fetchBooks();
-    // Refresh categories list too
-    apiClient.books.list({}).then(all => {
-      const cats = [...new Set(all.flatMap(b => b.categories))].sort();
-      setAllCategories(cats);
-    }).catch(() => { });
+    refreshCategories();
   };
 
   const handleDeleteBook = async (book: Book) => {
     await apiClient.books.delete(book.id);
     fetchBooks();
-    apiClient.books.list({}).then(all => {
-      const cats = [...new Set(all.flatMap(b => b.categories))].sort();
-      setAllCategories(cats);
-    }).catch(() => { });
+    refreshCategories();
   };
 
   const handleEditClick = (book: Book) => {
@@ -92,7 +122,7 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
 
   return (
     <section className="module-page" aria-labelledby="catalog-title">
-      <header className="module-page-head" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <header className="module-page-head catalog-header">
         <div>
           <p className="module-kicker">Katalog</p>
           <h1 id="catalog-title">Przegląd zbiorów</h1>
@@ -100,38 +130,38 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
         </div>
         <button
           onClick={() => { setEditingBook(null); setIsModalOpen(true); }}
-          style={{ padding: "0.75rem 1.25rem", background: "var(--brand, black)", color: "white", borderRadius: "8px", border: "none", cursor: "pointer", fontWeight: 500 }}
+          className="ui-btn ui-btn--primary catalog-primary-btn"
         >
           + Dodaj Książkę
         </button>
       </header>
 
-      <section style={{ display: "flex", gap: "1rem", marginBottom: "2rem", flexWrap: "wrap", alignItems: "center" }}>
+      <section className="catalog-filters" aria-label="Filtry katalogu">
         <input
+          className="ui-input"
           type="text"
           placeholder="Tytuł książki..."
           value={titleQuery}
           onChange={(e) => setTitleQuery(e.target.value)}
-          style={{ padding: "0.5rem", borderRadius: "0.5rem", border: "1px solid oklch(0.8 0 0)", flex: 1, minWidth: "200px" }}
         />
         <input
+          className="ui-input"
           type="text"
           placeholder="Autor..."
           value={authorQuery}
           onChange={(e) => setAuthorQuery(e.target.value)}
-          style={{ padding: "0.5rem", borderRadius: "0.5rem", border: "1px solid oklch(0.8 0 0)", flex: 1, minWidth: "200px" }}
         />
         <input
+          className="ui-input"
           type="text"
           placeholder="ISBN..."
           value={isbnQuery}
           onChange={(e) => setIsbnQuery(e.target.value)}
-          style={{ padding: "0.5rem", borderRadius: "0.5rem", border: "1px solid oklch(0.8 0 0)", flex: 1, minWidth: "150px" }}
         />
         <select
+          className="ui-select"
           value={categoryQuery}
           onChange={(e) => setCategoryQuery(e.target.value)}
-          style={{ padding: "0.5rem", borderRadius: "0.5rem", border: "1px solid oklch(0.8 0 0)", flex: 1, minWidth: "200px", backgroundColor: "#fff" }}
         >
           <option value="">Wszystkie kategorie</option>
           {allCategories.map(cat => (
@@ -140,25 +170,61 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
         </select>
       </section>
 
+      <div className="module-state-row" role="status" aria-live="polite">
+        <p>
+          {hasActiveFilters
+            ? `Wyniki po filtrach: ${books.length}`
+            : `Wszystkie pozycje w widoku: ${books.length}`}
+        </p>
+        {hasActiveFilters ? (
+          <button type="button" className="ui-btn ui-btn--compact ui-btn--ghost" onClick={clearFilters}>
+            Wyczysc filtry
+          </button>
+        ) : null}
+      </div>
+
+      {apiError ? (
+        <article className="module-card catalog-state" role="status">
+          <h3>Blad pobierania danych</h3>
+          <p>{apiError}</p>
+          <div className="catalog-state-actions">
+            <button type="button" className="ui-btn ui-btn--secondary" onClick={fetchBooks}>
+              Sprobuj ponownie
+            </button>
+          </div>
+        </article>
+      ) : null}
+
       {isFetching ? (
-        <div style={{ padding: "2rem", textAlign: "center", color: "oklch(0.6 0 0)" }}>
+        <div className="catalog-state">
           Wyszukiwanie...
         </div>
-      ) : books.length === 0 ? (
-        <article className="module-card" style={{ textAlign: "center", padding: "3rem 1rem" }}>
+      ) : !apiError && books.length === 0 ? (
+        <article className="module-card catalog-state">
           <h3>Brak wyników</h3>
           <p>Nie znaleziono książek pasujących do podanych kryteriów.</p>
         </article>
       ) : (
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-          gap: "1.5rem"
-        }}>
-          {books.map(book => (
-            <BookCard key={book.id} book={book} onEdit={handleEditClick} onDelete={handleDeleteBook} />
-          ))}
-        </div>
+        <>
+          <div className="catalog-grid">
+            {pagedBooks.map((book) => (
+              <BookCard key={book.id} book={book} onEdit={handleEditClick} onDelete={handleDeleteBook} />
+            ))}
+          </div>
+
+          <SmartPagination
+            label="Katalog"
+            totalItems={books.length}
+            page={page}
+            pageSize={pageSize}
+            onPageChange={setPage}
+            onPageSizeChange={(next) => {
+              setPageSize(next);
+              setPage(1);
+            }}
+            pageSizeOptions={[8, 12, 16]}
+          />
+        </>
       )}
 
       <BookFormModal

@@ -6,6 +6,7 @@ import { AppLayout } from "./modules/layout/AppLayout";
 import { LoansPage } from "./modules/loans/LoansPage";
 import { ReadersPage } from "./modules/readers/ReadersPage";
 import "./modules/dashboard/dashboard.css";
+import "./styles/ui.css";
 
 const defaultSection: SidebarItemId = "dashboard";
 
@@ -78,7 +79,7 @@ function App() {
   };
 
   return (
-    <AppLayout activeItem={activeSection} onNavigate={handleNavigate}>
+    <AppLayout activeItem={activeSection} onNavigate={handleNavigate} isPageTransitioning={isPageLoading}>
       {renderPage(activeSection, isPageLoading)}
     </AppLayout>
   );

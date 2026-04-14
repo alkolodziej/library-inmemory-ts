@@ -68,57 +68,53 @@ export function BookFormModal({ isOpen, onClose, onSave, initialData }: BookForm
   };
 
   return (
-    <div style={{
-      position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-      backgroundColor: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center",
-      zIndex: 1000
-    }}>
-      <div className="module-card" style={{ width: "100%", maxWidth: "500px", maxHeight: "90vh", overflowY: "auto" }}>
-        <h2 style={{ marginTop: 0 }}>{initialData ? "Edytuj książkę" : "Dodaj nową książkę"}</h2>
+    <div className="catalog-dialog-backdrop">
+      <div className="module-card catalog-dialog">
+        <h2 className="catalog-dialog-title">{initialData ? "Edytuj książkę" : "Dodaj nową książkę"}</h2>
         
         {errorMsg && (
-          <div style={{ padding: "0.5rem", backgroundColor: "oklch(0.6 0.2 25)", color: "white", borderRadius: "0.5rem", marginBottom: "1rem" }}>
+          <div className="catalog-dialog-error">
             {errorMsg}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <div>
-            <label style={{ display: "block", marginBottom: "0.25rem", fontSize: "0.875rem" }}>Tytuł</label>
-            <input required type="text" value={title} onChange={e => setTitle(e.target.value)} style={{ width: "100%", padding: "0.5rem" }} />
+        <form onSubmit={handleSubmit} className="catalog-form">
+          <div className="catalog-field">
+            <label>Tytuł</label>
+            <input className="ui-input" required type="text" value={title} onChange={e => setTitle(e.target.value)} />
           </div>
           
-          <div>
-            <label style={{ display: "block", marginBottom: "0.25rem", fontSize: "0.875rem" }}>Autorzy (po przecinku)</label>
-            <input required type="text" value={authorsStr} onChange={e => setAuthorsStr(e.target.value)} style={{ width: "100%", padding: "0.5rem" }} />
+          <div className="catalog-field">
+            <label>Autorzy (po przecinku)</label>
+            <input className="ui-input" required type="text" value={authorsStr} onChange={e => setAuthorsStr(e.target.value)} />
           </div>
 
-          <div>
-            <label style={{ display: "block", marginBottom: "0.25rem", fontSize: "0.875rem" }}>Kategorie (po przecinku)</label>
-            <input required type="text" value={categoriesStr} onChange={e => setCategoriesStr(e.target.value)} style={{ width: "100%", padding: "0.5rem" }} placeholder="Fantasy, Powieść..." />
+          <div className="catalog-field">
+            <label>Kategorie (po przecinku)</label>
+            <input className="ui-input" required type="text" value={categoriesStr} onChange={e => setCategoriesStr(e.target.value)} placeholder="Fantasy, Powieść..." />
           </div>
           
-          <div style={{ display: "flex", gap: "1rem" }}>
-            <div style={{ flex: 1 }}>
-              <label style={{ display: "block", marginBottom: "0.25rem", fontSize: "0.875rem" }}>ISBN</label>
-              <input required type="text" value={isbn} onChange={e => setIsbn(e.target.value)} style={{ width: "100%", padding: "0.5rem" }} />
+          <div className="catalog-form-grid">
+            <div className="catalog-field">
+              <label>ISBN</label>
+              <input className="ui-input" required type="text" value={isbn} onChange={e => setIsbn(e.target.value)} />
             </div>
-            <div style={{ flex: 1 }}>
-              <label style={{ display: "block", marginBottom: "0.25rem", fontSize: "0.875rem" }}>Rok wydania</label>
-              <input required type="number" value={publishedYear} onChange={e => setPublishedYear(Number(e.target.value))} style={{ width: "100%", padding: "0.5rem" }} />
+            <div className="catalog-field">
+              <label>Rok wydania</label>
+              <input className="ui-input" required type="number" value={publishedYear} onChange={e => setPublishedYear(Number(e.target.value))} />
             </div>
           </div>
 
-          <div>
-            <label style={{ display: "block", marginBottom: "0.25rem", fontSize: "0.875rem" }}>Sztuki całkowite</label>
-            <input required type="number" min="1" value={totalCopies} onChange={e => setTotalCopies(Number(e.target.value))} style={{ width: "100%", padding: "0.5rem" }} />
+          <div className="catalog-field">
+            <label>Sztuki całkowite</label>
+            <input className="ui-input" required type="number" min="1" value={totalCopies} onChange={e => setTotalCopies(Number(e.target.value))} />
           </div>
 
-          <div style={{ display: "flex", justifyContent: "flex-end", gap: "1rem", marginTop: "1rem" }}>
-            <button type="button" onClick={onClose} disabled={isSubmitting} style={{ padding: "0.5rem 1rem", border: "1px solid #ccc", background: "transparent", borderRadius: "0.5rem" }}>
+          <div className="catalog-dialog-actions">
+            <button type="button" onClick={onClose} disabled={isSubmitting} className="ui-btn ui-btn--secondary catalog-dialog-btn">
               Anuluj
             </button>
-            <button type="submit" disabled={isSubmitting} style={{ padding: "0.5rem 1rem", background: "var(--brand, blue)", color: "white", border: "none", borderRadius: "0.5rem" }}>
+            <button type="submit" disabled={isSubmitting} className="ui-btn ui-btn--primary catalog-primary-btn">
               {isSubmitting ? "Zapisywanie..." : "Zapisz"}
             </button>
           </div>

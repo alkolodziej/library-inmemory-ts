@@ -35,7 +35,7 @@ class DatabaseService {
     readerOrder = new DoublyLinkedList_1.DoublyLinkedList();
     isSaving = false;
     constructor(dataDir) {
-        this.dataDir = dataDir ?? node_path_1.default.resolve(process.cwd(), "server/data");
+        this.dataDir = dataDir ?? node_path_1.default.resolve(__dirname, "../../data");
     }
     static getInstance(dataDir) {
         if (!DatabaseService.instance) {
@@ -79,6 +79,45 @@ class DatabaseService {
     getLoan(id) {
         return this.loansById.get(id);
     }
+    searchBooksByAuthor(author) {
+        return this.booksByAuthor.get(author) ?? new Set();
+    }
+    searchBooksByAuthorPrefix(prefix) {
+        const result = new Set();
+        const lower = prefix.toLowerCase();
+        for (const [author, ids] of this.booksByAuthor.entries()) {
+            if (author.toLowerCase().includes(lower)) {
+                for (const id of ids)
+                    result.add(id);
+            }
+        }
+        return result;
+    }
+    searchBooksByCategory(category) {
+        return this.booksByCategory.get(category) ?? new Set();
+    }
+    searchBooksByCategoryPrefix(prefix) {
+        const result = new Set();
+        const lower = prefix.toLowerCase();
+        for (const [cat, ids] of this.booksByCategory.entries()) {
+            if (cat.toLowerCase().includes(lower)) {
+                for (const id of ids)
+                    result.add(id);
+            }
+        }
+        return result;
+    }
+    searchBooksByIsbnPrefix(prefix) {
+        const result = new Set();
+        const lower = prefix.toLowerCase();
+        for (const [isbn, ids] of this.bookIdsByIsbn.entries()) {
+            if (isbn.toLowerCase().includes(lower)) {
+                for (const id of ids)
+                    result.add(id);
+            }
+        }
+        return result;
+    }
     addBook(input) {
         if (this.booksById.has(input.id)) {
             throw new Error(`Book with id=${input.id} already exists.`);
@@ -97,9 +136,67 @@ class DatabaseService {
         this.booksByTitle.insert(input.title, input.id);
         return input;
     }
+    updateBook(id, updates) {
+        const existing = this.booksById.get(id);
+        if (!existing) {
+            throw new Error(`Book with id=${id} not found.`);
+        }
+        // Remove old indexes
+        this.removeFromMultiIndex(this.bookIdsByIsbn, existing.isbn, id);
+        for (const author of existing.authors) {
+            this.removeFromMultiIndex(this.booksByAuthor, author, id);
+        }
+        for (const cat of existing.categories) {
+            this.removeFromMultiIndex(this.booksByCategory, cat, id);
+        }
+        this.booksByTitle.remove(existing.title, id);
+        // Prepare updated book
+        const updated = { ...existing, ...updates, updatedAt: new Date().toISOString() };
+        if (updated.availableCopies > updated.totalCopies) {
+            throw new Error("availableCopies cannot exceed totalCopies.");
+        }
+        // Set new indexes
+        this.booksById.set(id, updated);
+        this.addToMultiIndex(this.bookIdsByIsbn, updated.isbn, id);
+        for (const author of updated.authors) {
+            this.addToMultiIndex(this.booksByAuthor, author, id);
+        }
+        for (const cat of updated.categories) {
+            this.addToMultiIndex(this.booksByCategory, cat, id);
+        }
+        this.booksByTitle.insert(updated.title, id);
+        return updated;
+    }
+    removeBook(id) {
+        const existing = this.booksById.get(id);
+        if (!existing) {
+            throw new Error(`Book with id=${id} not found.`);
+        }
+        // Block removal if any active / overdue loans exist for this book
+        const loanIds = this.loanIdsByBookId.get(id) ?? new Set();
+        for (const loanId of loanIds) {
+            const loan = this.loansById.get(loanId);
+            if (loan && (loan.status === "ACTIVE" || loan.status === "OVERDUE")) {
+                throw new Error("Nie można usunąć książki, która ma aktywne wypożyczenia.");
+            }
+        }
+        // Remove from all indexes
+        this.removeFromMultiIndex(this.bookIdsByIsbn, existing.isbn, id);
+        for (const author of existing.authors) {
+            this.removeFromMultiIndex(this.booksByAuthor, author, id);
+        }
+        for (const cat of existing.categories) {
+            this.removeFromMultiIndex(this.booksByCategory, cat, id);
+        }
+        this.booksByTitle.remove(existing.title, id);
+        this.booksById.delete(id);
+    }
     addReader(input) {
         if (this.readersById.has(input.id)) {
             throw new Error(`Reader with id=${input.id} already exists.`);
+        }
+        if (this.readersByEmail.has(input.email)) {
+            throw new Error(`Reader with email=${input.email} already exists.`);
         }
         this.readersById.set(input.id, input);
         this.readerOrder.push(input.id);
@@ -123,6 +220,31 @@ class DatabaseService {
         this.readersById.delete(readerId);
         this.removeFromMultiIndex(this.readersByEmail, reader.email, readerId);
         this.removeFromMultiIndex(this.readersByStatus, reader.status, readerId);
+    }
+    updateReader(id, updates) {
+        const existing = this.readersById.get(id);
+        if (!existing) {
+            throw new Error(`Reader with id=${id} not found.`);
+        }
+        const nextEmail = String(updates.email ?? existing.email);
+        const nextStatus = updates.status === "SUSPENDED" ? "SUSPENDED" : updates.status === "ACTIVE" ? "ACTIVE" : existing.status;
+        const existingForEmail = this.readersByEmail.get(nextEmail);
+        if (nextEmail !== existing.email && existingForEmail && existingForEmail.size > 0) {
+            throw new Error(`Reader with email=${nextEmail} already exists.`);
+        }
+        this.removeFromMultiIndex(this.readersByEmail, existing.email, id);
+        this.removeFromMultiIndex(this.readersByStatus, existing.status, id);
+        const updated = {
+            ...existing,
+            ...updates,
+            email: nextEmail,
+            status: nextStatus,
+            updatedAt: new Date().toISOString(),
+        };
+        this.readersById.set(id, updated);
+        this.addToMultiIndex(this.readersByEmail, updated.email, id);
+        this.addToMultiIndex(this.readersByStatus, updated.status, id);
+        return updated;
     }
     borrowBook(command) {
         const reader = this.readersById.get(command.readerId);
@@ -274,7 +396,8 @@ class DatabaseService {
             const raw = await node_fs_1.promises.readFile(filePath, "utf8");
             return JSON.parse(raw);
         }
-        catch {
+        catch (error) {
+            console.error(`Error reading ${filePath}:`, error);
             return fallback;
         }
     }

@@ -237,6 +237,10 @@ export class DatabaseService {
       throw new Error(`Reader with id=${input.id} already exists.`);
     }
 
+    if (this.readersByEmail.has(input.email)) {
+      throw new Error(`Reader with email=${input.email} already exists.`);
+    }
+
     this.readersById.set(input.id, input);
     this.readerOrder.push(input.id);
     this.addToMultiIndex(this.readersByEmail, input.email, input.id);
@@ -263,6 +267,38 @@ export class DatabaseService {
     this.readersById.delete(readerId);
     this.removeFromMultiIndex(this.readersByEmail, reader.email, readerId);
     this.removeFromMultiIndex(this.readersByStatus, reader.status, readerId);
+  }
+
+  public updateReader(id: string, updates: Partial<Reader>): Reader {
+    const existing = this.readersById.get(id);
+    if (!existing) {
+      throw new Error(`Reader with id=${id} not found.`);
+    }
+
+    const nextEmail = String(updates.email ?? existing.email);
+    const nextStatus = updates.status === "SUSPENDED" ? "SUSPENDED" : updates.status === "ACTIVE" ? "ACTIVE" : existing.status;
+
+    const existingForEmail = this.readersByEmail.get(nextEmail);
+    if (nextEmail !== existing.email && existingForEmail && existingForEmail.size > 0) {
+      throw new Error(`Reader with email=${nextEmail} already exists.`);
+    }
+
+    this.removeFromMultiIndex(this.readersByEmail, existing.email, id);
+    this.removeFromMultiIndex(this.readersByStatus, existing.status, id);
+
+    const updated: Reader = {
+      ...existing,
+      ...updates,
+      email: nextEmail,
+      status: nextStatus,
+      updatedAt: new Date().toISOString(),
+    };
+
+    this.readersById.set(id, updated);
+    this.addToMultiIndex(this.readersByEmail, updated.email, id);
+    this.addToMultiIndex(this.readersByStatus, updated.status, id);
+
+    return updated;
   }
 
   public borrowBook(command: BorrowBookCommand): Loan {
