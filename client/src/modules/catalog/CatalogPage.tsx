@@ -9,9 +9,11 @@ import "./catalog.css";
 
 type CatalogPageProps = {
   isLoading?: boolean;
+  pendingAction?: string | null;
+  onPendingActionConsumed?: () => void;
 };
 
-export function CatalogPage({ isLoading = false }: CatalogPageProps) {
+export function CatalogPage({ isLoading = false, pendingAction, onPendingActionConsumed }: CatalogPageProps) {
   const [books, setBooks] = useState<Book[]>([]);
   const [isFetching, setIsFetching] = useState(isLoading);
   const [apiError, setApiError] = useState<string | null>(null);
@@ -22,14 +24,16 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
   const [categoryQuery, setCategoryQuery] = useState("");
   const [isbnQuery, setIsbnQuery] = useState("");
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(8);
+  const [pageSize, setPageSize] = useState(9);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingBook, setEditingBook] = useState<Book | null>(null);
 
   const hasActiveFilters = Boolean(titleQuery || authorQuery || categoryQuery || isbnQuery);
-  const totalPages = getTotalPages(books.length, pageSize);
-  const pagedBooks = paginateItems(books, page, pageSize);
+  const sortedBooks = [...books].sort((a, b) => a.title.localeCompare(b.title, 'pl'));
+  const totalPages = getTotalPages(sortedBooks.length, pageSize);
+  const pagedBooks = paginateItems(sortedBooks, page, pageSize);
+
 
   const clearFilters = () => {
     setTitleQuery("");
@@ -87,6 +91,15 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
       setPage(totalPages);
     }
   }, [page, totalPages]);
+
+  // Quick action: open add-book modal
+  useEffect(() => {
+    if (pendingAction === 'add-book') {
+      onPendingActionConsumed?.();
+      setEditingBook(null);
+      setIsModalOpen(true);
+    }
+  }, [pendingAction]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSaveBook = async (data: Partial<Book>) => {
     if (editingBook) {
@@ -222,7 +235,7 @@ export function CatalogPage({ isLoading = false }: CatalogPageProps) {
               setPageSize(next);
               setPage(1);
             }}
-            pageSizeOptions={[8, 12, 16]}
+            pageSizeOptions={[9, 12, 15, 18]}
           />
         </>
       )}

@@ -91,10 +91,16 @@ projekt-zespolowy/
 - Wspolne modele domenowe znajduja sie w `shared/src/models.ts`.
 - Silnik in-memory (`DatabaseService`) jest podlaczony do API i persystencji JSON.
 - Dodane endpointy:
-  - `GET/POST /api/books`
-  - `GET/POST/DELETE /api/readers`
-  - `GET /api/loans`, `POST /api/loans/borrow`, `POST /api/loans/return`
+  - `GET/POST /api/books`, `PUT /api/books/:id`, `DELETE /api/books/:id`
+  - `GET/POST/PUT/DELETE /api/readers`
+  - `GET /api/loans`, `POST /api/loans/borrow`, `POST /api/loans/return`, `POST /api/loans/extend`
   - `GET /api/reports/overview`, `GET /api/reports/overdue`
+- Modul Wypozyczenia w pelni funkcjonalny: nowe wypozyczenie, zwrot, przedluzenie, alerty przetrzyman.
+- Zaimplementowane struktury danych: `AVLTree` (po `title`, `dueDate`), `HashMap` (po ID), indeksy pomocnicze (`Map<string, Set<string>>`).
+- Wdrozono symulacje platnosci (`FeeModal`) przy zwrocie po terminie i przedluzeniu przeterminowanych wypozyczen.
+- Autocomplete (typeahead) przy nowym wypozyczeniu — wyszukiwanie czytelnika i ksiazki z informacja o dostepnosci.
+- Sortowalne kolumny i paginacja (`SmartPagination`) w module Wypozyczenia i Katalogu.
+- Blokada/zawieszenie czytelnika (`SuspendReaderModal`) bezposrednio z poziomu wiersza przeterminowanego wypozyczenia.
 
 ## 7) Uruchamianie projektu
 
@@ -112,6 +118,33 @@ Domyslne porty:
 - Frontend: `http://localhost:5173`
 
 ## 8) Dziennik zmian
+
+### 2026-04-19
+- Zaimplementowano modul Wypozyczen — pelna obsluga wypozyczen i zwrotow podlaczona do backendu (`AVLTree` po `dueDate`, `HashMap` po `loanId`, indeks po `readerId`/`bookId`).
+- Wdrozono endpoint `POST /api/loans/extend` z poprawna aktualizacja drzewa `AVLTree` (usuwanie starego klucza, wstawianie nowego).
+- Sekcja alertow "Przekroczone terminy" wyswietla Top 3 najdluzej przetrzymanych posortowanych malejaco wg liczby dni; reszte wskazuje filtr "Po terminie" w tabeli.
+- Dodano symulacje platnosci (`FeeModal`): kara 0.50 PLN/dzien za zwrot po terminie, oplata 5 PLN za przedluzenie przeterminowanego wypozyczenia, bezplatne przedluzenie aktywnego.
+- Dla zwrotu wypozyczenia aktywnego (w terminie) wprowadzono prosty modal potwierdzenia (`ConfirmReturnModal`) bez naliczania oplat.
+- Zastapiono listy rozwijane `<select>` autouzupelnianiem (typeahead) przy nowym wypozyczeniu — czytelnik i ksiazka wyszukiwane z podpowiedziami; przy ksiazkach widoczna informacja o dostepnosci egzemplarzy.
+- Zmieniono `ReturnModal` na picker wyszukiwarkowy; rodzic (`LoansPage`) decyduje o pokazaniu `FeeModal` lub `ConfirmReturnModal`.
+- Dodano przycisk zawieszenia czytelnika (`SuspendReaderModal`) bezposrednio z wiersza przeterminowanego wypozyczenia w Top 3 i w tabeli — wywoluje `PUT /api/readers/:id` z `status: SUSPENDED`.
+- Dodano badge "zawieszone" przy nazwisku czytelnika w tabeli wypozyczen po zawieszeniu konta.
+- Naprawiono zawijanie przyciskow akcji (Edytuj/Usun) w Katalogu i tabeli Wypozyczen — `flex-wrap: nowrap` + `min-width` na kolumnie Akcje.
+- Tabela Wypozyczen: sortowalne kolumny (Czytelnik, Tytul, Wypozyczono, Termin, Zwrocono) z ikonami ↑↓↕; klikniecie zakladki "Po terminie" auto-sortuje po `dueAt` rosnaco (najdluzej przetrzymane na gorze).
+- Badge statusu "Po terminie" wyswietla liczbe dni w nawiasie, np. `• Po terminie (+349 dni)`.
+- Dodano paginacje `SmartPagination` w module Wypozyczen (domyslnie 15 rekordow/strone, opcje 10/15/25/50).
+- Katalog: ksiazki sortowane alfabetycznie po tytule przed wyswietleniem; opcje paginacji zmienione na 9/12/15/18.
+- Wygenerowano realistyczne dane testowe: 200+ ksiazek, 200+ czytelnikow, 200+ wypozyczen do testow wydajnosciowych struktury in-memory.
+- Podpieto panel "Szybkie akcje" (dostepny z kazdego widoku przez prawy gorny przycisk): Nowe wypozyczenie → otwiera `BorrowFormModal` na `#loans`, Skanuj zwrot → otwiera `ReturnModal` na `#loans`, Dodaj czytelnika → nawiguje do `#readers` i scrolluje do formularza, Dodaj tytul → otwiera `BookFormModal` na `#catalog`; nawigacja i otwieranie modalu sa ze soba zsynchronizowane (delay 320 ms po zmianie trasy).
+- Naprawiono blad w `updateReader()` (`DatabaseService`) — spread czesciowego obiektu updates z polami `undefined` nadpisywal istniejace dane czytelnika (np. imiê/nazwisko po zawieszeniu konta tylko ze statusem); dodano filtrowanie undefined przed spreaem (`safeUpdates`).
+- Przywrocono dane czytelnika Adam Dabrowski uszkodzone przez wymieniiony blad (firstName/lastName w `readers.json`).
+- Zawieszeni czytelnicy sa teraz widoczni na liscie autouzupelniania formularza nowego wypozyczenia z ikona 🔒 i etykieta "zawieszone" (styl analogiczny do niedostepnych ksiazek); klikniecie zawieszonego pokazuje blad inline i blokuje przycisk "Wypozycz".
+- Zawieszeni czytelnicy po terminie moga zwrocic ksiazke i przedluzyc wypozyczenie przez `FeeModal` (ten sam przepływ co aktywni).
+- Wdrozono automatyczne odblokowanie zawieszonego czytelnika: po zwrocie ostatniej **przeterminowanej** ksiazki system sprawdza czy czytelnik ma jeszcze inne wypozyczenia **po terminie**; jesli nie (moga pozostac wypozyczenia w terminie) — wywoluje `PUT /api/readers/:id` z `status: ACTIVE` i wyswietla zielony banner z imieniem czytelnika.
+- Przycisk 🔒 i badge "zawieszone" ustawione po prawej stronie komorki "Czytelnik" (`justify-content: space-between`); nazwa czytelnika pozostaje po lewej.
+- Dodano wyszukiwarke w module Wypozyczen: pole tekstowe pod przyciskami filtra statusu filtruje tabele jednoczesnie po imieniu, nazwisku i tytule ksiazki; licznik wynikow aktualizuje sie na zywo; przycisk × czyci zapytanie.
+- Naprawiono brakujacy `searchQuery` w tablicy zaleznosci `useMemo` (wyszukiwarka nie reagowala na wpisywanie).
+- Naprawiono logike przedluzenia wypozyczenia po terminie (`extendLoan` w `DatabaseService`): nowy termin liczony jest od **dzisiaj + N dni** zamiast od przeterminowanej daty; dzieki temu po zaplaceniu kary wypozyczenie jest faktycznie aktywne i nie nalicza opłat ponownie.
 
 ### 2026-04-13
 - Rozpoczeto realizacje zakresu Osoby 1 od sprintu "Dashboard live" (kolejnosc: 2 -> 1 -> 3).

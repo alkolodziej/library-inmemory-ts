@@ -29,7 +29,7 @@
     ],
     "publishedYear": 1999,
     "totalCopies": 2,
-    "availableCopies": 2,
+    "availableCopies": 0,
     "createdAt": "2026-01-03T10:00:00.000Z",
     "updatedAt": "2026-01-03T10:00:00.000Z"
   },
@@ -46,25 +46,3505 @@
     ],
     "publishedYear": 2001,
     "totalCopies": 10,
-    "availableCopies": 9,
+    "availableCopies": 7,
     "createdAt": "2026-02-01T12:00:00.000Z",
     "updatedAt": "2026-02-01T12:00:00.000Z"
   },
   {
-    "id": "be284f24-4b15-40ab-b5f8-36a6bb95df7a",
-    "isbn": "123-123-123-123",
-    "title": "Kraina 123",
+    "id": "a39b24d7-9c66-4e9c-b941-ab718f9c5a4b",
+    "isbn": "978-14-7705-152-6",
+    "title": "Harry Potter i kamien czarownikow",
     "authors": [
-      "Adam",
-      "Janusz"
+      "Andrzej Sapkowski",
+      "Terry Pratchett"
     ],
     "categories": [
-      "Powieść"
+      "Reportaz",
+      "Edukacja",
+      "Fizyka"
     ],
-    "publishedYear": 2026,
-    "totalCopies": 23,
-    "availableCopies": 23,
-    "createdAt": "2026-04-13T11:18:20.234Z",
-    "updatedAt": "2026-04-13T11:18:20.234Z"
+    "publishedYear": 1989,
+    "totalCopies": 11,
+    "availableCopies": 11,
+    "createdAt": "2024-05-18T09:00:00.000Z",
+    "updatedAt": "2024-05-18T09:00:00.000Z"
+  },
+  {
+    "id": "0fe7f746-860a-4cf1-b343-462945518890",
+    "isbn": "978-27-1389-509-1",
+    "title": "Ogniem i mieczem",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "categories": [
+      "Informatyka"
+    ],
+    "publishedYear": 1990,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-01-05T10:00:00.000Z",
+    "updatedAt": "2024-01-05T10:00:00.000Z"
+  },
+  {
+    "id": "3cf602bb-a749-4be8-a937-e46d345dbb25",
+    "isbn": "978-11-6498-266-7",
+    "title": "Myszy i ludzie",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Informatyka",
+      "Psychologia"
+    ],
+    "publishedYear": 1990,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-05-18T09:00:00.000Z",
+    "updatedAt": "2024-05-18T09:00:00.000Z"
+  },
+  {
+    "id": "a6806d41-6534-4625-bea0-b42a4594eac4",
+    "isbn": "978-30-5327-569-0",
+    "title": "Milosc w czasach zarazy",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "categories": [
+      "Poezja",
+      "Psychologia",
+      "Filozofia"
+    ],
+    "publishedYear": 1990,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-11-29T10:00:00.000Z",
+    "updatedAt": "2024-11-29T10:00:00.000Z"
+  },
+  {
+    "id": "0ad9fdad-c33e-4973-af36-72cc0fcb3280",
+    "isbn": "978-88-6541-635-3",
+    "title": "Analiza matematyczna",
+    "authors": [
+      "Donald E. Knuth",
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Thriller",
+      "Kryminał",
+      "Fantasy"
+    ],
+    "publishedYear": 1993,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-03-04T10:00:00.000Z",
+    "updatedAt": "2024-03-04T10:00:00.000Z"
+  },
+  {
+    "id": "f5d766aa-a024-4b9a-94c8-8693f4663e51",
+    "isbn": "978-40-8444-798-4",
+    "title": "Wahadlo Foucaulta",
+    "authors": [
+      "Frank Herbert"
+    ],
+    "categories": [
+      "Poradnik",
+      "Dla dzieci"
+    ],
+    "publishedYear": 2002,
+    "totalCopies": 6,
+    "availableCopies": 5,
+    "createdAt": "2024-04-23T09:00:00.000Z",
+    "updatedAt": "2024-04-23T09:00:00.000Z"
+  },
+  {
+    "id": "90709dfc-414c-4a69-aa52-03d3d3ba03dd",
+    "isbn": "978-54-9754-489-0",
+    "title": "Jak pisac",
+    "authors": [
+      "Andrzej Sapkowski",
+      "Martin Fowler"
+    ],
+    "categories": [
+      "Biografia",
+      "Sztuka"
+    ],
+    "publishedYear": 1989,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-08-16T09:00:00.000Z",
+    "updatedAt": "2024-08-16T09:00:00.000Z"
+  },
+  {
+    "id": "96bfca0f-8a1b-4ce1-9e9c-101cf7ea33d9",
+    "isbn": "978-71-9460-893-4",
+    "title": "Sapiens",
+    "authors": [
+      "Stanislaw Lem"
+    ],
+    "categories": [
+      "Matematyka",
+      "Sztuka",
+      "Edukacja"
+    ],
+    "publishedYear": 1994,
+    "totalCopies": 11,
+    "availableCopies": 10,
+    "createdAt": "2024-04-15T09:00:00.000Z",
+    "updatedAt": "2024-04-15T09:00:00.000Z"
+  },
+  {
+    "id": "c735b9d3-ce53-473e-8c4a-8a41e22b0c82",
+    "isbn": "978-35-2867-923-4",
+    "title": "Pielgrzym",
+    "authors": [
+      "Henryk Sienkiewicz"
+    ],
+    "categories": [
+      "Historia"
+    ],
+    "publishedYear": 2024,
+    "totalCopies": 8,
+    "availableCopies": 7,
+    "createdAt": "2024-01-07T10:00:00.000Z",
+    "updatedAt": "2024-01-07T10:00:00.000Z"
+  },
+  {
+    "id": "36cc88ec-9307-4824-91a0-c27fbd9b8283",
+    "isbn": "978-95-8695-976-2",
+    "title": "Myslenie szybkie i wolne",
+    "authors": [
+      "Stanislaw Lem",
+      "Erich Gamma"
+    ],
+    "categories": [
+      "Reportaz"
+    ],
+    "publishedYear": 2025,
+    "totalCopies": 7,
+    "availableCopies": 6,
+    "createdAt": "2024-02-05T10:00:00.000Z",
+    "updatedAt": "2024-02-05T10:00:00.000Z"
+  },
+  {
+    "id": "5f3f21a0-57ba-4918-88de-e405d83ce7af",
+    "isbn": "978-87-7454-205-5",
+    "title": "Scrum",
+    "authors": [
+      "Stefan Zeromski",
+      "Frank Herbert"
+    ],
+    "categories": [
+      "Ekonomia",
+      "Socjologia",
+      "Kryminał"
+    ],
+    "publishedYear": 2004,
+    "totalCopies": 15,
+    "availableCopies": 15,
+    "createdAt": "2024-01-09T10:00:00.000Z",
+    "updatedAt": "2024-01-09T10:00:00.000Z"
+  },
+  {
+    "id": "6f15e045-e2e6-4964-acd7-d804bd08ffee",
+    "isbn": "978-70-4928-846-2",
+    "title": "Warsztat pisarza",
+    "authors": [
+      "Wladyslaw Reymont"
+    ],
+    "categories": [
+      "Fizyka",
+      "Informatyka",
+      "Kryminał"
+    ],
+    "publishedYear": 1985,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-06-09T09:00:00.000Z",
+    "updatedAt": "2024-06-09T09:00:00.000Z"
+  },
+  {
+    "id": "1806500f-95ae-4bf7-a0ca-877a250aa043",
+    "isbn": "978-51-4560-274-0",
+    "title": "Zamek",
+    "authors": [
+      "Stephen Hawking",
+      "Richard Dawkins"
+    ],
+    "categories": [
+      "Biografia"
+    ],
+    "publishedYear": 2022,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-12-18T10:00:00.000Z",
+    "updatedAt": "2024-12-18T10:00:00.000Z"
+  },
+  {
+    "id": "0e2397ae-31f1-4bc9-8b57-17ef35401547",
+    "isbn": "978-92-9312-907-5",
+    "title": "Potop",
+    "authors": [
+      "J.R.R. Tolkien",
+      "Paulo Coelho"
+    ],
+    "categories": [
+      "Sztuka",
+      "Chemia",
+      "Horror"
+    ],
+    "publishedYear": 2008,
+    "totalCopies": 1,
+    "availableCopies": 1,
+    "createdAt": "2024-11-19T10:00:00.000Z",
+    "updatedAt": "2024-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "1472a720-83d8-4854-95f4-2c22e61285c5",
+    "isbn": "978-16-2212-166-3",
+    "title": "Konrad Wallenrod",
+    "authors": [
+      "Ryszard Kapuscinski"
+    ],
+    "categories": [
+      "Sztuka",
+      "Historia"
+    ],
+    "publishedYear": 2012,
+    "totalCopies": 7,
+    "availableCopies": 7,
+    "createdAt": "2024-11-15T10:00:00.000Z",
+    "updatedAt": "2024-11-15T10:00:00.000Z"
+  },
+  {
+    "id": "b886165a-7191-4ae9-bacb-5007cade5f52",
+    "isbn": "978-17-6559-977-7",
+    "title": "Psychologia wplywu",
+    "authors": [
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Reportaz"
+    ],
+    "publishedYear": 1998,
+    "totalCopies": 7,
+    "availableCopies": 6,
+    "createdAt": "2024-08-08T09:00:00.000Z",
+    "updatedAt": "2024-08-08T09:00:00.000Z"
+  },
+  {
+    "id": "c9e253d6-c526-45df-bd7d-df056c74b712",
+    "isbn": "978-24-5195-966-1",
+    "title": "Miasteczko Okamoto",
+    "authors": [
+      "George R.R. Martin",
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Informatyka"
+    ],
+    "publishedYear": 2009,
+    "totalCopies": 12,
+    "availableCopies": 9,
+    "createdAt": "2024-06-23T09:00:00.000Z",
+    "updatedAt": "2024-06-23T09:00:00.000Z"
+  },
+  {
+    "id": "68af7add-ae3b-4ed8-8893-0825ec90dea7",
+    "isbn": "978-58-2517-534-9",
+    "title": "Pamietnik znaleziony w wannie",
+    "authors": [
+      "Witold Gombrowicz",
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Fizyka"
+    ],
+    "publishedYear": 1971,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-11-01T10:00:00.000Z",
+    "updatedAt": "2024-11-01T10:00:00.000Z"
+  },
+  {
+    "id": "ee6dac38-cf3a-4fbf-8b4f-5991797ec051",
+    "isbn": "978-55-3801-935-0",
+    "title": "Fizyka kwantowa",
+    "authors": [
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Ekonomia"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 10,
+    "availableCopies": 9,
+    "createdAt": "2024-07-18T09:00:00.000Z",
+    "updatedAt": "2024-07-18T09:00:00.000Z"
+  },
+  {
+    "id": "359da3d1-5841-4efd-9553-878c021ef994",
+    "isbn": "978-85-4488-343-5",
+    "title": "Agatha Christie - Morderstwo Rogera Ackroyda",
+    "authors": [
+      "Henryk Sienkiewicz",
+      "Martin Fowler"
+    ],
+    "categories": [
+      "Literatura piękna"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-05-30T09:00:00.000Z",
+    "updatedAt": "2024-05-30T09:00:00.000Z"
+  },
+  {
+    "id": "57445d15-e4ae-4ead-b3e1-2bdfcb4e5b95",
+    "isbn": "978-24-1448-770-7",
+    "title": "Powrot krola",
+    "authors": [
+      "Franz Kafka"
+    ],
+    "categories": [
+      "Fizyka",
+      "Horror",
+      "Biografia"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 6,
+    "availableCopies": 5,
+    "createdAt": "2024-03-05T10:00:00.000Z",
+    "updatedAt": "2024-03-05T10:00:00.000Z"
+  },
+  {
+    "id": "53ed9ba8-447f-48fa-9963-a624a76503df",
+    "isbn": "978-23-9307-459-5",
+    "title": "Czarny labedz",
+    "authors": [
+      "Wladyslaw Reymont",
+      "Paulo Coelho"
+    ],
+    "categories": [
+      "Poradnik"
+    ],
+    "publishedYear": 2025,
+    "totalCopies": 12,
+    "availableCopies": 10,
+    "createdAt": "2024-10-07T09:00:00.000Z",
+    "updatedAt": "2024-10-07T09:00:00.000Z"
+  },
+  {
+    "id": "595641c8-e304-4b9f-90f1-c61ef13d6521",
+    "isbn": "978-50-3471-292-4",
+    "title": "Krzyzacy",
+    "authors": [
+      "Robert C. Martin"
+    ],
+    "categories": [
+      "Socjologia",
+      "Thriller",
+      "Psychologia"
+    ],
+    "publishedYear": 2014,
+    "totalCopies": 15,
+    "availableCopies": 15,
+    "createdAt": "2024-02-09T10:00:00.000Z",
+    "updatedAt": "2024-02-09T10:00:00.000Z"
+  },
+  {
+    "id": "c29ffcdf-ed49-41af-8275-229555c414ed",
+    "isbn": "978-53-7230-485-8",
+    "title": "Dziady",
+    "authors": [
+      "Stefan Zeromski"
+    ],
+    "categories": [
+      "Ekonomia",
+      "Kryminał",
+      "Reportaz"
+    ],
+    "publishedYear": 1984,
+    "totalCopies": 1,
+    "availableCopies": 1,
+    "createdAt": "2024-12-23T10:00:00.000Z",
+    "updatedAt": "2024-12-23T10:00:00.000Z"
+  },
+  {
+    "id": "c0ff3238-e3ef-4376-b20e-3da96b5ffaa5",
+    "isbn": "978-61-6256-443-2",
+    "title": "Dune",
+    "authors": [
+      "Kent Beck"
+    ],
+    "categories": [
+      "Kryminał",
+      "Matematyka",
+      "Literatura piękna"
+    ],
+    "publishedYear": 1998,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-07-07T09:00:00.000Z",
+    "updatedAt": "2024-07-07T09:00:00.000Z"
+  },
+  {
+    "id": "545632b6-d05b-44d2-a11b-9dfe3b676ec7",
+    "isbn": "978-40-1351-146-4",
+    "title": "Kafka nad morzem",
+    "authors": [
+      "Terry Pratchett"
+    ],
+    "categories": [
+      "Dramat"
+    ],
+    "publishedYear": 1981,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-05-21T09:00:00.000Z",
+    "updatedAt": "2024-05-21T09:00:00.000Z"
+  },
+  {
+    "id": "9704a322-8357-4a29-a23b-b56f448c919a",
+    "isbn": "978-97-2631-189-2",
+    "title": "Biologia molekularna",
+    "authors": [
+      "Haruki Murakami",
+      "Carl Sagan"
+    ],
+    "categories": [
+      "Reportaz"
+    ],
+    "publishedYear": 2007,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-05-30T09:00:00.000Z",
+    "updatedAt": "2024-05-30T09:00:00.000Z"
+  },
+  {
+    "id": "e883d381-4561-47a2-a037-2ed868e1535a",
+    "isbn": "978-29-9781-682-8",
+    "title": "Pratchett: Piaty elephant",
+    "authors": [
+      "Boleslaw Prus"
+    ],
+    "categories": [
+      "Poradnik"
+    ],
+    "publishedYear": 2012,
+    "totalCopies": 1,
+    "availableCopies": 0,
+    "createdAt": "2024-05-15T09:00:00.000Z",
+    "updatedAt": "2024-05-15T09:00:00.000Z"
+  },
+  {
+    "id": "636b55ab-0cc8-4af3-a2e1-f10b18f74cf2",
+    "isbn": "978-38-3021-651-1",
+    "title": "Superfreakonomia",
+    "authors": [
+      "Boleslaw Prus",
+      "Philip K. Dick"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Fizyka"
+    ],
+    "publishedYear": 1973,
+    "totalCopies": 12,
+    "availableCopies": 9,
+    "createdAt": "2024-07-29T09:00:00.000Z",
+    "updatedAt": "2024-07-29T09:00:00.000Z"
+  },
+  {
+    "id": "94e8401a-689c-40f9-90c4-540b1e3ef0c2",
+    "isbn": "978-29-1118-123-1",
+    "title": "Zanim zasne",
+    "authors": [
+      "Stephen Hawking",
+      "Terry Pratchett"
+    ],
+    "categories": [
+      "Filozofia"
+    ],
+    "publishedYear": 2002,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-08-14T09:00:00.000Z",
+    "updatedAt": "2024-08-14T09:00:00.000Z"
+  },
+  {
+    "id": "db64ccae-f167-4689-82e9-d2b8230a99f2",
+    "isbn": "978-92-1198-519-4",
+    "title": "Chrzest ognia",
+    "authors": [
+      "Steve McConnell"
+    ],
+    "categories": [
+      "Informatyka"
+    ],
+    "publishedYear": 1976,
+    "totalCopies": 10,
+    "availableCopies": 7,
+    "createdAt": "2024-09-13T09:00:00.000Z",
+    "updatedAt": "2024-09-13T09:00:00.000Z"
+  },
+  {
+    "id": "7f483a4d-5490-4214-bef2-827d4826c0d9",
+    "isbn": "978-27-8387-226-0",
+    "title": "Ballady i romanse",
+    "authors": [
+      "Kazuo Ishiguro",
+      "Henryk Sienkiewicz"
+    ],
+    "categories": [
+      "Fizyka",
+      "Socjologia"
+    ],
+    "publishedYear": 1984,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-10-25T09:00:00.000Z",
+    "updatedAt": "2024-10-25T09:00:00.000Z"
+  },
+  {
+    "id": "928ead14-331e-4b1d-af2a-445556d46caf",
+    "isbn": "978-98-2370-120-6",
+    "title": "Atlas zbuntowany",
+    "authors": [
+      "George R.R. Martin",
+      "Carl Sagan"
+    ],
+    "categories": [
+      "Dramat"
+    ],
+    "publishedYear": 1974,
+    "totalCopies": 5,
+    "availableCopies": 4,
+    "createdAt": "2024-05-17T09:00:00.000Z",
+    "updatedAt": "2024-05-17T09:00:00.000Z"
+  },
+  {
+    "id": "e10f1226-3c6c-4700-8317-e40414d757d0",
+    "isbn": "978-98-3861-491-8",
+    "title": "Homo Deus",
+    "authors": [
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Psychologia",
+      "Matematyka"
+    ],
+    "publishedYear": 2020,
+    "totalCopies": 6,
+    "availableCopies": 6,
+    "createdAt": "2024-03-01T10:00:00.000Z",
+    "updatedAt": "2024-03-01T10:00:00.000Z"
+  },
+  {
+    "id": "cb64013d-4525-4232-8e23-9707ef2f898c",
+    "isbn": "978-33-8400-930-4",
+    "title": "Krotka historia prawie wszystkiego",
+    "authors": [
+      "Steve McConnell"
+    ],
+    "categories": [
+      "Dramat",
+      "Historia",
+      "Reportaz"
+    ],
+    "publishedYear": 1999,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-11-09T10:00:00.000Z",
+    "updatedAt": "2024-11-09T10:00:00.000Z"
+  },
+  {
+    "id": "70ccd0d1-1c3f-40b2-8f6a-998a4932940c",
+    "isbn": "978-29-2160-244-5",
+    "title": "Gloriam victis",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Dramat",
+      "Sci-Fi",
+      "Fantasy"
+    ],
+    "publishedYear": 2025,
+    "totalCopies": 11,
+    "availableCopies": 11,
+    "createdAt": "2024-04-07T09:00:00.000Z",
+    "updatedAt": "2024-04-07T09:00:00.000Z"
+  },
+  {
+    "id": "bc5a74f0-a8af-4fbf-9ad2-08c7dfdcd158",
+    "isbn": "978-79-2623-141-8",
+    "title": "Kolor magii",
+    "authors": [
+      "Terry Pratchett",
+      "Robert C. Martin"
+    ],
+    "categories": [
+      "Edukacja"
+    ],
+    "publishedYear": 1985,
+    "totalCopies": 10,
+    "availableCopies": 7,
+    "createdAt": "2024-04-24T09:00:00.000Z",
+    "updatedAt": "2024-04-24T09:00:00.000Z"
+  },
+  {
+    "id": "bfd041b8-b567-4e71-aada-a8f384f4f9a0",
+    "isbn": "978-21-7946-932-7",
+    "title": "Proces",
+    "authors": [
+      "Thomas H. Cormen",
+      "Robert C. Martin"
+    ],
+    "categories": [
+      "Psychologia",
+      "Edukacja"
+    ],
+    "publishedYear": 1980,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2024-12-16T10:00:00.000Z",
+    "updatedAt": "2024-12-16T10:00:00.000Z"
+  },
+  {
+    "id": "0d29aa24-d233-4895-8aed-a4b320744165",
+    "isbn": "978-34-8765-115-9",
+    "title": "Eden 2",
+    "authors": [
+      "Wladyslaw Reymont"
+    ],
+    "categories": [
+      "Fizyka"
+    ],
+    "publishedYear": 1977,
+    "totalCopies": 3,
+    "availableCopies": 2,
+    "createdAt": "2024-01-27T10:00:00.000Z",
+    "updatedAt": "2024-01-27T10:00:00.000Z"
+  },
+  {
+    "id": "2b75bb46-0a30-40d5-b9e6-b07e33785dca",
+    "isbn": "978-77-5594-738-6",
+    "title": "Pornografia",
+    "authors": [
+      "George R.R. Martin",
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Socjologia",
+      "Informatyka",
+      "Dramat"
+    ],
+    "publishedYear": 1997,
+    "totalCopies": 14,
+    "availableCopies": 13,
+    "createdAt": "2024-11-13T10:00:00.000Z",
+    "updatedAt": "2024-11-13T10:00:00.000Z"
+  },
+  {
+    "id": "c7bcb56c-8e10-47a8-af86-68b2a91ec862",
+    "isbn": "978-58-2037-350-7",
+    "title": "Inzynieria oprogramowania",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Poezja",
+      "Sztuka"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 1,
+    "availableCopies": 0,
+    "createdAt": "2024-03-12T10:00:00.000Z",
+    "updatedAt": "2024-03-12T10:00:00.000Z"
+  },
+  {
+    "id": "8353741c-4a0a-4a5b-be28-be2b08d8fc0a",
+    "isbn": "978-74-2716-602-6",
+    "title": "Zderzenie cywilizacji",
+    "authors": [
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Poradnik",
+      "Biografia",
+      "Socjologia"
+    ],
+    "publishedYear": 1990,
+    "totalCopies": 11,
+    "availableCopies": 11,
+    "createdAt": "2024-09-08T09:00:00.000Z",
+    "updatedAt": "2024-09-08T09:00:00.000Z"
+  },
+  {
+    "id": "86f73766-89b2-4561-a2df-caf1e2a09a06",
+    "isbn": "978-55-6052-380-9",
+    "title": "Puentarenas",
+    "authors": [
+      "Steve McConnell",
+      "Brunon Schulz"
+    ],
+    "categories": [
+      "Fantasy",
+      "Fizyka"
+    ],
+    "publishedYear": 2017,
+    "totalCopies": 1,
+    "availableCopies": 1,
+    "createdAt": "2023-12-01T10:00:00.000Z",
+    "updatedAt": "2023-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "d0b09208-4153-4007-856f-8eecd9cff8aa",
+    "isbn": "978-98-6886-709-2",
+    "title": "Alchemia",
+    "authors": [
+      "Martin Fowler",
+      "Boleslaw Prus"
+    ],
+    "categories": [
+      "Fizyka",
+      "Chemia",
+      "Powiest"
+    ],
+    "publishedYear": 1998,
+    "totalCopies": 11,
+    "availableCopies": 11,
+    "createdAt": "2024-11-04T10:00:00.000Z",
+    "updatedAt": "2024-11-04T10:00:00.000Z"
+  },
+  {
+    "id": "8a7657d3-6f09-4afb-889c-4e25a53cfdb7",
+    "isbn": "978-21-5576-848-7",
+    "title": "Tajemnica Siedmiu Cyferblatow",
+    "authors": [
+      "Gabriel Garcia Marquez",
+      "Martin Fowler"
+    ],
+    "categories": [
+      "Chemia",
+      "Sci-Fi"
+    ],
+    "publishedYear": 2012,
+    "totalCopies": 7,
+    "availableCopies": 7,
+    "createdAt": "2024-12-01T10:00:00.000Z",
+    "updatedAt": "2024-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "3af325c1-c292-4fb4-ab11-50cc9d48018e",
+    "isbn": "978-10-7013-942-2",
+    "title": "Zaciemnienie",
+    "authors": [
+      "Gabriel Garcia Marquez",
+      "Henryk Sienkiewicz"
+    ],
+    "categories": [
+      "Thriller"
+    ],
+    "publishedYear": 1990,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-07-02T09:00:00.000Z",
+    "updatedAt": "2024-07-02T09:00:00.000Z"
+  },
+  {
+    "id": "d46e1607-3b3f-48a6-b87a-fa0b81fb2732",
+    "isbn": "978-66-8510-606-9",
+    "title": "Gracz",
+    "authors": [
+      "Andrew Hunt"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Ekonomia",
+      "Fizyka"
+    ],
+    "publishedYear": 2004,
+    "totalCopies": 2,
+    "availableCopies": 0,
+    "createdAt": "2024-06-17T09:00:00.000Z",
+    "updatedAt": "2024-06-17T09:00:00.000Z"
+  },
+  {
+    "id": "182eb238-0962-41f9-9649-8935da137ba6",
+    "isbn": "978-74-8179-394-9",
+    "title": "Po tej stronie raju",
+    "authors": [
+      "Umberto Eco"
+    ],
+    "categories": [
+      "Horror",
+      "Ekonomia",
+      "Psychologia"
+    ],
+    "publishedYear": 1988,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-11-29T10:00:00.000Z",
+    "updatedAt": "2024-11-29T10:00:00.000Z"
+  },
+  {
+    "id": "c8b747a9-790a-45e2-80d7-a7b7ee2efe40",
+    "isbn": "978-69-9914-448-4",
+    "title": "Ekonomia behawioralna",
+    "authors": [
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Psychologia",
+      "Informatyka",
+      "Biografia"
+    ],
+    "publishedYear": 2020,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-06-14T09:00:00.000Z",
+    "updatedAt": "2024-06-14T09:00:00.000Z"
+  },
+  {
+    "id": "1180279d-c650-46a0-a786-bf64c8ef0563",
+    "isbn": "978-62-7483-986-7",
+    "title": "Jesienny patriarcha",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Dramat"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-05-24T09:00:00.000Z",
+    "updatedAt": "2024-05-24T09:00:00.000Z"
+  },
+  {
+    "id": "09df03d5-8a0f-464d-a47f-8b2a6a60d6b1",
+    "isbn": "978-91-6140-657-9",
+    "title": "Bog Imperator Diuny",
+    "authors": [
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Poradnik"
+    ],
+    "publishedYear": 2018,
+    "totalCopies": 6,
+    "availableCopies": 6,
+    "createdAt": "2024-04-13T09:00:00.000Z",
+    "updatedAt": "2024-04-13T09:00:00.000Z"
+  },
+  {
+    "id": "a8c19552-12eb-439c-b66c-2b07966484b2",
+    "isbn": "978-25-2295-178-7",
+    "title": "Zabic drozda",
+    "authors": [
+      "Olga Tokarczuk"
+    ],
+    "categories": [
+      "Powiest",
+      "Sztuka",
+      "Literatura piękna"
+    ],
+    "publishedYear": 1979,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2023-12-12T10:00:00.000Z",
+    "updatedAt": "2023-12-12T10:00:00.000Z"
+  },
+  {
+    "id": "07c480ef-7a6e-4893-9e96-1f2827372028",
+    "isbn": "978-55-1910-962-0",
+    "title": "Dom lancuchow",
+    "authors": [
+      "Arthur C. Clarke",
+      "Brunon Schulz"
+    ],
+    "categories": [
+      "Filozofia",
+      "Historia",
+      "Dramat"
+    ],
+    "publishedYear": 2024,
+    "totalCopies": 13,
+    "availableCopies": 13,
+    "createdAt": "2024-01-16T10:00:00.000Z",
+    "updatedAt": "2024-01-16T10:00:00.000Z"
+  },
+  {
+    "id": "c495a925-ea02-41ca-82e1-c9d615d338c7",
+    "isbn": "978-90-1203-598-0",
+    "title": "Na wschod od Edenu",
+    "authors": [
+      "Richard Dawkins",
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Fantasy",
+      "Biografia"
+    ],
+    "publishedYear": 2012,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-02-27T10:00:00.000Z",
+    "updatedAt": "2024-02-27T10:00:00.000Z"
+  },
+  {
+    "id": "b092e6cc-856a-4215-9fa5-3f8bd99480b3",
+    "isbn": "978-52-5603-576-7",
+    "title": "Gra o tron",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "categories": [
+      "Matematyka",
+      "Sci-Fi"
+    ],
+    "publishedYear": 2023,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-04-24T09:00:00.000Z",
+    "updatedAt": "2024-04-24T09:00:00.000Z"
+  },
+  {
+    "id": "63711af7-7dea-4eb7-8f52-015f6e6bd492",
+    "isbn": "978-63-7286-564-1",
+    "title": "451 stopni Fahrenheita",
+    "authors": [
+      "Haruki Murakami",
+      "Richard Dawkins"
+    ],
+    "categories": [
+      "Powiest",
+      "Ekonomia",
+      "Chemia"
+    ],
+    "publishedYear": 1993,
+    "totalCopies": 1,
+    "availableCopies": 0,
+    "createdAt": "2024-06-23T09:00:00.000Z",
+    "updatedAt": "2024-06-23T09:00:00.000Z"
+  },
+  {
+    "id": "46da1de2-0b30-46fa-8da4-4ba0fbeff5a2",
+    "isbn": "978-44-7905-703-7",
+    "title": "Krew elfow",
+    "authors": [
+      "J.R.R. Tolkien"
+    ],
+    "categories": [
+      "Matematyka"
+    ],
+    "publishedYear": 1970,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-09-24T09:00:00.000Z",
+    "updatedAt": "2024-09-24T09:00:00.000Z"
+  },
+  {
+    "id": "95247088-a339-4f1b-b0d2-463c49293a4e",
+    "isbn": "978-74-2065-553-1",
+    "title": "Faraon",
+    "authors": [
+      "Donald E. Knuth",
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Thriller",
+      "Kryminał"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 1,
+    "availableCopies": 0,
+    "createdAt": "2024-02-04T10:00:00.000Z",
+    "updatedAt": "2024-02-04T10:00:00.000Z"
+  },
+  {
+    "id": "963be759-0258-4f65-bbc1-7f1a0d2d7c63",
+    "isbn": "978-16-5979-609-8",
+    "title": "Zarzadzanie projektem",
+    "authors": [
+      "Paulo Coelho"
+    ],
+    "categories": [
+      "Fizyka"
+    ],
+    "publishedYear": 1999,
+    "totalCopies": 6,
+    "availableCopies": 6,
+    "createdAt": "2024-08-21T09:00:00.000Z",
+    "updatedAt": "2024-08-21T09:00:00.000Z"
+  },
+  {
+    "id": "295a0eab-143b-433c-b0d5-296ded35444d",
+    "isbn": "978-87-9436-805-4",
+    "title": "Jo Nesbo: Karaluch",
+    "authors": [
+      "Gabriel Garcia Marquez",
+      "Fyodor Dostoevsky"
+    ],
+    "categories": [
+      "Biografia",
+      "Powiest"
+    ],
+    "publishedYear": 1987,
+    "totalCopies": 8,
+    "availableCopies": 7,
+    "createdAt": "2024-02-12T10:00:00.000Z",
+    "updatedAt": "2024-02-12T10:00:00.000Z"
+  },
+  {
+    "id": "4c028c99-9640-4324-85ba-52c37c62377a",
+    "isbn": "978-78-4993-358-8",
+    "title": "Historia sztuki",
+    "authors": [
+      "Andrew Hunt"
+    ],
+    "categories": [
+      "Reportaz"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 5,
+    "availableCopies": 4,
+    "createdAt": "2024-02-10T10:00:00.000Z",
+    "updatedAt": "2024-02-10T10:00:00.000Z"
+  },
+  {
+    "id": "94afa2b6-3ece-48f7-9bd6-a202ce5df802",
+    "isbn": "978-68-6813-899-0",
+    "title": "Freakonomia",
+    "authors": [
+      "Richard Dawkins"
+    ],
+    "categories": [
+      "Edukacja",
+      "Thriller",
+      "Reportaz"
+    ],
+    "publishedYear": 2009,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-04-01T09:00:00.000Z",
+    "updatedAt": "2024-04-01T09:00:00.000Z"
+  },
+  {
+    "id": "138b285e-13e5-4783-929d-05e5a9858160",
+    "isbn": "978-47-8128-451-3",
+    "title": "Summa Technologiae",
+    "authors": [
+      "Martin Fowler"
+    ],
+    "categories": [
+      "Socjologia",
+      "Historia"
+    ],
+    "publishedYear": 2000,
+    "totalCopies": 8,
+    "availableCopies": 7,
+    "createdAt": "2024-06-01T09:00:00.000Z",
+    "updatedAt": "2024-06-01T09:00:00.000Z"
+  },
+  {
+    "id": "bb1f19d8-5d66-4333-b542-1e54b261cbb1",
+    "isbn": "978-34-9722-289-8",
+    "title": "Zbieznosc aniola",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "categories": [
+      "Powiest"
+    ],
+    "publishedYear": 1987,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-08-03T09:00:00.000Z",
+    "updatedAt": "2024-08-03T09:00:00.000Z"
+  },
+  {
+    "id": "d8e57458-7b2f-42c8-8ee8-eabbc8fc57d9",
+    "isbn": "978-57-2849-756-1",
+    "title": "Miasteczko Salem",
+    "authors": [
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Poradnik"
+    ],
+    "publishedYear": 1984,
+    "totalCopies": 12,
+    "availableCopies": 10,
+    "createdAt": "2024-04-14T09:00:00.000Z",
+    "updatedAt": "2024-04-14T09:00:00.000Z"
+  },
+  {
+    "id": "75f77212-6605-49bb-933f-6c5148e57908",
+    "isbn": "978-23-1967-481-8",
+    "title": "Mesjasz Diuny",
+    "authors": [
+      "Henryk Sienkiewicz"
+    ],
+    "categories": [
+      "Ekonomia",
+      "Historia"
+    ],
+    "publishedYear": 1998,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-08-19T09:00:00.000Z",
+    "updatedAt": "2024-08-19T09:00:00.000Z"
+  },
+  {
+    "id": "b73cf3e8-3ca3-488b-b1b4-ac00c9bbe2b6",
+    "isbn": "978-66-2765-439-6",
+    "title": "Quo Vadis",
+    "authors": [
+      "Terry Pratchett",
+      "J.K. Rowling"
+    ],
+    "categories": [
+      "Poradnik",
+      "Historia"
+    ],
+    "publishedYear": 2018,
+    "totalCopies": 15,
+    "availableCopies": 14,
+    "createdAt": "2024-04-27T09:00:00.000Z",
+    "updatedAt": "2024-04-27T09:00:00.000Z"
+  },
+  {
+    "id": "fd841b3e-99c1-46d0-a032-9bf59f1ef9a8",
+    "isbn": "978-21-8142-533-9",
+    "title": "Imie rozy",
+    "authors": [
+      "Stephen Hawking",
+      "Gabriel Garcia Marquez"
+    ],
+    "categories": [
+      "Filozofia"
+    ],
+    "publishedYear": 1982,
+    "totalCopies": 3,
+    "availableCopies": 1,
+    "createdAt": "2024-06-21T09:00:00.000Z",
+    "updatedAt": "2024-06-21T09:00:00.000Z"
+  },
+  {
+    "id": "42b7dad6-c251-4504-b9ef-e16dade0a6e5",
+    "isbn": "978-51-6213-208-4",
+    "title": "Klucz do krolestwa",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Horror",
+      "Powiest",
+      "Kryminał"
+    ],
+    "publishedYear": 2007,
+    "totalCopies": 11,
+    "availableCopies": 11,
+    "createdAt": "2024-12-02T10:00:00.000Z",
+    "updatedAt": "2024-12-02T10:00:00.000Z"
+  },
+  {
+    "id": "50535ee0-798c-498a-a212-269b752db8d6",
+    "isbn": "978-23-3320-393-0",
+    "title": "Sto lat samotnosci",
+    "authors": [
+      "Philip K. Dick",
+      "Arthur C. Clarke"
+    ],
+    "categories": [
+      "Ekonomia"
+    ],
+    "publishedYear": 2018,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-03-15T10:00:00.000Z",
+    "updatedAt": "2024-03-15T10:00:00.000Z"
+  },
+  {
+    "id": "84fb505f-ba3b-469f-9f8a-abb1725c9e84",
+    "isbn": "978-54-4529-958-7",
+    "title": "Przygody Sherlocka Holmesa",
+    "authors": [
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Dla dzieci"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-05-20T09:00:00.000Z",
+    "updatedAt": "2024-05-20T09:00:00.000Z"
+  },
+  {
+    "id": "ee1af7ec-8661-4e0a-8b78-2b1870405e3f",
+    "isbn": "978-90-3259-647-2",
+    "title": "Hobbit",
+    "authors": [
+      "Carl Sagan",
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Fizyka",
+      "Ekonomia"
+    ],
+    "publishedYear": 2013,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-08-02T09:00:00.000Z",
+    "updatedAt": "2024-08-02T09:00:00.000Z"
+  },
+  {
+    "id": "37e38d5f-3fea-4a97-b78b-c59a2f538752",
+    "isbn": "978-67-8501-427-3",
+    "title": "Dwie wieze",
+    "authors": [
+      "Philip K. Dick",
+      "J.K. Rowling"
+    ],
+    "categories": [
+      "Poezja",
+      "Powiest",
+      "Informatyka"
+    ],
+    "publishedYear": 2011,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-09-29T09:00:00.000Z",
+    "updatedAt": "2024-09-29T09:00:00.000Z"
+  },
+  {
+    "id": "d75745ba-bd53-4fa6-86c1-95de7d57899c",
+    "isbn": "978-97-6452-578-6",
+    "title": "Wieza jaskolki",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "categories": [
+      "Poezja",
+      "Historia"
+    ],
+    "publishedYear": 1996,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-04-25T09:00:00.000Z",
+    "updatedAt": "2024-04-25T09:00:00.000Z"
+  },
+  {
+    "id": "34a81a8b-a6e5-457e-a40f-87d9f555b65e",
+    "isbn": "978-89-4832-555-4",
+    "title": "Powrot z gwiazd 2",
+    "authors": [
+      "Donald E. Knuth"
+    ],
+    "categories": [
+      "Socjologia"
+    ],
+    "publishedYear": 1998,
+    "totalCopies": 3,
+    "availableCopies": 2,
+    "createdAt": "2024-01-24T10:00:00.000Z",
+    "updatedAt": "2024-01-24T10:00:00.000Z"
+  },
+  {
+    "id": "eab6a1f0-4de0-420c-a418-c002598fe8ba",
+    "isbn": "978-99-7578-767-7",
+    "title": "Zemsta czarnoksiaznika",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Fizyka",
+      "Dla dzieci",
+      "Sci-Fi"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 9,
+    "availableCopies": 8,
+    "createdAt": "2024-07-10T09:00:00.000Z",
+    "updatedAt": "2024-07-10T09:00:00.000Z"
+  },
+  {
+    "id": "52edee81-65be-4ab0-9e52-aedc9a4e289f",
+    "isbn": "978-11-9054-149-7",
+    "title": "Pani jeziora extra",
+    "authors": [
+      "George R.R. Martin",
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Socjologia"
+    ],
+    "publishedYear": 1995,
+    "totalCopies": 13,
+    "availableCopies": 12,
+    "createdAt": "2024-07-31T09:00:00.000Z",
+    "updatedAt": "2024-07-31T09:00:00.000Z"
+  },
+  {
+    "id": "f85e6e35-b557-41a1-a1da-2906d00f5bfc",
+    "isbn": "978-47-8832-414-6",
+    "title": "Baudolino",
+    "authors": [
+      "Steve McConnell",
+      "Ryszard Kapuscinski"
+    ],
+    "categories": [
+      "Fantasy",
+      "Socjologia"
+    ],
+    "publishedYear": 2023,
+    "totalCopies": 6,
+    "availableCopies": 4,
+    "createdAt": "2023-12-07T10:00:00.000Z",
+    "updatedAt": "2023-12-07T10:00:00.000Z"
+  },
+  {
+    "id": "93993d5c-bd40-4879-b129-67b2ab7774df",
+    "isbn": "978-83-8032-523-0",
+    "title": "Powrot z gwiazd",
+    "authors": [
+      "Olga Tokarczuk",
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Matematyka",
+      "Poradnik",
+      "Fizyka"
+    ],
+    "publishedYear": 2010,
+    "totalCopies": 7,
+    "availableCopies": 7,
+    "createdAt": "2024-07-29T09:00:00.000Z",
+    "updatedAt": "2024-07-29T09:00:00.000Z"
+  },
+  {
+    "id": "b70cd492-89bf-41f9-993f-ecf078eecd70",
+    "isbn": "978-69-8310-853-6",
+    "title": "Smierc na Nilu",
+    "authors": [
+      "Stanislaw Lem",
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Dramat",
+      "Literatura piękna"
+    ],
+    "publishedYear": 1973,
+    "totalCopies": 11,
+    "availableCopies": 10,
+    "createdAt": "2024-09-17T09:00:00.000Z",
+    "updatedAt": "2024-09-17T09:00:00.000Z"
+  },
+  {
+    "id": "2796c86f-5b44-469a-8f1f-3a61dc03f061",
+    "isbn": "978-77-7905-615-4",
+    "title": "Trans-Atlantyk",
+    "authors": [
+      "Thomas H. Cormen"
+    ],
+    "categories": [
+      "Socjologia",
+      "Sztuka"
+    ],
+    "publishedYear": 1971,
+    "totalCopies": 15,
+    "availableCopies": 15,
+    "createdAt": "2024-05-20T09:00:00.000Z",
+    "updatedAt": "2024-05-20T09:00:00.000Z"
+  },
+  {
+    "id": "8432bf3e-fb3e-406c-b8d5-62f7f6788841",
+    "isbn": "978-60-1092-345-3",
+    "title": "Zanim wzejdzie slonce",
+    "authors": [
+      "Wladyslaw Reymont",
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Fantasy",
+      "Biografia",
+      "Informatyka"
+    ],
+    "publishedYear": 1981,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-10-26T09:00:00.000Z",
+    "updatedAt": "2024-10-26T09:00:00.000Z"
+  },
+  {
+    "id": "a276dc7d-589d-4ece-9998-5e2ac6b08c0d",
+    "isbn": "978-49-2113-961-3",
+    "title": "Ferdydurke",
+    "authors": [
+      "Terry Pratchett",
+      "Gabriel Garcia Marquez"
+    ],
+    "categories": [
+      "Sztuka",
+      "Biografia"
+    ],
+    "publishedYear": 1992,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2024-11-11T10:00:00.000Z",
+    "updatedAt": "2024-11-11T10:00:00.000Z"
+  },
+  {
+    "id": "77f60608-632c-4a50-bf6c-10574972b635",
+    "isbn": "978-82-9614-608-8",
+    "title": "Kochankowie z Marony",
+    "authors": [
+      "Andrew Hunt"
+    ],
+    "categories": [
+      "Literatura piękna",
+      "Thriller",
+      "Reportaz"
+    ],
+    "publishedYear": 2017,
+    "totalCopies": 15,
+    "availableCopies": 14,
+    "createdAt": "2024-05-20T09:00:00.000Z",
+    "updatedAt": "2024-05-20T09:00:00.000Z"
+  },
+  {
+    "id": "e6f9a557-9d54-4eb3-a1fa-0e443e3a4570",
+    "isbn": "978-49-3386-846-5",
+    "title": "Historia Swiata",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Fantasy",
+      "Psychologia"
+    ],
+    "publishedYear": 1985,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2024-09-07T09:00:00.000Z",
+    "updatedAt": "2024-09-07T09:00:00.000Z"
+  },
+  {
+    "id": "bc39d4b3-d152-4793-aa3f-5c6e2630806c",
+    "isbn": "978-15-8773-434-6",
+    "title": "Statystyka",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Matematyka",
+      "Horror",
+      "Thriller"
+    ],
+    "publishedYear": 1991,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2024-12-27T10:00:00.000Z",
+    "updatedAt": "2024-12-27T10:00:00.000Z"
+  },
+  {
+    "id": "27975dd4-2ba0-4369-b768-11f781c94bef",
+    "isbn": "978-63-5437-116-2",
+    "title": "Grona gniewu",
+    "authors": [
+      "Henryk Sienkiewicz",
+      "Gabriel Garcia Marquez"
+    ],
+    "categories": [
+      "Socjologia"
+    ],
+    "publishedYear": 1973,
+    "totalCopies": 7,
+    "availableCopies": 7,
+    "createdAt": "2024-12-28T10:00:00.000Z",
+    "updatedAt": "2024-12-28T10:00:00.000Z"
+  },
+  {
+    "id": "4146d0c3-2429-453a-84b8-242d262a071e",
+    "isbn": "978-51-5284-269-7",
+    "title": "Niezwyciezony",
+    "authors": [
+      "Kent Beck"
+    ],
+    "categories": [
+      "Horror",
+      "Kryminał"
+    ],
+    "publishedYear": 2023,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-07-22T09:00:00.000Z",
+    "updatedAt": "2024-07-22T09:00:00.000Z"
+  },
+  {
+    "id": "4522ef7c-0f85-4e8e-a71a-9accfaaf62bf",
+    "isbn": "978-74-6395-574-4",
+    "title": "Starcie krolow",
+    "authors": [
+      "Frank Herbert",
+      "Stefan Zeromski"
+    ],
+    "categories": [
+      "Filozofia",
+      "Psychologia"
+    ],
+    "publishedYear": 1997,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-09-11T09:00:00.000Z",
+    "updatedAt": "2024-09-11T09:00:00.000Z"
+  },
+  {
+    "id": "2a384254-04be-4bb8-a0f3-3ae4f3c9a62c",
+    "isbn": "978-18-9736-381-6",
+    "title": "Harry Potter i komnata tajemnic",
+    "authors": [
+      "Fyodor Dostoevsky",
+      "Paulo Coelho"
+    ],
+    "categories": [
+      "Sztuka",
+      "Fizyka",
+      "Thriller"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 10,
+    "availableCopies": 8,
+    "createdAt": "2024-06-22T09:00:00.000Z",
+    "updatedAt": "2024-06-22T09:00:00.000Z"
+  },
+  {
+    "id": "2a2b7bbf-25a5-4964-a03e-c03511c398b2",
+    "isbn": "978-81-5384-155-6",
+    "title": "Bunt mas",
+    "authors": [
+      "Adam Mickiewicz",
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Kryminał",
+      "Poradnik"
+    ],
+    "publishedYear": 2025,
+    "totalCopies": 9,
+    "availableCopies": 7,
+    "createdAt": "2023-12-28T10:00:00.000Z",
+    "updatedAt": "2023-12-28T10:00:00.000Z"
+  },
+  {
+    "id": "623dc789-9287-4e77-a379-0dc93e48fe7e",
+    "isbn": "978-12-6295-592-2",
+    "title": "Sherlock Holmes - pies Baskervillow",
+    "authors": [
+      "Carl Sagan"
+    ],
+    "categories": [
+      "Poradnik",
+      "Psychologia"
+    ],
+    "publishedYear": 1996,
+    "totalCopies": 6,
+    "availableCopies": 6,
+    "createdAt": "2024-03-03T10:00:00.000Z",
+    "updatedAt": "2024-03-03T10:00:00.000Z"
+  },
+  {
+    "id": "983cc903-8e57-46e0-874d-448a2413dd7e",
+    "isbn": "978-31-3274-982-3",
+    "title": "O mysach i ludziach",
+    "authors": [
+      "Richard Dawkins"
+    ],
+    "categories": [
+      "Ekonomia",
+      "Thriller",
+      "Sci-Fi"
+    ],
+    "publishedYear": 1982,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-04-12T09:00:00.000Z",
+    "updatedAt": "2024-04-12T09:00:00.000Z"
+  },
+  {
+    "id": "dc1145c1-c8ad-43e4-b17c-4c763dfaf738",
+    "isbn": "978-11-7745-754-0",
+    "title": "Lsnienie",
+    "authors": [
+      "Boleslaw Prus",
+      "Donald E. Knuth"
+    ],
+    "categories": [
+      "Psychologia",
+      "Fantasy",
+      "Poradnik"
+    ],
+    "publishedYear": 2013,
+    "totalCopies": 15,
+    "availableCopies": 15,
+    "createdAt": "2024-10-31T10:00:00.000Z",
+    "updatedAt": "2024-10-31T10:00:00.000Z"
+  },
+  {
+    "id": "e3d0fb93-7c70-46f1-a99c-5470372111fa",
+    "isbn": "978-37-8997-354-7",
+    "title": "Atlas geograficzny",
+    "authors": [
+      "George R.R. Martin"
+    ],
+    "categories": [
+      "Historia",
+      "Informatyka",
+      "Biografia"
+    ],
+    "publishedYear": 2020,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-12-30T10:00:00.000Z",
+    "updatedAt": "2024-12-30T10:00:00.000Z"
+  },
+  {
+    "id": "a61aed36-55d1-488e-a3c0-68ef6bb8467f",
+    "isbn": "978-77-3810-603-0",
+    "title": "Absalom Absalom",
+    "authors": [
+      "Robert C. Martin"
+    ],
+    "categories": [
+      "Horror",
+      "Historia",
+      "Literatura piękna"
+    ],
+    "publishedYear": 2005,
+    "totalCopies": 4,
+    "availableCopies": 3,
+    "createdAt": "2024-11-05T10:00:00.000Z",
+    "updatedAt": "2024-11-05T10:00:00.000Z"
+  },
+  {
+    "id": "ca29c478-0280-4514-91a3-d25ea5f7602e",
+    "isbn": "978-49-6585-898-0",
+    "title": "Refaktoryzacja",
+    "authors": [
+      "George R.R. Martin",
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Poezja",
+      "Powiest",
+      "Edukacja"
+    ],
+    "publishedYear": 2016,
+    "totalCopies": 4,
+    "availableCopies": 3,
+    "createdAt": "2024-02-26T10:00:00.000Z",
+    "updatedAt": "2024-02-26T10:00:00.000Z"
+  },
+  {
+    "id": "f357d65a-35ad-44ae-bbfe-248c1e6cd56a",
+    "isbn": "978-88-7493-842-8",
+    "title": "Historia Polski",
+    "authors": [
+      "Carl Sagan",
+      "Terry Pratchett"
+    ],
+    "categories": [
+      "Matematyka",
+      "Biografia",
+      "Fantasy"
+    ],
+    "publishedYear": 1987,
+    "totalCopies": 11,
+    "availableCopies": 11,
+    "createdAt": "2023-12-30T10:00:00.000Z",
+    "updatedAt": "2023-12-30T10:00:00.000Z"
+  },
+  {
+    "id": "375b5716-d018-4c95-88f5-2281eb2899c8",
+    "isbn": "978-77-2474-224-6",
+    "title": "Swiatlo w sierpniu",
+    "authors": [
+      "Kazuo Ishiguro",
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Thriller",
+      "Dla dzieci",
+      "Chemia"
+    ],
+    "publishedYear": 1970,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2023-12-02T10:00:00.000Z",
+    "updatedAt": "2023-12-02T10:00:00.000Z"
+  },
+  {
+    "id": "6dc063ab-00fa-4797-89d2-488e8af90d5b",
+    "isbn": "978-43-9998-572-8",
+    "title": "Malazan: Ogrody Ksiezyca",
+    "authors": [
+      "Paulo Coelho",
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Thriller",
+      "Reportaz"
+    ],
+    "publishedYear": 1996,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-12-01T10:00:00.000Z",
+    "updatedAt": "2024-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "e1e6ede8-160b-416f-a15c-c55ba3c5c7b2",
+    "isbn": "978-37-1943-880-2",
+    "title": "Harry Potter i wiezien Azkabanu",
+    "authors": [
+      "Henryk Sienkiewicz"
+    ],
+    "categories": [
+      "Ekonomia"
+    ],
+    "publishedYear": 2007,
+    "totalCopies": 11,
+    "availableCopies": 10,
+    "createdAt": "2024-08-22T09:00:00.000Z",
+    "updatedAt": "2024-08-22T09:00:00.000Z"
+  },
+  {
+    "id": "5d17515e-973a-48ee-be85-fc4b73154a0d",
+    "isbn": "978-71-4268-712-2",
+    "title": "Ostatni magnat",
+    "authors": [
+      "Juliusz Slowacki",
+      "Boleslaw Prus"
+    ],
+    "categories": [
+      "Biografia",
+      "Filozofia"
+    ],
+    "publishedYear": 2018,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-01-04T10:00:00.000Z",
+    "updatedAt": "2024-01-04T10:00:00.000Z"
+  },
+  {
+    "id": "e3bd57e8-8812-42f4-a15e-9ced0fed28a8",
+    "isbn": "978-69-4420-191-8",
+    "title": "Bazy danych",
+    "authors": [
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Kryminał"
+    ],
+    "publishedYear": 1998,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-08-20T09:00:00.000Z",
+    "updatedAt": "2024-08-20T09:00:00.000Z"
+  },
+  {
+    "id": "d0f6216a-2673-43ac-8824-96be1b7347d7",
+    "isbn": "978-29-6233-243-0",
+    "title": "Nesbø: Czerwony gardziel",
+    "authors": [
+      "Arthur C. Clarke",
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Poezja",
+      "Matematyka",
+      "Dla dzieci"
+    ],
+    "publishedYear": 2023,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-08-18T09:00:00.000Z",
+    "updatedAt": "2024-08-18T09:00:00.000Z"
+  },
+  {
+    "id": "3c1168ec-d4ba-4d82-8065-f2084432f19b",
+    "isbn": "978-17-7289-931-5",
+    "title": "Fahrenheit 451",
+    "authors": [
+      "Kazuo Ishiguro",
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Ekonomia",
+      "Socjologia",
+      "Powiest"
+    ],
+    "publishedYear": 2020,
+    "totalCopies": 11,
+    "availableCopies": 11,
+    "createdAt": "2024-05-18T09:00:00.000Z",
+    "updatedAt": "2024-05-18T09:00:00.000Z"
+  },
+  {
+    "id": "48494caf-e1b9-4d29-b1b8-1dc3313956c7",
+    "isbn": "978-69-6020-635-6",
+    "title": "Zbrodnia i kara",
+    "authors": [
+      "Henryk Sienkiewicz"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Chemia"
+    ],
+    "publishedYear": 1982,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2023-12-20T10:00:00.000Z",
+    "updatedAt": "2023-12-20T10:00:00.000Z"
+  },
+  {
+    "id": "aa02c03e-2ccb-41f3-8b71-b9c88d163ee9",
+    "isbn": "978-94-7593-748-7",
+    "title": "Dziewczyna ktora igra z ogniem",
+    "authors": [
+      "Frank Herbert"
+    ],
+    "categories": [
+      "Reportaz",
+      "Sztuka",
+      "Horror"
+    ],
+    "publishedYear": 2017,
+    "totalCopies": 7,
+    "availableCopies": 5,
+    "createdAt": "2024-03-11T10:00:00.000Z",
+    "updatedAt": "2024-03-11T10:00:00.000Z"
+  },
+  {
+    "id": "ca6de63f-e5c5-4805-9db6-a550d766cd8d",
+    "isbn": "978-28-7264-801-3",
+    "title": "Algorytmy i struktury danych",
+    "authors": [
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Historia"
+    ],
+    "publishedYear": 2010,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-05-28T09:00:00.000Z",
+    "updatedAt": "2024-05-28T09:00:00.000Z"
+  },
+  {
+    "id": "47543288-f54c-4166-a74c-e2c09657fdfe",
+    "isbn": "978-98-3493-229-5",
+    "title": "Czas krotszy od mgnienia",
+    "authors": [
+      "Umberto Eco"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Dramat"
+    ],
+    "publishedYear": 1974,
+    "totalCopies": 12,
+    "availableCopies": 11,
+    "createdAt": "2024-12-16T10:00:00.000Z",
+    "updatedAt": "2024-12-16T10:00:00.000Z"
+  },
+  {
+    "id": "9ba7932c-438f-415a-a5a9-2c4d2ac23d67",
+    "isbn": "978-14-4935-675-5",
+    "title": "Agile",
+    "authors": [
+      "Umberto Eco",
+      "J.K. Rowling"
+    ],
+    "categories": [
+      "Horror",
+      "Thriller"
+    ],
+    "publishedYear": 2002,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-05-12T09:00:00.000Z",
+    "updatedAt": "2024-05-12T09:00:00.000Z"
+  },
+  {
+    "id": "b2c437b3-00a4-469e-a6e3-081cfb34b033",
+    "isbn": "978-93-9072-185-7",
+    "title": "Faulkner - Wrzask i furia",
+    "authors": [
+      "Haruki Murakami",
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Filozofia",
+      "Dramat",
+      "Literatura piękna"
+    ],
+    "publishedYear": 1984,
+    "totalCopies": 6,
+    "availableCopies": 4,
+    "createdAt": "2024-06-25T09:00:00.000Z",
+    "updatedAt": "2024-06-25T09:00:00.000Z"
+  },
+  {
+    "id": "98f00645-922b-4730-b6a1-2486a73cc389",
+    "isbn": "978-73-6725-742-1",
+    "title": "Wielki Gatsby",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "categories": [
+      "Poezja"
+    ],
+    "publishedYear": 2000,
+    "totalCopies": 14,
+    "availableCopies": 13,
+    "createdAt": "2024-05-10T09:00:00.000Z",
+    "updatedAt": "2024-05-10T09:00:00.000Z"
+  },
+  {
+    "id": "cbda1093-c64a-402c-9a47-a531f55ed92e",
+    "isbn": "978-55-6344-906-6",
+    "title": "Rzeka Eden",
+    "authors": [
+      "Boleslaw Prus",
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Sztuka",
+      "Dla dzieci",
+      "Fantasy"
+    ],
+    "publishedYear": 1980,
+    "totalCopies": 6,
+    "availableCopies": 6,
+    "createdAt": "2024-02-15T10:00:00.000Z",
+    "updatedAt": "2024-02-15T10:00:00.000Z"
+  },
+  {
+    "id": "e107ae9f-a988-4f30-849f-f3e9fb0d5476",
+    "isbn": "978-58-7952-968-2",
+    "title": "Ameryka",
+    "authors": [
+      "Erich Gamma"
+    ],
+    "categories": [
+      "Filozofia",
+      "Chemia",
+      "Powiest"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-07-28T09:00:00.000Z",
+    "updatedAt": "2024-07-28T09:00:00.000Z"
+  },
+  {
+    "id": "b1ef0cf8-ea53-45b3-85b0-5fbd513dcdf3",
+    "isbn": "978-73-9223-368-1",
+    "title": "Kroniki Wardstone",
+    "authors": [
+      "Henryk Sienkiewicz",
+      "Boleslaw Prus"
+    ],
+    "categories": [
+      "Psychologia",
+      "Historia"
+    ],
+    "publishedYear": 2020,
+    "totalCopies": 1,
+    "availableCopies": 1,
+    "createdAt": "2024-04-26T09:00:00.000Z",
+    "updatedAt": "2024-04-26T09:00:00.000Z"
+  },
+  {
+    "id": "be2662d8-97c5-4e4f-b0e8-55fb867939e5",
+    "isbn": "978-90-4201-891-6",
+    "title": "Koniec historii",
+    "authors": [
+      "Arthur C. Clarke",
+      "Boleslaw Prus"
+    ],
+    "categories": [
+      "Psychologia"
+    ],
+    "publishedYear": 2010,
+    "totalCopies": 3,
+    "availableCopies": 3,
+    "createdAt": "2024-10-23T09:00:00.000Z",
+    "updatedAt": "2024-10-23T09:00:00.000Z"
+  },
+  {
+    "id": "eab0aa1a-fa66-4ae0-bab7-bb3bc431d24f",
+    "isbn": "978-32-3462-922-7",
+    "title": "Kronika ptaka nakrecacza",
+    "authors": [
+      "Stanislaw Lem"
+    ],
+    "categories": [
+      "Horror"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-11-15T10:00:00.000Z",
+    "updatedAt": "2024-11-15T10:00:00.000Z"
+  },
+  {
+    "id": "0a4795f4-ba7e-4514-9733-51ed6b1ee199",
+    "isbn": "978-61-1808-984-6",
+    "title": "Algebra liniowa",
+    "authors": [
+      "Leo Tolstoy",
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Kryminał",
+      "Reportaz"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 8,
+    "availableCopies": 7,
+    "createdAt": "2023-11-28T10:00:00.000Z",
+    "updatedAt": "2023-11-28T10:00:00.000Z"
+  },
+  {
+    "id": "7ad78d6f-74d0-4ac8-ac01-220b46128172",
+    "isbn": "978-65-7562-443-8",
+    "title": "Larsson - Mezczyzni ktorzy nienawidza kobiet",
+    "authors": [
+      "Thomas H. Cormen",
+      "George R.R. Martin"
+    ],
+    "categories": [
+      "Biografia",
+      "Literatura piękna"
+    ],
+    "publishedYear": 2009,
+    "totalCopies": 9,
+    "availableCopies": 8,
+    "createdAt": "2024-01-08T10:00:00.000Z",
+    "updatedAt": "2024-01-08T10:00:00.000Z"
+  },
+  {
+    "id": "256ae60a-8d0a-4f5e-bd6a-3c32166a0b38",
+    "isbn": "978-24-8595-764-9",
+    "title": "Powrot do Millhaven",
+    "authors": [
+      "Andrew Hunt",
+      "Adam Mickiewicz"
+    ],
+    "categories": [
+      "Historia"
+    ],
+    "publishedYear": 2000,
+    "totalCopies": 7,
+    "availableCopies": 7,
+    "createdAt": "2024-01-03T10:00:00.000Z",
+    "updatedAt": "2024-01-03T10:00:00.000Z"
+  },
+  {
+    "id": "dd7b27ab-f58d-48b2-ba37-628c0ab4ddd4",
+    "isbn": "978-37-3001-367-4",
+    "title": "Stieg Larsson: Bibliotekarz",
+    "authors": [
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Ekonomia"
+    ],
+    "publishedYear": 1972,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-02-17T10:00:00.000Z",
+    "updatedAt": "2024-02-17T10:00:00.000Z"
+  },
+  {
+    "id": "b41cd21d-26c9-4bac-972c-32fc8eb84339",
+    "isbn": "978-36-2010-507-3",
+    "title": "Ja robot",
+    "authors": [
+      "Stanislaw Lem",
+      "J.K. Rowling"
+    ],
+    "categories": [
+      "Literatura piękna"
+    ],
+    "publishedYear": 2014,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-05-19T09:00:00.000Z",
+    "updatedAt": "2024-05-19T09:00:00.000Z"
+  },
+  {
+    "id": "2b82be6a-c2a5-4dee-9e1a-350bb0ae8268",
+    "isbn": "978-48-1736-981-1",
+    "title": "Czule jest noc",
+    "authors": [
+      "George R.R. Martin"
+    ],
+    "categories": [
+      "Edukacja",
+      "Filozofia"
+    ],
+    "publishedYear": 1988,
+    "totalCopies": 7,
+    "availableCopies": 7,
+    "createdAt": "2024-11-11T10:00:00.000Z",
+    "updatedAt": "2024-11-11T10:00:00.000Z"
+  },
+  {
+    "id": "87b05eff-9ab2-4d3f-9183-102a95eabc36",
+    "isbn": "978-61-4854-323-8",
+    "title": "Mistrz i Malgorzata",
+    "authors": [
+      "Andrzej Sapkowski",
+      "Paulo Coelho"
+    ],
+    "categories": [
+      "Fantasy"
+    ],
+    "publishedYear": 1979,
+    "totalCopies": 8,
+    "availableCopies": 8,
+    "createdAt": "2024-01-26T10:00:00.000Z",
+    "updatedAt": "2024-01-26T10:00:00.000Z"
+  },
+  {
+    "id": "5d8cb629-73bd-48c1-95a6-1f0a64f53ec0",
+    "isbn": "978-58-8754-754-7",
+    "title": "Czas pogardy",
+    "authors": [
+      "Isaac Asimov",
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Sci-Fi"
+    ],
+    "publishedYear": 2004,
+    "totalCopies": 13,
+    "availableCopies": 13,
+    "createdAt": "2024-03-19T10:00:00.000Z",
+    "updatedAt": "2024-03-19T10:00:00.000Z"
+  },
+  {
+    "id": "0ab5b023-bdf1-43b9-a582-bcc099de1800",
+    "isbn": "978-87-8374-715-6",
+    "title": "Chemia organiczna",
+    "authors": [
+      "Wladyslaw Reymont"
+    ],
+    "categories": [
+      "Fantasy",
+      "Filozofia",
+      "Ekonomia"
+    ],
+    "publishedYear": 2014,
+    "totalCopies": 14,
+    "availableCopies": 13,
+    "createdAt": "2023-12-23T10:00:00.000Z",
+    "updatedAt": "2023-12-23T10:00:00.000Z"
+  },
+  {
+    "id": "92d63f2d-1533-4de0-9aed-b8dd806d3ce9",
+    "isbn": "978-23-6768-153-6",
+    "title": "Harry Potter i ksiaze polkrwi",
+    "authors": [
+      "Brunon Schulz"
+    ],
+    "categories": [
+      "Matematyka",
+      "Sztuka",
+      "Edukacja"
+    ],
+    "publishedYear": 2002,
+    "totalCopies": 13,
+    "availableCopies": 13,
+    "createdAt": "2024-09-12T09:00:00.000Z",
+    "updatedAt": "2024-09-12T09:00:00.000Z"
+  },
+  {
+    "id": "fafe0127-5509-40d1-8a3b-d1c846817c81",
+    "isbn": "978-86-9305-475-0",
+    "title": "Bracia Karamazow",
+    "authors": [
+      "Juliusz Slowacki"
+    ],
+    "categories": [
+      "Dla dzieci",
+      "Sci-Fi"
+    ],
+    "publishedYear": 2016,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-07-10T09:00:00.000Z",
+    "updatedAt": "2024-07-10T09:00:00.000Z"
+  },
+  {
+    "id": "b44c5fce-b9b5-4867-986d-2b7607c75b03",
+    "isbn": "978-37-9104-232-7",
+    "title": "Norwegski las",
+    "authors": [
+      "Umberto Eco"
+    ],
+    "categories": [
+      "Edukacja",
+      "Chemia",
+      "Poradnik"
+    ],
+    "publishedYear": 2019,
+    "totalCopies": 1,
+    "availableCopies": 1,
+    "createdAt": "2024-09-03T09:00:00.000Z",
+    "updatedAt": "2024-09-03T09:00:00.000Z"
+  },
+  {
+    "id": "250bc0fd-a2ea-4517-befb-990e7c072ad1",
+    "isbn": "978-37-6587-709-6",
+    "title": "Fiasco",
+    "authors": [
+      "Boleslaw Prus",
+      "Donald E. Knuth"
+    ],
+    "categories": [
+      "Reportaz",
+      "Fizyka",
+      "Thriller"
+    ],
+    "publishedYear": 2024,
+    "totalCopies": 9,
+    "availableCopies": 7,
+    "createdAt": "2024-01-03T10:00:00.000Z",
+    "updatedAt": "2024-01-03T10:00:00.000Z"
+  },
+  {
+    "id": "afbdc548-b0ba-4889-92e4-0cad72f17c91",
+    "isbn": "978-23-9935-991-2",
+    "title": "Zamek z piasku ktory runal",
+    "authors": [
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Fizyka",
+      "Powiest"
+    ],
+    "publishedYear": 2016,
+    "totalCopies": 13,
+    "availableCopies": 13,
+    "createdAt": "2024-11-13T10:00:00.000Z",
+    "updatedAt": "2024-11-13T10:00:00.000Z"
+  },
+  {
+    "id": "46865fb1-3268-4cd9-9a15-4470dd3fa214",
+    "isbn": "978-15-6741-351-5",
+    "title": "Teoria gier",
+    "authors": [
+      "Olga Tokarczuk",
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Fizyka",
+      "Edukacja"
+    ],
+    "publishedYear": 2000,
+    "totalCopies": 10,
+    "availableCopies": 9,
+    "createdAt": "2024-05-11T09:00:00.000Z",
+    "updatedAt": "2024-05-11T09:00:00.000Z"
+  },
+  {
+    "id": "e57b1ebc-1572-466a-92ee-257dc10b456e",
+    "isbn": "978-14-3542-985-9",
+    "title": "Solaris",
+    "authors": [
+      "Boleslaw Prus"
+    ],
+    "categories": [
+      "Edukacja",
+      "Dla dzieci"
+    ],
+    "publishedYear": 2000,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-07-03T09:00:00.000Z",
+    "updatedAt": "2024-07-03T09:00:00.000Z"
+  },
+  {
+    "id": "1b0ce598-9b62-49c6-b5db-7facd3d9fade",
+    "isbn": "978-41-7393-387-9",
+    "title": "Rachunek prawdopodobienstwa",
+    "authors": [
+      "Paulo Coelho"
+    ],
+    "categories": [
+      "Psychologia",
+      "Powiest"
+    ],
+    "publishedYear": 1989,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-03-02T10:00:00.000Z",
+    "updatedAt": "2024-03-02T10:00:00.000Z"
+  },
+  {
+    "id": "ab12a949-fc1c-4855-91af-a1c57206e51b",
+    "isbn": "978-91-4229-234-8",
+    "title": "Wzorce projektowe",
+    "authors": [
+      "Robert C. Martin",
+      "Franz Kafka"
+    ],
+    "categories": [
+      "Poradnik",
+      "Psychologia"
+    ],
+    "publishedYear": 1995,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-05-01T09:00:00.000Z",
+    "updatedAt": "2024-05-01T09:00:00.000Z"
+  },
+  {
+    "id": "c8607f2c-dac0-4a6e-8a88-f271d99b1954",
+    "isbn": "978-98-7820-712-6",
+    "title": "Carrie",
+    "authors": [
+      "Thomas H. Cormen"
+    ],
+    "categories": [
+      "Fantasy",
+      "Powiest",
+      "Matematyka"
+    ],
+    "publishedYear": 1973,
+    "totalCopies": 11,
+    "availableCopies": 9,
+    "createdAt": "2024-04-06T09:00:00.000Z",
+    "updatedAt": "2024-04-06T09:00:00.000Z"
+  },
+  {
+    "id": "16d7de21-1613-488f-9114-352da8b40923",
+    "isbn": "978-34-1530-224-2",
+    "title": "Blask fantastyczny",
+    "authors": [
+      "Donald E. Knuth"
+    ],
+    "categories": [
+      "Horror",
+      "Ekonomia"
+    ],
+    "publishedYear": 1974,
+    "totalCopies": 3,
+    "availableCopies": 2,
+    "createdAt": "2024-01-24T10:00:00.000Z",
+    "updatedAt": "2024-01-24T10:00:00.000Z"
+  },
+  {
+    "id": "086a2a14-6b46-4b6a-b829-b1e99bc2bd85",
+    "isbn": "978-96-6133-189-1",
+    "title": "Skandal w Bohemii",
+    "authors": [
+      "Steve McConnell",
+      "Stanislaw Lem"
+    ],
+    "categories": [
+      "Literatura piękna"
+    ],
+    "publishedYear": 2012,
+    "totalCopies": 8,
+    "availableCopies": 8,
+    "createdAt": "2024-09-30T09:00:00.000Z",
+    "updatedAt": "2024-09-30T09:00:00.000Z"
+  },
+  {
+    "id": "00af3d88-4571-4b4b-b879-4d68c9112f25",
+    "isbn": "978-45-8958-561-2",
+    "title": "Zlo pod sloncem",
+    "authors": [
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Poradnik",
+      "Fizyka",
+      "Literatura piękna"
+    ],
+    "publishedYear": 2017,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2023-12-26T10:00:00.000Z",
+    "updatedAt": "2023-12-26T10:00:00.000Z"
+  },
+  {
+    "id": "c890512b-e0cd-4115-ab6b-54e8c724ef4b",
+    "isbn": "978-51-2712-703-7",
+    "title": "Dziewczyna z pociagu",
+    "authors": [
+      "Brunon Schulz"
+    ],
+    "categories": [
+      "Chemia",
+      "Literatura piękna",
+      "Dla dzieci"
+    ],
+    "publishedYear": 2018,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-02-09T10:00:00.000Z",
+    "updatedAt": "2024-02-09T10:00:00.000Z"
+  },
+  {
+    "id": "fdb20205-71df-4d11-97c6-093f0295049b",
+    "isbn": "978-87-8742-439-1",
+    "title": "Mgla",
+    "authors": [
+      "Boleslaw Prus",
+      "Wladyslaw Reymont"
+    ],
+    "categories": [
+      "Socjologia",
+      "Thriller"
+    ],
+    "publishedYear": 1972,
+    "totalCopies": 9,
+    "availableCopies": 8,
+    "createdAt": "2024-08-31T09:00:00.000Z",
+    "updatedAt": "2024-08-31T09:00:00.000Z"
+  },
+  {
+    "id": "5093d80e-828a-4018-bd9e-859af6ae7406",
+    "isbn": "978-72-5406-648-1",
+    "title": "Zahir",
+    "authors": [
+      "Thomas H. Cormen",
+      "J.K. Rowling"
+    ],
+    "categories": [
+      "Filozofia"
+    ],
+    "publishedYear": 1989,
+    "totalCopies": 7,
+    "availableCopies": 7,
+    "createdAt": "2024-09-10T09:00:00.000Z",
+    "updatedAt": "2024-09-10T09:00:00.000Z"
+  },
+  {
+    "id": "06440029-33b7-4750-a02b-0e831091a61f",
+    "isbn": "978-23-7380-555-6",
+    "title": "Nad Niemnem",
+    "authors": [
+      "Haruki Murakami",
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Informatyka"
+    ],
+    "publishedYear": 2016,
+    "totalCopies": 13,
+    "availableCopies": 12,
+    "createdAt": "2024-05-17T09:00:00.000Z",
+    "updatedAt": "2024-05-17T09:00:00.000Z"
+  },
+  {
+    "id": "dbed3af6-6fef-4ec9-96fd-655ac9c6140f",
+    "isbn": "978-96-9525-318-3",
+    "title": "Zrodlo",
+    "authors": [
+      "Gabriel Garcia Marquez"
+    ],
+    "categories": [
+      "Biografia"
+    ],
+    "publishedYear": 1982,
+    "totalCopies": 4,
+    "availableCopies": 3,
+    "createdAt": "2024-02-17T10:00:00.000Z",
+    "updatedAt": "2024-02-17T10:00:00.000Z"
+  },
+  {
+    "id": "655d303a-5391-4fbc-bc14-7e0446ace1ed",
+    "isbn": "978-13-8313-837-8",
+    "title": "Taniec ze smokami",
+    "authors": [
+      "Frank Herbert"
+    ],
+    "categories": [
+      "Historia"
+    ],
+    "publishedYear": 2019,
+    "totalCopies": 4,
+    "availableCopies": 3,
+    "createdAt": "2024-07-24T09:00:00.000Z",
+    "updatedAt": "2024-07-24T09:00:00.000Z"
+  },
+  {
+    "id": "4d6d3344-7afd-4334-8888-c58c9cfc0a1a",
+    "isbn": "978-58-4672-275-9",
+    "title": "Rzemioslo pisarskie",
+    "authors": [
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Poezja"
+    ],
+    "publishedYear": 2016,
+    "totalCopies": 13,
+    "availableCopies": 13,
+    "createdAt": "2024-12-05T10:00:00.000Z",
+    "updatedAt": "2024-12-05T10:00:00.000Z"
+  },
+  {
+    "id": "f6156f37-4dd4-4a0f-89fb-0db56cc27bd7",
+    "isbn": "978-92-4583-667-5",
+    "title": "Weronika postanawia umrzec",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Edukacja",
+      "Matematyka",
+      "Psychologia"
+    ],
+    "publishedYear": 1995,
+    "totalCopies": 12,
+    "availableCopies": 12,
+    "createdAt": "2024-08-11T09:00:00.000Z",
+    "updatedAt": "2024-08-11T09:00:00.000Z"
+  },
+  {
+    "id": "cd194a97-f3a6-4d31-8783-bf8c9f5421ed",
+    "isbn": "978-71-6608-724-9",
+    "title": "Ptaki ciernistych krzewy",
+    "authors": [
+      "Stefan Zeromski"
+    ],
+    "categories": [
+      "Socjologia",
+      "Psychologia"
+    ],
+    "publishedYear": 2010,
+    "totalCopies": 8,
+    "availableCopies": 7,
+    "createdAt": "2024-03-31T09:00:00.000Z",
+    "updatedAt": "2024-03-31T09:00:00.000Z"
+  },
+  {
+    "id": "a22eed5c-e161-4ffe-a686-74c5b6c0fd1a",
+    "isbn": "978-29-8680-394-0",
+    "title": "Larsson cz 4",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "categories": [
+      "Horror"
+    ],
+    "publishedYear": 1990,
+    "totalCopies": 8,
+    "availableCopies": 7,
+    "createdAt": "2024-04-26T09:00:00.000Z",
+    "updatedAt": "2024-04-26T09:00:00.000Z"
+  },
+  {
+    "id": "f1b31191-eee3-4278-a9fa-58a9764aa091",
+    "isbn": "978-67-8023-803-0",
+    "title": "Pragmatyczny programista",
+    "authors": [
+      "Kazuo Ishiguro",
+      "Olga Tokarczuk"
+    ],
+    "categories": [
+      "Kryminał"
+    ],
+    "publishedYear": 2012,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-10-28T10:00:00.000Z",
+    "updatedAt": "2024-10-28T10:00:00.000Z"
+  },
+  {
+    "id": "ef98f96c-33d5-40c7-a841-432ab2bf808a",
+    "isbn": "978-93-8004-548-6",
+    "title": "Dziesieciu malych Murzynkow",
+    "authors": [
+      "Gabriel Garcia Marquez"
+    ],
+    "categories": [
+      "Kryminał",
+      "Sztuka"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 6,
+    "availableCopies": 5,
+    "createdAt": "2024-12-27T10:00:00.000Z",
+    "updatedAt": "2024-12-27T10:00:00.000Z"
+  },
+  {
+    "id": "8121dbfd-cd0f-46da-9e47-b04589401533",
+    "isbn": "978-85-7741-744-1",
+    "title": "Jo Nesbo: Sniegowy czlowiek",
+    "authors": [
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Literatura piękna",
+      "Edukacja"
+    ],
+    "publishedYear": 2006,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-09-20T09:00:00.000Z",
+    "updatedAt": "2024-09-20T09:00:00.000Z"
+  },
+  {
+    "id": "9fc02ed5-7d61-4f34-8147-e1b8e20687e7",
+    "isbn": "978-58-4070-432-7",
+    "title": "Antek",
+    "authors": [
+      "Richard Dawkins",
+      "Olga Tokarczuk"
+    ],
+    "categories": [
+      "Fantasy",
+      "Poezja"
+    ],
+    "publishedYear": 2020,
+    "totalCopies": 1,
+    "availableCopies": 1,
+    "createdAt": "2024-06-29T09:00:00.000Z",
+    "updatedAt": "2024-06-29T09:00:00.000Z"
+  },
+  {
+    "id": "75365729-0b9f-4cac-a543-c5aae879746a",
+    "isbn": "978-14-1106-299-5",
+    "title": "Harry Potter i insygnia smierci",
+    "authors": [
+      "Arthur C. Clarke"
+    ],
+    "categories": [
+      "Socjologia",
+      "Fantasy"
+    ],
+    "publishedYear": 1972,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-12-13T10:00:00.000Z",
+    "updatedAt": "2024-12-13T10:00:00.000Z"
+  },
+  {
+    "id": "0011a208-d381-4ab2-bcb6-0064742f0cfd",
+    "isbn": "978-57-8274-196-7",
+    "title": "Astrofizyka",
+    "authors": [
+      "Brunon Schulz",
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Chemia",
+      "Horror",
+      "Filozofia"
+    ],
+    "publishedYear": 2001,
+    "totalCopies": 6,
+    "availableCopies": 6,
+    "createdAt": "2024-05-29T09:00:00.000Z",
+    "updatedAt": "2024-05-29T09:00:00.000Z"
+  },
+  {
+    "id": "35ab6cb7-1e2a-4d65-8fb3-f6e21dc33984",
+    "isbn": "978-70-7868-633-7",
+    "title": "Antykruchosc",
+    "authors": [
+      "Witold Gombrowicz",
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Poezja",
+      "Filozofia",
+      "Socjologia"
+    ],
+    "publishedYear": 1975,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-05-21T09:00:00.000Z",
+    "updatedAt": "2024-05-21T09:00:00.000Z"
+  },
+  {
+    "id": "9b60f25a-6c14-4da0-8602-1b36f0e2d523",
+    "isbn": "978-87-9621-900-1",
+    "title": "Nowy wspanialy swiat",
+    "authors": [
+      "Andrew Hunt",
+      "Robert C. Martin"
+    ],
+    "categories": [
+      "Literatura piękna"
+    ],
+    "publishedYear": 1982,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-04-13T09:00:00.000Z",
+    "updatedAt": "2024-04-13T09:00:00.000Z"
+  },
+  {
+    "id": "53f0695b-4b69-46d2-9e38-a0d89998a5f3",
+    "isbn": "978-52-5684-621-0",
+    "title": "Pierwsza prawa",
+    "authors": [
+      "Arthur C. Clarke",
+      "Boleslaw Prus"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Dramat"
+    ],
+    "publishedYear": 2018,
+    "totalCopies": 4,
+    "availableCopies": 3,
+    "createdAt": "2024-07-30T09:00:00.000Z",
+    "updatedAt": "2024-07-30T09:00:00.000Z"
+  },
+  {
+    "id": "247dc565-ddce-4514-961f-a7033d8b3e96",
+    "isbn": "978-66-4371-646-7",
+    "title": "Drugie pokolenie",
+    "authors": [
+      "Paulo Coelho",
+      "Haruki Murakami"
+    ],
+    "categories": [
+      "Fizyka"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2024-06-02T09:00:00.000Z",
+    "updatedAt": "2024-06-02T09:00:00.000Z"
+  },
+  {
+    "id": "af34e17d-929d-407e-bf66-c572754cb7c8",
+    "isbn": "978-65-4428-265-6",
+    "title": "Ostatni argument krolow",
+    "authors": [
+      "Yuval Noah Harari",
+      "Martin Fowler"
+    ],
+    "categories": [
+      "Sci-Fi",
+      "Historia"
+    ],
+    "publishedYear": 2004,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-10-13T09:00:00.000Z",
+    "updatedAt": "2024-10-13T09:00:00.000Z"
+  },
+  {
+    "id": "e123d379-6c36-43dc-b010-8b2062bab396",
+    "isbn": "978-75-1844-243-4",
+    "title": "Terry Pratchett: Straze strazy",
+    "authors": [
+      "Fyodor Dostoevsky",
+      "J.K. Rowling"
+    ],
+    "categories": [
+      "Dla dzieci",
+      "Filozofia"
+    ],
+    "publishedYear": 1986,
+    "totalCopies": 6,
+    "availableCopies": 6,
+    "createdAt": "2023-11-28T10:00:00.000Z",
+    "updatedAt": "2023-11-28T10:00:00.000Z"
+  },
+  {
+    "id": "8289bb69-3cb7-4508-a0d7-6353dc63db87",
+    "isbn": "978-62-7842-525-8",
+    "title": "Bohaterowie",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Poradnik",
+      "Dramat"
+    ],
+    "publishedYear": 2001,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-01-24T10:00:00.000Z",
+    "updatedAt": "2024-01-24T10:00:00.000Z"
+  },
+  {
+    "id": "e76a5b4b-6cb0-482d-b62d-cf3fe3ff64ce",
+    "isbn": "978-89-8612-261-7",
+    "title": "To",
+    "authors": [
+      "Franz Kafka",
+      "Andrew Hunt"
+    ],
+    "categories": [
+      "Edukacja"
+    ],
+    "publishedYear": 2010,
+    "totalCopies": 4,
+    "availableCopies": 3,
+    "createdAt": "2024-09-15T09:00:00.000Z",
+    "updatedAt": "2024-09-15T09:00:00.000Z"
+  },
+  {
+    "id": "a09e62b9-fdfe-466e-833a-efd627857283",
+    "isbn": "978-21-2036-965-6",
+    "title": "Deep learning",
+    "authors": [
+      "Brunon Schulz",
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Dramat"
+    ],
+    "publishedYear": 1977,
+    "totalCopies": 13,
+    "availableCopies": 13,
+    "createdAt": "2024-03-20T10:00:00.000Z",
+    "updatedAt": "2024-03-20T10:00:00.000Z"
+  },
+  {
+    "id": "a612d8de-9e62-438d-9445-755ef60cfc95",
+    "isbn": "978-77-3810-323-3",
+    "title": "Programowanie funkcyjne",
+    "authors": [
+      "Ryszard Kapuscinski",
+      "Erich Gamma"
+    ],
+    "categories": [
+      "Fizyka",
+      "Dla dzieci",
+      "Sci-Fi"
+    ],
+    "publishedYear": 1975,
+    "totalCopies": 5,
+    "availableCopies": 5,
+    "createdAt": "2023-12-29T10:00:00.000Z",
+    "updatedAt": "2023-12-29T10:00:00.000Z"
+  },
+  {
+    "id": "0ae05425-a0a6-4e89-b793-5b32781727ae",
+    "isbn": "978-98-2582-304-7",
+    "title": "Carpe Jugulum",
+    "authors": [
+      "Juliusz Slowacki",
+      "Carl Sagan"
+    ],
+    "categories": [
+      "Socjologia",
+      "Fizyka",
+      "Informatyka"
+    ],
+    "publishedYear": 1989,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-07-20T09:00:00.000Z",
+    "updatedAt": "2024-07-20T09:00:00.000Z"
+  },
+  {
+    "id": "4e678b59-1cb0-4e07-89bc-db5f66f4792d",
+    "isbn": "978-31-8732-715-2",
+    "title": "Otello",
+    "authors": [
+      "Steve McConnell",
+      "Franz Kafka"
+    ],
+    "categories": [
+      "Psychologia",
+      "Thriller",
+      "Socjologia"
+    ],
+    "publishedYear": 1992,
+    "totalCopies": 1,
+    "availableCopies": 0,
+    "createdAt": "2024-01-05T10:00:00.000Z",
+    "updatedAt": "2024-01-05T10:00:00.000Z"
+  },
+  {
+    "id": "a146946c-9035-446a-9be4-13f3f52d9336",
+    "isbn": "978-39-4298-873-0",
+    "title": "Metamorfozy",
+    "authors": [
+      "Stanislaw Lem",
+      "Thomas H. Cormen"
+    ],
+    "categories": [
+      "Literatura piękna"
+    ],
+    "publishedYear": 1994,
+    "totalCopies": 12,
+    "availableCopies": 10,
+    "createdAt": "2024-06-03T09:00:00.000Z",
+    "updatedAt": "2024-06-03T09:00:00.000Z"
+  },
+  {
+    "id": "96c2c66b-d7fc-48aa-acd8-27201d37911b",
+    "isbn": "978-79-1380-400-2",
+    "title": "Swift dla iOS",
+    "authors": [
+      "Wladyslaw Reymont",
+      "Robert C. Martin"
+    ],
+    "categories": [
+      "Chemia"
+    ],
+    "publishedYear": 1980,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-04-11T09:00:00.000Z",
+    "updatedAt": "2024-04-11T09:00:00.000Z"
+  },
+  {
+    "id": "2284018b-048b-4bc5-9aae-afcdfc5e1d5b",
+    "isbn": "978-33-3925-299-2",
+    "title": "Sieci neuronowe",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "categories": [
+      "Socjologia",
+      "Fantasy",
+      "Horror"
+    ],
+    "publishedYear": 2007,
+    "totalCopies": 7,
+    "availableCopies": 6,
+    "createdAt": "2024-03-20T10:00:00.000Z",
+    "updatedAt": "2024-03-20T10:00:00.000Z"
+  },
+  {
+    "id": "8e55f96a-aebb-46bb-bb91-e35a17348d38",
+    "isbn": "978-80-1701-106-7",
+    "title": "Spring Boot",
+    "authors": [
+      "Stephen Hawking",
+      "Kazuo Ishiguro"
+    ],
+    "categories": [
+      "Poradnik",
+      "Reportaz"
+    ],
+    "publishedYear": 1985,
+    "totalCopies": 6,
+    "availableCopies": 4,
+    "createdAt": "2024-12-21T10:00:00.000Z",
+    "updatedAt": "2024-12-21T10:00:00.000Z"
+  },
+  {
+    "id": "990f2875-156f-4fb1-bff3-7983a6fa42a4",
+    "isbn": "978-64-3747-495-4",
+    "title": "Sluzy do pisania",
+    "authors": [
+      "Olga Tokarczuk",
+      "Juliusz Slowacki"
+    ],
+    "categories": [
+      "Matematyka",
+      "Chemia",
+      "Ekonomia"
+    ],
+    "publishedYear": 1993,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-04-15T09:00:00.000Z",
+    "updatedAt": "2024-04-15T09:00:00.000Z"
+  },
+  {
+    "id": "2d44c53f-0ca8-460a-b603-552cd44bf947",
+    "isbn": "978-23-5919-673-4",
+    "title": "Cyberiada",
+    "authors": [
+      "Andrew Hunt",
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Historia",
+      "Sci-Fi"
+    ],
+    "publishedYear": 1999,
+    "totalCopies": 14,
+    "availableCopies": 12,
+    "createdAt": "2024-02-10T10:00:00.000Z",
+    "updatedAt": "2024-02-10T10:00:00.000Z"
+  },
+  {
+    "id": "40eeb848-5006-435e-96ce-d9d2d87a05a9",
+    "isbn": "978-95-9114-636-2",
+    "title": "Pratchett: Noce",
+    "authors": [
+      "Steve McConnell",
+      "Robert C. Martin"
+    ],
+    "categories": [
+      "Literatura piękna",
+      "Fantasy"
+    ],
+    "publishedYear": 1990,
+    "totalCopies": 3,
+    "availableCopies": 3,
+    "createdAt": "2024-02-05T10:00:00.000Z",
+    "updatedAt": "2024-02-05T10:00:00.000Z"
+  },
+  {
+    "id": "112f0d82-03c3-4872-adba-dbb5af48e0f4",
+    "isbn": "978-98-7473-867-2",
+    "title": "Bialy wilk",
+    "authors": [
+      "J.K. Rowling",
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Informatyka",
+      "Biografia",
+      "Poezja"
+    ],
+    "publishedYear": 2025,
+    "totalCopies": 13,
+    "availableCopies": 12,
+    "createdAt": "2024-08-18T09:00:00.000Z",
+    "updatedAt": "2024-08-18T09:00:00.000Z"
+  },
+  {
+    "id": "1ce24762-35a2-48ad-86f1-eb7c2885d7ec",
+    "isbn": "978-98-1520-763-6",
+    "title": "Rok 1984",
+    "authors": [
+      "Isaac Asimov",
+      "Richard Dawkins"
+    ],
+    "categories": [
+      "Biografia",
+      "Informatyka"
+    ],
+    "publishedYear": 1971,
+    "totalCopies": 9,
+    "availableCopies": 6,
+    "createdAt": "2024-08-25T09:00:00.000Z",
+    "updatedAt": "2024-08-25T09:00:00.000Z"
+  },
+  {
+    "id": "dfccc767-8547-4bb0-b39d-6b18db534e3b",
+    "isbn": "978-32-4249-295-2",
+    "title": "Krew elfow 2",
+    "authors": [
+      "Adam Mickiewicz"
+    ],
+    "categories": [
+      "Fizyka",
+      "Dla dzieci"
+    ],
+    "publishedYear": 1995,
+    "totalCopies": 9,
+    "availableCopies": 6,
+    "createdAt": "2024-07-21T09:00:00.000Z",
+    "updatedAt": "2024-07-21T09:00:00.000Z"
+  },
+  {
+    "id": "23ea6a46-7226-417c-ae6c-544f96cc886f",
+    "isbn": "978-42-5557-108-2",
+    "title": "React w praktyce",
+    "authors": [
+      "Andrzej Sapkowski"
+    ],
+    "categories": [
+      "Sztuka",
+      "Literatura piękna"
+    ],
+    "publishedYear": 2000,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-09-13T09:00:00.000Z",
+    "updatedAt": "2024-09-13T09:00:00.000Z"
+  },
+  {
+    "id": "f46f3099-1152-4445-817d-8c5c66fa7351",
+    "isbn": "978-78-9449-672-3",
+    "title": "Kotlin dla androida",
+    "authors": [
+      "Carl Sagan"
+    ],
+    "categories": [
+      "Poezja"
+    ],
+    "publishedYear": 1988,
+    "totalCopies": 14,
+    "availableCopies": 13,
+    "createdAt": "2024-03-16T10:00:00.000Z",
+    "updatedAt": "2024-03-16T10:00:00.000Z"
+  },
+  {
+    "id": "64a901c2-1b0d-425c-807d-99b675e1a36b",
+    "isbn": "978-17-8286-789-5",
+    "title": "Czerwone i czarne",
+    "authors": [
+      "Erich Gamma",
+      "Juliusz Slowacki"
+    ],
+    "categories": [
+      "Dramat",
+      "Chemia"
+    ],
+    "publishedYear": 2019,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-07-14T09:00:00.000Z",
+    "updatedAt": "2024-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "0296ce0c-21ce-4dc4-bda0-ec354143ca18",
+    "isbn": "978-76-6881-113-4",
+    "title": "C++ nowoczesny",
+    "authors": [
+      "Donald E. Knuth"
+    ],
+    "categories": [
+      "Matematyka",
+      "Poradnik"
+    ],
+    "publishedYear": 2008,
+    "totalCopies": 10,
+    "availableCopies": 9,
+    "createdAt": "2024-09-02T09:00:00.000Z",
+    "updatedAt": "2024-09-02T09:00:00.000Z"
+  },
+  {
+    "id": "11f28ea3-45ad-430c-9796-cadd5d19e594",
+    "isbn": "978-62-9792-663-3",
+    "title": "TypeScript w praktyce",
+    "authors": [
+      "Arthur C. Clarke"
+    ],
+    "categories": [
+      "Chemia",
+      "Psychologia",
+      "Powiest"
+    ],
+    "publishedYear": 1977,
+    "totalCopies": 3,
+    "availableCopies": 2,
+    "createdAt": "2024-04-20T09:00:00.000Z",
+    "updatedAt": "2024-04-20T09:00:00.000Z"
+  },
+  {
+    "id": "d5ae9f34-28e1-4dfe-a427-e0c377530762",
+    "isbn": "978-16-3177-774-3",
+    "title": "Polityczny rozum",
+    "authors": [
+      "Leo Tolstoy"
+    ],
+    "categories": [
+      "Dramat"
+    ],
+    "publishedYear": 1977,
+    "totalCopies": 15,
+    "availableCopies": 15,
+    "createdAt": "2023-12-06T10:00:00.000Z",
+    "updatedAt": "2023-12-06T10:00:00.000Z"
+  },
+  {
+    "id": "a9acf3ea-0130-41b5-ac08-e115c34ea8d5",
+    "isbn": "978-95-7240-671-6",
+    "title": "Hamlet",
+    "authors": [
+      "Kazuo Ishiguro",
+      "Stefan Zeromski"
+    ],
+    "categories": [
+      "Sci-Fi"
+    ],
+    "publishedYear": 2001,
+    "totalCopies": 15,
+    "availableCopies": 14,
+    "createdAt": "2024-09-30T09:00:00.000Z",
+    "updatedAt": "2024-09-30T09:00:00.000Z"
+  },
+  {
+    "id": "b7a574a6-6f21-455f-94d8-9d291c34163b",
+    "isbn": "978-28-1660-460-5",
+    "title": "Budenbrookowie",
+    "authors": [
+      "Thomas H. Cormen"
+    ],
+    "categories": [
+      "Sci-Fi"
+    ],
+    "publishedYear": 1974,
+    "totalCopies": 9,
+    "availableCopies": 7,
+    "createdAt": "2024-03-13T10:00:00.000Z",
+    "updatedAt": "2024-03-13T10:00:00.000Z"
+  },
+  {
+    "id": "328949cf-cfbb-4bc5-aa3d-a1a4e4ee5120",
+    "isbn": "978-32-7309-595-1",
+    "title": "Historia Europy",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Poradnik"
+    ],
+    "publishedYear": 2024,
+    "totalCopies": 3,
+    "availableCopies": 3,
+    "createdAt": "2024-06-03T09:00:00.000Z",
+    "updatedAt": "2024-06-03T09:00:00.000Z"
+  },
+  {
+    "id": "a87783e8-c76e-4bcc-b986-3114410de575",
+    "isbn": "978-70-4737-583-2",
+    "title": "Galileusz",
+    "authors": [
+      "Stephen Hawking"
+    ],
+    "categories": [
+      "Poradnik",
+      "Informatyka"
+    ],
+    "publishedYear": 2024,
+    "totalCopies": 2,
+    "availableCopies": 1,
+    "createdAt": "2024-11-23T10:00:00.000Z",
+    "updatedAt": "2024-11-23T10:00:00.000Z"
+  },
+  {
+    "id": "ce590ddc-69e3-4913-8086-f3277d5261b0",
+    "isbn": "978-18-6279-959-9",
+    "title": "Eden",
+    "authors": [
+      "Kazuo Ishiguro",
+      "Stanislaw Lem"
+    ],
+    "categories": [
+      "Fantasy",
+      "Socjologia"
+    ],
+    "publishedYear": 1988,
+    "totalCopies": 10,
+    "availableCopies": 8,
+    "createdAt": "2024-05-11T09:00:00.000Z",
+    "updatedAt": "2024-05-11T09:00:00.000Z"
+  },
+  {
+    "id": "2037c374-6734-458f-bdf7-297979c6bf97",
+    "isbn": "978-51-5169-632-4",
+    "title": "Kanban w praktyce",
+    "authors": [
+      "Yuval Noah Harari"
+    ],
+    "categories": [
+      "Ekonomia"
+    ],
+    "publishedYear": 1997,
+    "totalCopies": 13,
+    "availableCopies": 13,
+    "createdAt": "2024-07-23T09:00:00.000Z",
+    "updatedAt": "2024-07-23T09:00:00.000Z"
+  },
+  {
+    "id": "eb8b31cb-1245-46cf-aa5a-a263ba15e7e3",
+    "isbn": "978-46-2428-366-3",
+    "title": "Bezpieczenstwo aplikacji",
+    "authors": [
+      "Kent Beck"
+    ],
+    "categories": [
+      "Poradnik"
+    ],
+    "publishedYear": 2005,
+    "totalCopies": 4,
+    "availableCopies": 4,
+    "createdAt": "2024-09-15T09:00:00.000Z",
+    "updatedAt": "2024-09-15T09:00:00.000Z"
+  },
+  {
+    "id": "0d91445f-2466-458d-8b7c-d3b88dffa458",
+    "isbn": "978-79-2809-563-6",
+    "title": "Mort",
+    "authors": [
+      "Terry Pratchett",
+      "Wladyslaw Reymont"
+    ],
+    "categories": [
+      "Literatura piękna",
+      "Psychologia",
+      "Sztuka"
+    ],
+    "publishedYear": 1997,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-07-04T09:00:00.000Z",
+    "updatedAt": "2024-07-04T09:00:00.000Z"
+  },
+  {
+    "id": "3e884ad2-ae89-44f5-8237-f7a484b4679a",
+    "isbn": "978-16-4840-542-0",
+    "title": "Uczta dla wron",
+    "authors": [
+      "Isaac Asimov",
+      "Ryszard Kapuscinski"
+    ],
+    "categories": [
+      "Fantasy"
+    ],
+    "publishedYear": 2014,
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "createdAt": "2024-01-06T10:00:00.000Z",
+    "updatedAt": "2024-01-06T10:00:00.000Z"
+  },
+  {
+    "id": "e1d53e58-0924-41c3-99aa-f157b21df077",
+    "isbn": "978-88-7217-975-7",
+    "title": "Kuzyn Pons",
+    "authors": [
+      "Richard Dawkins",
+      "Wladyslaw Reymont"
+    ],
+    "categories": [
+      "Thriller"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 3,
+    "availableCopies": 2,
+    "createdAt": "2024-05-20T09:00:00.000Z",
+    "updatedAt": "2024-05-20T09:00:00.000Z"
+  },
+  {
+    "id": "8bcb61d6-eaba-4f27-8d70-19810efd533d",
+    "isbn": "978-41-2704-447-1",
+    "title": "Ojciec Goriot",
+    "authors": [
+      "Isaac Asimov"
+    ],
+    "categories": [
+      "Poezja",
+      "Psychologia"
+    ],
+    "publishedYear": 1972,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-12-03T10:00:00.000Z",
+    "updatedAt": "2024-12-03T10:00:00.000Z"
+  },
+  {
+    "id": "0282801d-aba6-4144-aea3-ca847f185b0d",
+    "isbn": "978-73-8418-978-4",
+    "title": "Burza",
+    "authors": [
+      "Stephen Hawking",
+      "Henryk Sienkiewicz"
+    ],
+    "categories": [
+      "Thriller",
+      "Dramat"
+    ],
+    "publishedYear": 2016,
+    "totalCopies": 2,
+    "availableCopies": 2,
+    "createdAt": "2024-08-12T09:00:00.000Z",
+    "updatedAt": "2024-08-12T09:00:00.000Z"
+  },
+  {
+    "id": "c95b99c9-8fc1-4641-b4fa-c7f471b77c21",
+    "isbn": "978-99-7286-581-7",
+    "title": "Uczniowie czarnoksieznika",
+    "authors": [
+      "Terry Pratchett",
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Biografia",
+      "Psychologia",
+      "Thriller"
+    ],
+    "publishedYear": 1983,
+    "totalCopies": 14,
+    "availableCopies": 14,
+    "createdAt": "2024-08-13T09:00:00.000Z",
+    "updatedAt": "2024-08-13T09:00:00.000Z"
+  },
+  {
+    "id": "499c2c80-bb40-4b96-b6b7-7013a386d1d7",
+    "isbn": "978-65-9964-138-3",
+    "title": "JavaScript zaawansowany",
+    "authors": [
+      "Witold Gombrowicz"
+    ],
+    "categories": [
+      "Socjologia"
+    ],
+    "publishedYear": 1998,
+    "totalCopies": 9,
+    "availableCopies": 9,
+    "createdAt": "2024-01-17T10:00:00.000Z",
+    "updatedAt": "2024-01-17T10:00:00.000Z"
+  },
+  {
+    "id": "befe73c4-d46b-4a93-9d32-32c02375ea22",
+    "isbn": "978-83-7858-949-7",
+    "title": "Wiedzminek",
+    "authors": [
+      "Richard Dawkins",
+      "Philip K. Dick"
+    ],
+    "categories": [
+      "Poradnik"
+    ],
+    "publishedYear": 1975,
+    "totalCopies": 4,
+    "availableCopies": 3,
+    "createdAt": "2023-12-11T10:00:00.000Z",
+    "updatedAt": "2023-12-11T10:00:00.000Z"
+  },
+  {
+    "id": "2b249e83-c479-48bd-9755-09a95e6bce5f",
+    "isbn": "978-64-6727-478-7",
+    "title": "Blind Watchmaker",
+    "authors": [
+      "Erich Gamma"
+    ],
+    "categories": [
+      "Informatyka",
+      "Thriller",
+      "Fizyka"
+    ],
+    "publishedYear": 2004,
+    "totalCopies": 7,
+    "availableCopies": 6,
+    "createdAt": "2024-09-21T09:00:00.000Z",
+    "updatedAt": "2024-09-21T09:00:00.000Z"
+  },
+  {
+    "id": "c3d5bce8-0803-4f8f-bca2-0789f69d6799",
+    "isbn": "978-35-1061-443-1",
+    "title": "Fundacja",
+    "authors": [
+      "Gabriel Garcia Marquez"
+    ],
+    "categories": [
+      "Kryminał",
+      "Dla dzieci"
+    ],
+    "publishedYear": 2021,
+    "totalCopies": 15,
+    "availableCopies": 15,
+    "createdAt": "2024-05-11T09:00:00.000Z",
+    "updatedAt": "2024-05-11T09:00:00.000Z"
   }
 ]

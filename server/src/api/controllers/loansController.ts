@@ -34,3 +34,16 @@ export const returnBook = async (req: Request, res: Response): Promise<void> => 
     res.status(400).json({ error: (error as Error).message });
   }
 };
+export const extendLoan = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const loan = db.extendLoan(
+      String(req.body.loanId),
+      Number(req.body.days ?? 7),
+    );
+
+    await db.saveAll();
+    res.status(200).json(loan);
+  } catch (error) {
+    res.status(400).json({ error: (error as Error).message });
+  }
+};

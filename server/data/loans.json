@@ -5,7 +5,8 @@
     "readerId": "r1",
     "borrowedAt": "2026-04-01T10:00:00.000Z",
     "dueAt": "2026-04-15T10:00:00.000Z",
-    "status": "ACTIVE"
+    "status": "RETURNED",
+    "returnedAt": "2026-04-19T18:03:50.156Z"
   },
   {
     "id": "l2",
@@ -13,6 +14,1701 @@
     "readerId": "r2",
     "borrowedAt": "2026-04-10T11:00:00.000Z",
     "dueAt": "2026-04-24T11:00:00.000Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "6e66d903-0354-45c3-b0d6-39dbdefb925e",
+    "bookId": "46da1de2-0b30-46fa-8da4-4ba0fbeff5a2",
+    "readerId": "6968b212-8d54-4743-8e29-c8d1bea6f203",
+    "borrowedAt": "2026-03-12T18:11:03.429Z",
+    "dueAt": "2026-03-25T18:11:03.429Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-26T18:11:03.429Z"
+  },
+  {
+    "id": "28754240-0da8-4d22-b978-55805fb3a622",
+    "bookId": "4e678b59-1cb0-4e07-89bc-db5f66f4792d",
+    "readerId": "8bf47775-82fe-4750-b6ee-4288aac9b023",
+    "borrowedAt": "2025-10-01T18:11:03.430Z",
+    "dueAt": "2025-10-12T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-11-29T18:11:03.430Z"
+  },
+  {
+    "id": "58ab2919-349a-4523-b6ec-e25631c6fc3b",
+    "bookId": "2a384254-04be-4bb8-a0f3-3ae4f3c9a62c",
+    "readerId": "34c41e5f-41e6-4722-94d0-1133f7f16812",
+    "borrowedAt": "2025-09-02T18:11:03.430Z",
+    "dueAt": "2025-09-20T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "6cfac22e-64b1-492c-8e4f-cfe680ebc445",
+    "bookId": "8432bf3e-fb3e-406c-b8d5-62f7f6788841",
+    "readerId": "e7e4fb8f-775e-4f5b-a028-e642e910d7af",
+    "borrowedAt": "2025-08-06T18:11:03.430Z",
+    "dueAt": "2025-09-02T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "da4a4f99-c6fd-4b57-ba45-de13ee3af13a",
+    "bookId": "3e884ad2-ae89-44f5-8237-f7a484b4679a",
+    "readerId": "08bf07cf-0312-4f21-a29b-4e03bb93285b",
+    "borrowedAt": "2025-04-24T18:11:03.430Z",
+    "dueAt": "2025-05-17T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-19T19:45:02.796Z"
+  },
+  {
+    "id": "eceefb63-3548-4229-9991-35f4621d89b3",
+    "bookId": "b3",
+    "readerId": "3f7ce847-3626-4663-903c-68d990c01abd",
+    "borrowedAt": "2025-12-10T18:11:03.430Z",
+    "dueAt": "2025-12-29T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-02-05T18:11:03.430Z"
+  },
+  {
+    "id": "ef6503ee-d1ad-4c16-b483-e6ff2f1227d2",
+    "bookId": "b7a574a6-6f21-455f-94d8-9d291c34163b",
+    "readerId": "59cfd207-328f-4edb-a73f-203fe86f73b2",
+    "borrowedAt": "2025-10-14T18:11:03.430Z",
+    "dueAt": "2025-10-28T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "397f59ea-6cad-459c-a021-be41f3319da4",
+    "bookId": "8e55f96a-aebb-46bb-bb91-e35a17348d38",
+    "readerId": "59cfd207-328f-4edb-a73f-203fe86f73b2",
+    "borrowedAt": "2026-02-16T18:11:03.430Z",
+    "dueAt": "2026-02-25T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-31T18:11:03.430Z"
+  },
+  {
+    "id": "093c86f6-c613-4a41-af64-30c54705be3f",
+    "bookId": "bc5a74f0-a8af-4fbf-9ad2-08c7dfdcd158",
+    "readerId": "51a422de-3e1c-405d-a7dc-e7a7445156ff",
+    "borrowedAt": "2026-03-03T18:11:03.430Z",
+    "dueAt": "2026-03-14T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "483825e1-600f-4ac4-b493-cc583c431dbc",
+    "bookId": "0a4795f4-ba7e-4514-9733-51ed6b1ee199",
+    "readerId": "ac404823-60a5-4e89-9886-362aa0b2e0e5",
+    "borrowedAt": "2025-05-09T18:11:03.430Z",
+    "dueAt": "2025-05-24T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "e505458d-9e59-40ad-aa3d-44234ab5de15",
+    "bookId": "36cc88ec-9307-4824-91a0-c27fbd9b8283",
+    "readerId": "e003699e-6036-4a99-b327-ecd927c8908e",
+    "borrowedAt": "2025-07-13T18:11:03.430Z",
+    "dueAt": "2025-07-20T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-12T18:11:03.430Z"
+  },
+  {
+    "id": "7995cc65-b48e-4301-86fa-7545858dae55",
+    "bookId": "cd194a97-f3a6-4d31-8783-bf8c9f5421ed",
+    "readerId": "06e781a4-d3f0-4d21-bfe5-a90e03f39460",
+    "borrowedAt": "2026-03-11T18:11:03.430Z",
+    "dueAt": "2026-04-07T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-29T18:11:03.430Z"
+  },
+  {
+    "id": "b56fc411-34c9-4c5a-8da7-9b050dd432e0",
+    "bookId": "1ce24762-35a2-48ad-86f1-eb7c2885d7ec",
+    "readerId": "3e2bef90-824a-4eb2-9eb5-10a713ea7139",
+    "borrowedAt": "2026-02-02T18:11:03.430Z",
+    "dueAt": "2026-02-20T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "0ec3c85a-ffab-43c8-999e-f1a3fb8de3a8",
+    "bookId": "e10f1226-3c6c-4700-8317-e40414d757d0",
+    "readerId": "28b81b38-b95a-4133-872f-0f519a88139a",
+    "borrowedAt": "2026-03-21T18:11:03.430Z",
+    "dueAt": "2026-03-30T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-06T18:11:03.430Z"
+  },
+  {
+    "id": "94b3dc71-b459-4200-8f66-9812c0d24bfd",
+    "bookId": "bc5a74f0-a8af-4fbf-9ad2-08c7dfdcd158",
+    "readerId": "99e3f90e-5bcd-4503-bd41-98982b2231bb",
+    "borrowedAt": "2025-07-28T18:11:03.430Z",
+    "dueAt": "2025-08-21T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "28bb5acf-88cb-455d-80e9-7f8637b4c4a9",
+    "bookId": "e1d53e58-0924-41c3-99aa-f157b21df077",
+    "readerId": "a5799443-5905-4122-b49c-b625d3d1fd21",
+    "borrowedAt": "2026-03-31T18:11:03.430Z",
+    "dueAt": "2026-04-26T20:00:09.670Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "6e7b5e69-fd1c-4173-979f-203d89e4345d",
+    "bookId": "fdb20205-71df-4d11-97c6-093f0295049b",
+    "readerId": "ee521245-f540-4402-9f80-048be0eb24e6",
+    "borrowedAt": "2026-01-03T18:11:03.430Z",
+    "dueAt": "2026-01-28T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "60f019fe-dda7-4a39-87c7-21542b65130a",
+    "bookId": "983cc903-8e57-46e0-874d-448a2413dd7e",
+    "readerId": "7e76a960-231c-4fec-acd7-1991e6a1d6ec",
+    "borrowedAt": "2025-06-12T18:11:03.430Z",
+    "dueAt": "2025-07-03T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-12-13T18:11:03.430Z"
+  },
+  {
+    "id": "08b304df-7dc9-43b6-907b-56435c4df126",
+    "bookId": "d8e57458-7b2f-42c8-8ee8-eabbc8fc57d9",
+    "readerId": "f2de63ef-10f1-4260-b820-307ec39601eb",
+    "borrowedAt": "2025-11-19T18:11:03.430Z",
+    "dueAt": "2025-12-11T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "10267e53-8b35-4013-a141-3f0fc1e05c26",
+    "bookId": "96bfca0f-8a1b-4ce1-9e9c-101cf7ea33d9",
+    "readerId": "195c5368-98c8-4d60-ac66-1b283b289ae3",
+    "borrowedAt": "2026-01-21T18:11:03.430Z",
+    "dueAt": "2026-02-08T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "0b168e26-689a-439b-a7d3-e47a2748fdd9",
+    "bookId": "9fc02ed5-7d61-4f34-8147-e1b8e20687e7",
+    "readerId": "037ad07a-86f7-4b93-80ff-d56844c9a880",
+    "borrowedAt": "2025-05-12T18:11:03.430Z",
+    "dueAt": "2025-06-05T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-07-03T18:11:03.430Z"
+  },
+  {
+    "id": "81f3ddf2-8420-4834-b850-8c163fb465f2",
+    "bookId": "ca29c478-0280-4514-91a3-d25ea5f7602e",
+    "readerId": "69487ac5-c01b-42d7-a30f-fb46735a7c24",
+    "borrowedAt": "2025-10-13T18:11:03.430Z",
+    "dueAt": "2025-11-02T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "e4c57277-0f29-481b-ae62-8387141c40bb",
+    "bookId": "1472a720-83d8-4854-95f4-2c22e61285c5",
+    "readerId": "78c9ffec-f818-45cf-bb59-a3fe010a09d3",
+    "borrowedAt": "2025-07-13T18:11:03.430Z",
+    "dueAt": "2025-07-22T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-07-22T18:11:03.430Z"
+  },
+  {
+    "id": "b3f8a5e9-d8f5-4324-a85d-7ccf4f45aa61",
+    "bookId": "36cc88ec-9307-4824-91a0-c27fbd9b8283",
+    "readerId": "3e2bef90-824a-4eb2-9eb5-10a713ea7139",
+    "borrowedAt": "2025-06-01T18:11:03.430Z",
+    "dueAt": "2025-06-26T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-07-07T18:11:03.430Z"
+  },
+  {
+    "id": "62426a5b-2d85-4836-9249-9ba7979ca905",
+    "bookId": "250bc0fd-a2ea-4517-befb-990e7c072ad1",
+    "readerId": "c2d4c962-0cea-4cd6-88c0-66ebc1e69ec6",
+    "borrowedAt": "2025-10-09T18:11:03.430Z",
+    "dueAt": "2025-10-19T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "82f67c21-f576-4c7a-9a5f-e9463b12e214",
+    "bookId": "295a0eab-143b-433c-b0d5-296ded35444d",
+    "readerId": "7af59e37-238e-43ea-9d33-d496275e7733",
+    "borrowedAt": "2025-06-06T18:11:03.430Z",
+    "dueAt": "2025-07-02T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-07-31T18:11:03.430Z"
+  },
+  {
+    "id": "fc37cf21-3c1e-490e-94e6-4b16b7c6244d",
+    "bookId": "e57b1ebc-1572-466a-92ee-257dc10b456e",
+    "readerId": "ec10032f-cb62-41a8-b574-9022ee8ddf53",
+    "borrowedAt": "2025-05-14T18:11:03.430Z",
+    "dueAt": "2025-05-25T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "42324161-1b5c-4e68-9726-4159010d3c25",
+    "bookId": "086a2a14-6b46-4b6a-b829-b1e99bc2bd85",
+    "readerId": "abc4e551-d5aa-4f6d-b87a-44c5f30a6135",
+    "borrowedAt": "2025-05-06T18:11:03.430Z",
+    "dueAt": "2025-05-20T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-19T19:44:46.897Z"
+  },
+  {
+    "id": "77a415d4-dd87-4880-bd9f-4bae3d25e867",
+    "bookId": "b886165a-7191-4ae9-bacb-5007cade5f52",
+    "readerId": "bf119afe-761f-4b48-b863-cc9b0894583d",
+    "borrowedAt": "2026-04-02T18:11:03.430Z",
+    "dueAt": "2026-04-15T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "1866c17f-1e3b-4df0-bad1-ca46da6721cb",
+    "bookId": "928ead14-331e-4b1d-af2a-445556d46caf",
+    "readerId": "dfe14933-b609-40bf-a9f8-274d4c1cb296",
+    "borrowedAt": "2026-01-08T18:11:03.430Z",
+    "dueAt": "2026-01-17T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "2291ba29-b6fd-4936-abbd-8949c2fd22c9",
+    "bookId": "8e55f96a-aebb-46bb-bb91-e35a17348d38",
+    "readerId": "b2499b67-a8b5-4c3d-881f-4848be448278",
+    "borrowedAt": "2026-01-07T18:11:03.430Z",
+    "dueAt": "2026-02-03T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "d2c8c271-1a3c-4c5a-b68e-0c97930351a6",
+    "bookId": "636b55ab-0cc8-4af3-a2e1-f10b18f74cf2",
+    "readerId": "df6bf7a5-1773-4025-a9c5-f8465bf9a81c",
+    "borrowedAt": "2025-08-04T18:11:03.430Z",
+    "dueAt": "2025-08-26T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "65d2927b-da2c-4e4b-a75d-e3532cbe2b44",
+    "bookId": "250bc0fd-a2ea-4517-befb-990e7c072ad1",
+    "readerId": "d2e8a26a-39a3-4f06-a3c3-42e78bbb8088",
+    "borrowedAt": "2025-09-30T18:11:03.430Z",
+    "dueAt": "2025-10-30T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "cd293cfa-80e8-450d-ba87-4e76a2eeee89",
+    "bookId": "a22eed5c-e161-4ffe-a686-74c5b6c0fd1a",
+    "readerId": "f42bf4c3-25d5-45b5-8985-d3b8883f6ba1",
+    "borrowedAt": "2025-12-12T18:11:03.430Z",
+    "dueAt": "2026-01-06T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "21e06a5d-41f3-46b2-b0dd-71e176e0a028",
+    "bookId": "b886165a-7191-4ae9-bacb-5007cade5f52",
+    "readerId": "0b4cee31-e910-40ba-9e8e-363b2772e5cb",
+    "borrowedAt": "2025-08-29T18:11:03.430Z",
+    "dueAt": "2025-09-05T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-12-21T18:11:03.430Z"
+  },
+  {
+    "id": "17a55735-045a-4d9c-8621-562e9abaa99c",
+    "bookId": "a146946c-9035-446a-9be4-13f3f52d9336",
+    "readerId": "a081edee-5a13-4982-b610-a095b73c3811",
+    "borrowedAt": "2025-08-18T18:11:03.430Z",
+    "dueAt": "2025-08-30T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "117fee0b-089e-4a43-a2c7-7f13752be66c",
+    "bookId": "2b75bb46-0a30-40d5-b9e6-b07e33785dca",
+    "readerId": "98190add-da07-47a6-aabc-561118314a9d",
+    "borrowedAt": "2025-05-21T18:11:03.430Z",
+    "dueAt": "2025-05-30T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "4ecd1c64-5bdc-463a-be61-659204edb999",
+    "bookId": "aa02c03e-2ccb-41f3-8b71-b9c88d163ee9",
+    "readerId": "9212d5b9-e045-425d-a371-614ab26456c9",
+    "borrowedAt": "2025-08-13T18:11:03.430Z",
+    "dueAt": "2025-09-07T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "6ed888d4-300a-4442-9b0d-e0f548a0aa7f",
+    "bookId": "ce590ddc-69e3-4913-8086-f3277d5261b0",
+    "readerId": "5e53ece8-687b-493a-b864-984f6fe97b88",
+    "borrowedAt": "2025-07-05T18:11:03.430Z",
+    "dueAt": "2025-07-23T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-25T18:11:03.430Z"
+  },
+  {
+    "id": "fa2e623b-fe7f-4cff-93e8-d1cce71caacf",
+    "bookId": "90709dfc-414c-4a69-aa52-03d3d3ba03dd",
+    "readerId": "2e031bda-4ad3-45c4-9c0b-566bfc4e0469",
+    "borrowedAt": "2026-01-22T18:11:03.430Z",
+    "dueAt": "2026-02-02T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-19T18:11:03.430Z"
+  },
+  {
+    "id": "ed65f517-2079-41cc-a1a2-2e624d457f21",
+    "bookId": "ef98f96c-33d5-40c7-a841-432ab2bf808a",
+    "readerId": "e9315efa-564c-496d-a262-23b4eced4326",
+    "borrowedAt": "2025-06-29T18:11:03.430Z",
+    "dueAt": "2025-07-08T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "1421dbdb-2b1f-4870-a1ab-3c5c13a11599",
+    "bookId": "befe73c4-d46b-4a93-9d32-32c02375ea22",
+    "readerId": "387bf89a-b686-4001-b8e0-624076adf973",
+    "borrowedAt": "2025-09-05T18:11:03.430Z",
+    "dueAt": "2025-09-29T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "5d33a473-0d72-41c8-9d17-23020113c761",
+    "bookId": "d8e57458-7b2f-42c8-8ee8-eabbc8fc57d9",
+    "readerId": "e7e4fb8f-775e-4f5b-a028-e642e910d7af",
+    "borrowedAt": "2025-12-19T18:11:03.430Z",
+    "dueAt": "2026-01-15T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "ced5752f-5171-4d68-83c2-c9bf9f32a35d",
+    "bookId": "d46e1607-3b3f-48a6-b87a-fa0b81fb2732",
+    "readerId": "eb07fe1b-88a0-4e51-9129-87cea83b02ce",
+    "borrowedAt": "2025-04-27T18:11:03.430Z",
+    "dueAt": "2025-05-26T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "da0f545d-f7a2-427f-8002-a62c2a830d3d",
+    "bookId": "93993d5c-bd40-4879-b129-67b2ab7774df",
+    "readerId": "22aa1a3b-aeb1-4198-9f94-29367e7eb936",
+    "borrowedAt": "2025-06-11T18:11:03.430Z",
+    "dueAt": "2025-06-27T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-10T18:11:03.430Z"
+  },
+  {
+    "id": "fde59fd7-8704-42bf-b755-8a7074e49589",
+    "bookId": "34a81a8b-a6e5-457e-a40f-87d9f555b65e",
+    "readerId": "0089a6a4-ce94-42c1-8a22-4c4a05fa9fd7",
+    "borrowedAt": "2025-05-15T18:11:03.430Z",
+    "dueAt": "2025-05-26T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-06-17T18:11:03.430Z"
+  },
+  {
+    "id": "b9cf3a8a-3106-42c0-9586-ed90df8761d1",
+    "bookId": "aa02c03e-2ccb-41f3-8b71-b9c88d163ee9",
+    "readerId": "3aa2fa8d-771c-46cd-bd08-7ec2fe756443",
+    "borrowedAt": "2025-09-12T18:11:03.430Z",
+    "dueAt": "2025-10-07T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-15T18:11:03.430Z"
+  },
+  {
+    "id": "f27dae9b-344c-46ea-91a0-4d764e6853f3",
+    "bookId": "06440029-33b7-4750-a02b-0e831091a61f",
+    "readerId": "f2de63ef-10f1-4260-b820-307ec39601eb",
+    "borrowedAt": "2025-06-20T18:11:03.430Z",
+    "dueAt": "2025-06-28T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "3ca5c0db-4b78-4eda-8a1c-56bc95a296ae",
+    "bookId": "a146946c-9035-446a-9be4-13f3f52d9336",
+    "readerId": "03abcad1-219d-4ddd-9903-afa2747733cd",
+    "borrowedAt": "2025-11-10T18:11:03.430Z",
+    "dueAt": "2025-12-01T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "451024c6-0e22-4660-b149-ce398320a190",
+    "bookId": "a612d8de-9e62-438d-9445-755ef60cfc95",
+    "readerId": "d830e1fc-a582-4bb3-9ae0-3f526c4f96a9",
+    "borrowedAt": "2025-12-07T18:11:03.430Z",
+    "dueAt": "2025-12-29T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-14T18:11:03.430Z"
+  },
+  {
+    "id": "7fcecb5c-b1a8-4c81-8931-b89989a781a2",
+    "bookId": "96bfca0f-8a1b-4ce1-9e9c-101cf7ea33d9",
+    "readerId": "bcb5f2d7-2ee3-47f1-9222-44efa0fa8590",
+    "borrowedAt": "2025-05-30T18:11:03.430Z",
+    "dueAt": "2025-06-15T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-02-20T18:11:03.430Z"
+  },
+  {
+    "id": "d6f5134f-7897-45ba-bd1e-4241096f1084",
+    "bookId": "db64ccae-f167-4689-82e9-d2b8230a99f2",
+    "readerId": "a1047c26-da02-451a-8487-d49a40fbf53f",
+    "borrowedAt": "2025-07-21T18:11:03.430Z",
+    "dueAt": "2025-08-05T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-07-26T18:11:03.430Z"
+  },
+  {
+    "id": "a8d1924d-fa96-4331-89dc-8f55d23c4615",
+    "bookId": "35ab6cb7-1e2a-4d65-8fb3-f6e21dc33984",
+    "readerId": "c6661b6a-3777-4be5-8b3b-c1550bced872",
+    "borrowedAt": "2025-05-03T18:11:03.430Z",
+    "dueAt": "2025-06-02T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-10T18:11:03.430Z"
+  },
+  {
+    "id": "de04b58a-a54d-4462-b446-9c678b7b3965",
+    "bookId": "4e678b59-1cb0-4e07-89bc-db5f66f4792d",
+    "readerId": "78c9ffec-f818-45cf-bb59-a3fe010a09d3",
+    "borrowedAt": "2025-10-18T18:11:03.430Z",
+    "dueAt": "2025-10-25T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "f7144f57-0f1e-4ee8-8f89-7d76d16875e6",
+    "bookId": "c735b9d3-ce53-473e-8c4a-8a41e22b0c82",
+    "readerId": "9f876267-c206-4811-92be-73536772b913",
+    "borrowedAt": "2025-10-22T18:11:03.430Z",
+    "dueAt": "2025-11-02T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "4ffcdf00-38a7-4b67-a0b6-b28a5c1ab7b7",
+    "bookId": "e3bd57e8-8812-42f4-a15e-9ced0fed28a8",
+    "readerId": "3b6b9509-896a-4b29-bc8c-9c1edfae1c9c",
+    "borrowedAt": "2026-01-05T18:11:03.430Z",
+    "dueAt": "2026-01-25T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-11T18:11:03.430Z"
+  },
+  {
+    "id": "914b8179-b773-4f14-892d-cede5d74380d",
+    "bookId": "f85e6e35-b557-41a1-a1da-2906d00f5bfc",
+    "readerId": "7f66ddfe-c2a2-4367-8ba1-c8eaa872714e",
+    "borrowedAt": "2025-12-18T18:11:03.430Z",
+    "dueAt": "2026-01-16T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "d33abae1-80b1-4270-a9cc-7f31fd3ab7a8",
+    "bookId": "09df03d5-8a0f-464d-a47f-8b2a6a60d6b1",
+    "readerId": "84357d12-b292-452b-865a-b0067fc3cd7d",
+    "borrowedAt": "2025-10-07T18:11:03.430Z",
+    "dueAt": "2025-10-14T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-12-12T18:11:03.430Z"
+  },
+  {
+    "id": "1b8cdf71-8e81-4c99-90ba-dff50e41f091",
+    "bookId": "8e55f96a-aebb-46bb-bb91-e35a17348d38",
+    "readerId": "121cb45c-8b25-444c-920a-fb96a9a1e839",
+    "borrowedAt": "2025-11-15T18:11:03.430Z",
+    "dueAt": "2025-11-22T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "cc1a92e6-87b0-4317-9297-32b6a45bb29a",
+    "bookId": "fd841b3e-99c1-46d0-a032-9bf59f1ef9a8",
+    "readerId": "36d69b32-3eaf-43ed-85d3-d00816573705",
+    "borrowedAt": "2025-05-09T18:11:03.430Z",
+    "dueAt": "2025-05-21T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "7c414664-755a-4ca2-8f46-c8600499a641",
+    "bookId": "f85e6e35-b557-41a1-a1da-2906d00f5bfc",
+    "readerId": "22aa1a3b-aeb1-4198-9f94-29367e7eb936",
+    "borrowedAt": "2026-02-09T18:11:03.430Z",
+    "dueAt": "2026-02-18T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "256a0f6d-a536-4b0a-8988-6670278079c6",
+    "bookId": "7f483a4d-5490-4214-bef2-827d4826c0d9",
+    "readerId": "5c71c517-4979-4370-bfc7-4297602c97d2",
+    "borrowedAt": "2025-06-24T18:11:03.430Z",
+    "dueAt": "2025-07-10T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-01T18:11:03.430Z"
+  },
+  {
+    "id": "933645bf-460c-46b7-bd36-cc5f054b430e",
+    "bookId": "ee1af7ec-8661-4e0a-8b78-2b1870405e3f",
+    "readerId": "d52c9114-7623-4946-afbf-96d09a1d74c2",
+    "borrowedAt": "2025-10-17T18:11:03.430Z",
+    "dueAt": "2025-11-03T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-10-24T18:11:03.430Z"
+  },
+  {
+    "id": "59f2039b-3297-40ea-ae97-f8cfb6b9fe53",
+    "bookId": "f5d766aa-a024-4b9a-94c8-8693f4663e51",
+    "readerId": "1a0c2334-4563-477f-9e29-8804133d6464",
+    "borrowedAt": "2025-06-25T18:11:03.430Z",
+    "dueAt": "2025-07-11T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "dffd3d9f-e0a9-4911-afe9-f431a57f3fb5",
+    "bookId": "b7a574a6-6f21-455f-94d8-9d291c34163b",
+    "readerId": "c3cc8f79-63bb-442b-ad5f-f24d9be0d827",
+    "borrowedAt": "2025-06-10T18:11:03.430Z",
+    "dueAt": "2025-06-25T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "8c7462ca-e003-4662-8176-fdd4e96d6e2f",
+    "bookId": "92d63f2d-1533-4de0-9aed-b8dd806d3ce9",
+    "readerId": "3aa2fa8d-771c-46cd-bd08-7ec2fe756443",
+    "borrowedAt": "2025-10-19T18:11:03.430Z",
+    "dueAt": "2025-10-29T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-11-20T18:11:03.430Z"
+  },
+  {
+    "id": "08bb19b3-f9c5-4f7b-aa22-005382200a84",
+    "bookId": "f46f3099-1152-4445-817d-8c5c66fa7351",
+    "readerId": "d6ab6462-e0f5-448e-978a-d21f8000207f",
+    "borrowedAt": "2025-07-24T18:11:03.430Z",
+    "dueAt": "2025-08-06T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-11-22T18:11:03.430Z"
+  },
+  {
+    "id": "ea338e12-2f66-4cf4-927c-6ed596ce0697",
+    "bookId": "1ce24762-35a2-48ad-86f1-eb7c2885d7ec",
+    "readerId": "15842df4-2832-4e90-b0b4-d7d7a59cd568",
+    "borrowedAt": "2025-12-19T18:11:03.430Z",
+    "dueAt": "2025-12-27T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "26f45251-dc6c-4215-a47b-8ceda7c0d489",
+    "bookId": "3c1168ec-d4ba-4d82-8065-f2084432f19b",
+    "readerId": "1a0c2334-4563-477f-9e29-8804133d6464",
+    "borrowedAt": "2025-10-24T18:11:03.430Z",
+    "dueAt": "2025-11-08T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-12-11T18:11:03.430Z"
+  },
+  {
+    "id": "3a05bb4e-4b71-4165-af3d-84319135c7de",
+    "bookId": "2284018b-048b-4bc5-9aae-afcdfc5e1d5b",
+    "readerId": "2d7875be-54ba-428d-9180-f66664494c20",
+    "borrowedAt": "2025-05-30T18:11:03.430Z",
+    "dueAt": "2025-06-19T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "0e388d56-12ae-420c-b665-3f1a89a3a73c",
+    "bookId": "a87783e8-c76e-4bcc-b986-3114410de575",
+    "readerId": "f2de63ef-10f1-4260-b820-307ec39601eb",
+    "borrowedAt": "2025-12-10T18:11:03.430Z",
+    "dueAt": "2025-12-22T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "39618e8a-4473-46c1-9970-164dff912696",
+    "bookId": "3c1168ec-d4ba-4d82-8065-f2084432f19b",
+    "readerId": "387bf89a-b686-4001-b8e0-624076adf973",
+    "borrowedAt": "2025-04-24T18:11:03.430Z",
+    "dueAt": "2025-05-05T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-19T19:43:59.493Z"
+  },
+  {
+    "id": "5c869cca-da0b-4e81-8b4a-82ae658553e2",
+    "bookId": "77f60608-632c-4a50-bf6c-10574972b635",
+    "readerId": "d6ab6462-e0f5-448e-978a-d21f8000207f",
+    "borrowedAt": "2025-05-23T18:11:03.430Z",
+    "dueAt": "2025-06-05T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-06T18:11:03.430Z"
+  },
+  {
+    "id": "0806981c-b804-48b6-8dd1-42e80221f791",
+    "bookId": "ce590ddc-69e3-4913-8086-f3277d5261b0",
+    "readerId": "706e5a2b-aae9-432f-8f12-4f90360628d7",
+    "borrowedAt": "2025-09-14T18:11:03.430Z",
+    "dueAt": "2025-10-10T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "47a6b7af-a745-4595-8243-a5d85b937c37",
+    "bookId": "1806500f-95ae-4bf7-a0ca-877a250aa043",
+    "readerId": "d52c9114-7623-4946-afbf-96d09a1d74c2",
+    "borrowedAt": "2025-10-27T18:11:03.430Z",
+    "dueAt": "2025-11-26T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-12-24T18:11:03.430Z"
+  },
+  {
+    "id": "f771c563-8a70-4fe4-8cd4-1ed42f85bf5b",
+    "bookId": "4c028c99-9640-4324-85ba-52c37c62377a",
+    "readerId": "7af59e37-238e-43ea-9d33-d496275e7733",
+    "borrowedAt": "2025-07-20T18:11:03.430Z",
+    "dueAt": "2025-08-17T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "696e0289-a796-475a-94cd-55155ca79827",
+    "bookId": "359da3d1-5841-4efd-9553-878c021ef994",
+    "readerId": "51c9c6af-45c6-4b2d-8215-8db8cddc37b9",
+    "borrowedAt": "2025-08-28T18:11:03.430Z",
+    "dueAt": "2025-09-07T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-11-03T18:11:03.430Z"
+  },
+  {
+    "id": "c45b7937-9677-439a-94db-6d332e75a9ca",
+    "bookId": "52edee81-65be-4ab0-9e52-aedc9a4e289f",
+    "readerId": "69487ac5-c01b-42d7-a30f-fb46735a7c24",
+    "borrowedAt": "2025-08-21T18:11:03.430Z",
+    "dueAt": "2025-09-20T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "635daa51-a903-4451-a015-3dfa07cf0c3a",
+    "bookId": "e883d381-4561-47a2-a037-2ed868e1535a",
+    "readerId": "9e824456-40df-47a9-a0bd-9b690753d68a",
+    "borrowedAt": "2025-12-16T18:11:03.430Z",
+    "dueAt": "2026-01-14T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "d7d379aa-b33c-42ac-8383-5353a12f88ab",
+    "bookId": "cd194a97-f3a6-4d31-8783-bf8c9f5421ed",
+    "readerId": "095f3cc0-d2ec-4da6-acbf-89c98bf07306",
+    "borrowedAt": "2025-08-23T18:11:03.430Z",
+    "dueAt": "2025-09-05T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-06T18:11:03.430Z"
+  },
+  {
+    "id": "4e09ee1d-5ba7-4056-a205-b7cbf0b8b6b7",
+    "bookId": "b4",
+    "readerId": "9e824456-40df-47a9-a0bd-9b690753d68a",
+    "borrowedAt": "2025-09-07T18:11:03.430Z",
+    "dueAt": "2025-09-19T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "630944d9-6648-4f17-81e4-4504c7853560",
+    "bookId": "655d303a-5391-4fbc-bc14-7e0446ace1ed",
+    "readerId": "d4a127c8-45dd-461c-aede-d63f9357ceb0",
+    "borrowedAt": "2025-09-19T18:11:03.430Z",
+    "dueAt": "2025-10-17T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "647e420c-9e53-408d-a2b4-b1ebecaf6c63",
+    "bookId": "a39b24d7-9c66-4e9c-b941-ab718f9c5a4b",
+    "readerId": "6eb14542-0c4d-4d8b-92bc-f5b300193d17",
+    "borrowedAt": "2025-07-09T18:11:03.430Z",
+    "dueAt": "2025-08-01T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-13T18:11:03.430Z"
+  },
+  {
+    "id": "3ea9b45f-93c5-4f97-b264-cf7f410cdb50",
+    "bookId": "f46f3099-1152-4445-817d-8c5c66fa7351",
+    "readerId": "673f6520-7806-410f-9945-23560f53ff69",
+    "borrowedAt": "2026-01-23T18:11:03.430Z",
+    "dueAt": "2026-02-15T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "4600448a-e607-46dc-ae27-40c028b70e82",
+    "bookId": "70ccd0d1-1c3f-40b2-8f6a-998a4932940c",
+    "readerId": "3ab33663-a5bf-47d8-8f66-15b9d00fed61",
+    "borrowedAt": "2025-10-04T18:11:03.430Z",
+    "dueAt": "2025-10-28T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-02-03T18:11:03.430Z"
+  },
+  {
+    "id": "c14a7793-df4e-4744-8f3c-e3c683d8e7e2",
+    "bookId": "aa02c03e-2ccb-41f3-8b71-b9c88d163ee9",
+    "readerId": "ee521245-f540-4402-9f80-048be0eb24e6",
+    "borrowedAt": "2026-02-23T18:11:03.430Z",
+    "dueAt": "2026-03-13T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "87f2da6c-aec4-4ef1-beb1-d1fbe877c52d",
+    "bookId": "fd841b3e-99c1-46d0-a032-9bf59f1ef9a8",
+    "readerId": "788debfb-df71-49e4-8f82-9931263db8e3",
+    "borrowedAt": "2025-08-29T18:11:03.430Z",
+    "dueAt": "2025-09-27T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "2a081065-5dc3-4907-a004-ca16dae55163",
+    "bookId": "c8607f2c-dac0-4a6e-8a88-f271d99b1954",
+    "readerId": "d5d3f70f-a4b8-4433-a8cf-4404be36d35d",
+    "borrowedAt": "2025-06-16T18:11:03.430Z",
+    "dueAt": "2025-07-14T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-07-17T18:11:03.430Z"
+  },
+  {
+    "id": "4429f036-0c7c-4660-9cea-7a9ef1fb55af",
+    "bookId": "256ae60a-8d0a-4f5e-bd6a-3c32166a0b38",
+    "readerId": "7af59e37-238e-43ea-9d33-d496275e7733",
+    "borrowedAt": "2026-01-14T18:11:03.430Z",
+    "dueAt": "2026-01-21T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-01T18:11:03.430Z"
+  },
+  {
+    "id": "d8c4c1e2-c2b5-45ec-92e8-30134708bcbc",
+    "bookId": "92d63f2d-1533-4de0-9aed-b8dd806d3ce9",
+    "readerId": "c2d4c962-0cea-4cd6-88c0-66ebc1e69ec6",
+    "borrowedAt": "2025-05-23T18:11:03.430Z",
+    "dueAt": "2025-06-22T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-08-18T18:11:03.430Z"
+  },
+  {
+    "id": "d5606d5b-5783-4dea-960f-103755880228",
+    "bookId": "6f15e045-e2e6-4964-acd7-d804bd08ffee",
+    "readerId": "7dec1e2a-126d-42df-aeee-257c8f995a9b",
+    "borrowedAt": "2026-04-14T18:11:03.430Z",
+    "dueAt": "2026-04-21T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-17T18:11:03.430Z"
+  },
+  {
+    "id": "ce0bd737-3277-47ba-b065-2564610e41f3",
+    "bookId": "c9e253d6-c526-45df-bd7d-df056c74b712",
+    "readerId": "742f2d58-8413-4db1-91df-d2568f8f651c",
+    "borrowedAt": "2025-10-19T18:11:03.430Z",
+    "dueAt": "2025-10-26T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "11732d92-9c77-482e-a627-36b2d08e13aa",
+    "bookId": "a61aed36-55d1-488e-a3c0-68ef6bb8467f",
+    "readerId": "6879f607-084b-415c-bc04-130e9411e5d7",
+    "borrowedAt": "2025-11-17T18:11:03.430Z",
+    "dueAt": "2025-12-03T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "af95c5d0-7e20-4d88-9138-606c5de0d1ec",
+    "bookId": "b3",
+    "readerId": "2d7875be-54ba-428d-9180-f66664494c20",
+    "borrowedAt": "2026-03-23T18:11:03.430Z",
+    "dueAt": "2026-04-26T20:00:27.404Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "0fffba57-e2c7-4b77-b2cb-9f7ea40d834c",
+    "bookId": "0ad9fdad-c33e-4973-af36-72cc0fcb3280",
+    "readerId": "fb4b7fbe-592a-4e90-b7c0-1aa775185bd7",
+    "borrowedAt": "2025-07-01T18:11:03.430Z",
+    "dueAt": "2025-07-22T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-18T18:11:03.430Z"
+  },
+  {
+    "id": "c5e9cc9e-ec18-47f4-9fcd-63ef7e0d7520",
+    "bookId": "dd7b27ab-f58d-48b2-ba37-628c0ab4ddd4",
+    "readerId": "706e5a2b-aae9-432f-8f12-4f90360628d7",
+    "borrowedAt": "2025-07-23T18:11:03.430Z",
+    "dueAt": "2025-08-08T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-09-23T18:11:03.430Z"
+  },
+  {
+    "id": "5fbc896c-5775-4a69-a493-1f8d1c03da02",
+    "bookId": "95247088-a339-4f1b-b0d2-463c49293a4e",
+    "readerId": "61736322-855c-4cb0-a2ec-daacc86fb7c9",
+    "borrowedAt": "2025-10-22T18:11:03.430Z",
+    "dueAt": "2025-11-12T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "6c6c6f42-136b-4196-ada1-1421a4b209f7",
+    "bookId": "e76a5b4b-6cb0-482d-b62d-cf3fe3ff64ce",
+    "readerId": "16263c73-2836-4f79-8867-b64f8f5219d9",
+    "borrowedAt": "2025-05-12T18:11:03.430Z",
+    "dueAt": "2025-06-11T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "91099ede-44b4-44a2-b233-fbd9f5124273",
+    "bookId": "0d29aa24-d233-4895-8aed-a4b320744165",
+    "readerId": "84357d12-b292-452b-865a-b0067fc3cd7d",
+    "borrowedAt": "2025-09-21T18:11:03.430Z",
+    "dueAt": "2025-10-08T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-11-11T18:11:03.430Z"
+  },
+  {
+    "id": "e5d89e05-e52a-4677-9709-55ffb8ce895b",
+    "bookId": "b2c437b3-00a4-469e-a6e3-081cfb34b033",
+    "readerId": "c482e0aa-2c3f-4461-b6fb-0a075f01cf8d",
+    "borrowedAt": "2025-08-13T18:11:03.430Z",
+    "dueAt": "2025-09-02T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "e899f071-e103-4a6c-8164-70c333fa1d3d",
+    "bookId": "16d7de21-1613-488f-9114-352da8b40923",
+    "readerId": "dc9e0e39-5490-4fb6-85ea-5899303f580e",
+    "borrowedAt": "2025-05-20T18:11:03.430Z",
+    "dueAt": "2025-06-18T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "606ac59e-c1f4-46a6-8d9d-74561ffba207",
+    "bookId": "06440029-33b7-4750-a02b-0e831091a61f",
+    "readerId": "fb4b7fbe-592a-4e90-b7c0-1aa775185bd7",
+    "borrowedAt": "2026-02-22T18:11:03.430Z",
+    "dueAt": "2026-03-01T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-25T18:11:03.430Z"
+  },
+  {
+    "id": "0a2528c3-96c3-43a3-afd2-f29fb1bc8d57",
+    "bookId": "77f60608-632c-4a50-bf6c-10574972b635",
+    "readerId": "fb4b7fbe-592a-4e90-b7c0-1aa775185bd7",
+    "borrowedAt": "2025-11-17T18:11:03.430Z",
+    "dueAt": "2025-12-09T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "9652078f-3135-4c1c-9c70-cdd09dc815af",
+    "bookId": "b1",
+    "readerId": "0e1f2842-0f2b-4785-bb73-62630f22f154",
+    "borrowedAt": "2025-07-30T18:11:03.430Z",
+    "dueAt": "2025-08-06T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "7a5b8d2c-b0df-42c7-8929-7351f6e789b6",
+    "bookId": "47543288-f54c-4166-a74c-e2c09657fdfe",
+    "readerId": "3f7ce847-3626-4663-903c-68d990c01abd",
+    "borrowedAt": "2026-03-08T18:11:03.430Z",
+    "dueAt": "2026-03-19T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "d6525459-6b4a-4a4e-a988-58f356264b0d",
+    "bookId": "2d44c53f-0ca8-460a-b603-552cd44bf947",
+    "readerId": "c482e0aa-2c3f-4461-b6fb-0a075f01cf8d",
+    "borrowedAt": "2025-09-11T18:11:03.430Z",
+    "dueAt": "2025-10-04T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-11T18:11:03.430Z"
+  },
+  {
+    "id": "b886bcbc-72f3-4b5f-9a6e-b3bbea629efc",
+    "bookId": "dbed3af6-6fef-4ec9-96fd-655ac9c6140f",
+    "readerId": "5c71c517-4979-4370-bfc7-4297602c97d2",
+    "borrowedAt": "2026-02-27T18:11:03.430Z",
+    "dueAt": "2026-03-26T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "91f719e7-730c-4c1e-bc79-c206c91f694c",
+    "bookId": "53ed9ba8-447f-48fa-9963-a624a76503df",
+    "readerId": "6ce51b98-9812-4651-899d-a355b4d90139",
+    "borrowedAt": "2025-07-31T18:11:03.430Z",
+    "dueAt": "2025-08-10T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "01d95085-3793-4ddb-a213-2cad68577dff",
+    "bookId": "af34e17d-929d-407e-bf66-c572754cb7c8",
+    "readerId": "5c4571cd-7bd6-4e4d-a2ca-a92e20542ce9",
+    "borrowedAt": "2025-07-13T18:11:03.430Z",
+    "dueAt": "2025-07-21T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-07-25T18:11:03.430Z"
+  },
+  {
+    "id": "c5da97a7-7f2e-4226-9e0e-150899368cc6",
+    "bookId": "2a384254-04be-4bb8-a0f3-3ae4f3c9a62c",
+    "readerId": "c3cc8f79-63bb-442b-ad5f-f24d9be0d827",
+    "borrowedAt": "2025-09-16T18:11:03.430Z",
+    "dueAt": "2025-09-26T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "b7f549b2-aefc-4a26-bbfe-81f12ebac6e6",
+    "bookId": "c8607f2c-dac0-4a6e-8a88-f271d99b1954",
+    "readerId": "898fffc1-92bc-44bc-a656-8fe79cbda22b",
+    "borrowedAt": "2026-04-05T18:11:03.430Z",
+    "dueAt": "2026-04-20T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "27884fe6-428a-4708-9a01-6e72cd6f1a33",
+    "bookId": "3af325c1-c292-4fb4-ab11-50cc9d48018e",
+    "readerId": "de90de95-5f77-442a-a671-ce72d1d7fa0d",
+    "borrowedAt": "2026-03-14T18:11:03.430Z",
+    "dueAt": "2026-03-29T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "31be1584-de38-49fc-9799-d4bb365a1985",
+    "bookId": "cd194a97-f3a6-4d31-8783-bf8c9f5421ed",
+    "readerId": "4ee6e5e0-1eb3-4eee-ba82-22c655a18899",
+    "borrowedAt": "2025-07-27T18:11:03.430Z",
+    "dueAt": "2025-08-04T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "3f9ed795-7b9d-4aab-ab33-d5d86906a256",
+    "bookId": "c7bcb56c-8e10-47a8-af86-68b2a91ec862",
+    "readerId": "d52c9114-7623-4946-afbf-96d09a1d74c2",
+    "borrowedAt": "2025-11-21T18:11:03.430Z",
+    "dueAt": "2025-11-29T18:11:03.430Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "98431905-d0ed-483a-bf4f-699774ce81ba",
+    "bookId": "d75745ba-bd53-4fa6-86c1-95de7d57899c",
+    "readerId": "08bf07cf-0312-4f21-a29b-4e03bb93285b",
+    "borrowedAt": "2025-06-24T18:11:03.430Z",
+    "dueAt": "2025-07-07T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-19T19:53:03.484Z"
+  },
+  {
+    "id": "971e370e-90bf-4c96-a5d2-e4182489da0c",
+    "bookId": "93993d5c-bd40-4879-b129-67b2ab7774df",
+    "readerId": "4beeb2c4-41f1-4cb3-b2b9-731a3d101d9c",
+    "borrowedAt": "2026-02-12T18:11:03.430Z",
+    "dueAt": "2026-03-10T18:11:03.430Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-01T18:11:03.430Z"
+  },
+  {
+    "id": "8c33fe76-3330-483a-9ca7-3268ee517f43",
+    "bookId": "f1b31191-eee3-4278-a9fa-58a9764aa091",
+    "readerId": "15842df4-2832-4e90-b0b4-d7d7a59cd568",
+    "borrowedAt": "2026-02-02T18:11:03.431Z",
+    "dueAt": "2026-03-03T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-02-19T18:11:03.431Z"
+  },
+  {
+    "id": "79dccc1c-9d43-484d-a5ce-7c5c66b981d4",
+    "bookId": "928ead14-331e-4b1d-af2a-445556d46caf",
+    "readerId": "ec10032f-cb62-41a8-b574-9022ee8ddf53",
+    "borrowedAt": "2025-04-26T18:11:03.431Z",
+    "dueAt": "2025-05-10T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-08-26T18:11:03.431Z"
+  },
+  {
+    "id": "f2e6c0df-5d4d-41e2-85b1-6c177b3481c0",
+    "bookId": "0fe7f746-860a-4cf1-b343-462945518890",
+    "readerId": "f42bf4c3-25d5-45b5-8985-d3b8883f6ba1",
+    "borrowedAt": "2025-11-18T18:11:03.431Z",
+    "dueAt": "2025-12-14T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-12-29T18:11:03.431Z"
+  },
+  {
+    "id": "169344c6-1128-4dff-b097-4349981ebfbf",
+    "bookId": "359da3d1-5841-4efd-9553-878c021ef994",
+    "readerId": "abc4e551-d5aa-4f6d-b87a-44c5f30a6135",
+    "borrowedAt": "2025-07-14T18:11:03.431Z",
+    "dueAt": "2025-07-23T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-28T18:11:03.431Z"
+  },
+  {
+    "id": "879082eb-09bd-4074-8e6d-fbe30e92f29b",
+    "bookId": "7f483a4d-5490-4214-bef2-827d4826c0d9",
+    "readerId": "5e53ece8-687b-493a-b864-984f6fe97b88",
+    "borrowedAt": "2025-08-19T18:11:03.431Z",
+    "dueAt": "2025-09-14T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "005d1f70-b2f5-4941-8969-8cafb5f21b58",
+    "bookId": "dfccc767-8547-4bb0-b39d-6b18db534e3b",
+    "readerId": "51a422de-3e1c-405d-a7dc-e7a7445156ff",
+    "borrowedAt": "2025-08-18T18:11:03.431Z",
+    "dueAt": "2025-09-14T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "b31e9b91-6121-4a24-be79-ed744aa88fd5",
+    "bookId": "2d44c53f-0ca8-460a-b603-552cd44bf947",
+    "readerId": "ec10032f-cb62-41a8-b574-9022ee8ddf53",
+    "borrowedAt": "2025-06-04T18:11:03.431Z",
+    "dueAt": "2025-06-27T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "dc32e92a-7d00-4919-b52a-47bd0a8d7834",
+    "bookId": "95247088-a339-4f1b-b0d2-463c49293a4e",
+    "readerId": "d5d3f70f-a4b8-4433-a8cf-4404be36d35d",
+    "borrowedAt": "2025-06-24T18:11:03.431Z",
+    "dueAt": "2025-07-14T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-12-03T18:11:03.431Z"
+  },
+  {
+    "id": "513dfe3f-15b8-4471-bab1-9eff00f077c3",
+    "bookId": "98f00645-922b-4730-b6a1-2486a73cc389",
+    "readerId": "4b758f4f-4e8d-4861-8e53-07e4d8780a9b",
+    "borrowedAt": "2025-07-26T18:11:03.431Z",
+    "dueAt": "2025-08-25T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "0adb4b2b-0db3-43bc-955d-ed16764b9c55",
+    "bookId": "c8b747a9-790a-45e2-80d7-a7b7ee2efe40",
+    "readerId": "c43bb247-1b49-4001-be13-fadc5876dde0",
+    "borrowedAt": "2025-08-11T18:11:03.431Z",
+    "dueAt": "2025-08-31T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-10-25T18:11:03.431Z"
+  },
+  {
+    "id": "bf0dabc2-3a19-4d96-89db-32875383cb66",
+    "bookId": "64a901c2-1b0d-425c-807d-99b675e1a36b",
+    "readerId": "c2d4c962-0cea-4cd6-88c0-66ebc1e69ec6",
+    "borrowedAt": "2025-06-27T18:11:03.431Z",
+    "dueAt": "2025-07-15T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "aba7c82f-bed6-415d-897c-2614b8eae1a4",
+    "bookId": "b70cd492-89bf-41f9-993f-ecf078eecd70",
+    "readerId": "c43bb247-1b49-4001-be13-fadc5876dde0",
+    "borrowedAt": "2025-07-02T18:11:03.431Z",
+    "dueAt": "2025-07-10T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "af9bb55c-4279-42b4-a270-06bb871f0e59",
+    "bookId": "a61aed36-55d1-488e-a3c0-68ef6bb8467f",
+    "readerId": "dc9e0e39-5490-4fb6-85ea-5899303f580e",
+    "borrowedAt": "2026-03-11T18:11:03.431Z",
+    "dueAt": "2026-04-01T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-29T18:11:03.431Z"
+  },
+  {
+    "id": "c0aaec9f-8a98-40cd-8a4f-e9550836fb53",
+    "bookId": "84fb505f-ba3b-469f-9f8a-abb1725c9e84",
+    "readerId": "a79f2375-d8d1-46cb-aa0d-a44fc463a0ae",
+    "borrowedAt": "2025-12-11T18:11:03.431Z",
+    "dueAt": "2025-12-21T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-25T18:11:03.431Z"
+  },
+  {
+    "id": "0b6ae1c6-e17e-4244-90b9-d55dde688650",
+    "bookId": "2a2b7bbf-25a5-4964-a03e-c03511c398b2",
+    "readerId": "32df714c-ab1f-4e61-ad65-f61e14a40dd7",
+    "borrowedAt": "2025-09-21T18:11:03.431Z",
+    "dueAt": "2025-10-20T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "fa36d9bf-2cb3-44d8-ba39-c19e8f916c03",
+    "bookId": "11f28ea3-45ad-430c-9796-cadd5d19e594",
+    "readerId": "64054734-82b9-47be-8ca4-37698ba40766",
+    "borrowedAt": "2026-03-06T18:11:03.431Z",
+    "dueAt": "2026-04-04T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "540e3242-7fc6-40cc-892d-c71f427d9dd5",
+    "bookId": "dfccc767-8547-4bb0-b39d-6b18db534e3b",
+    "readerId": "ac1bc8c2-cccb-47b9-a3a1-2fc1271702f0",
+    "borrowedAt": "2025-09-22T18:11:03.431Z",
+    "dueAt": "2025-10-04T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "02e39725-b466-4ed3-af57-499718f31400",
+    "bookId": "655d303a-5391-4fbc-bc14-7e0446ace1ed",
+    "readerId": "16263c73-2836-4f79-8867-b64f8f5219d9",
+    "borrowedAt": "2026-04-01T18:11:03.431Z",
+    "dueAt": "2026-04-09T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-16T18:11:03.431Z"
+  },
+  {
+    "id": "39b4d7fe-5b51-4ff7-8a66-81a4f859ca3f",
+    "bookId": "c7bcb56c-8e10-47a8-af86-68b2a91ec862",
+    "readerId": "6b0165f2-da60-4933-821b-cd2b867b458c",
+    "borrowedAt": "2025-05-21T18:11:03.431Z",
+    "dueAt": "2025-06-15T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-05T18:11:03.431Z"
+  },
+  {
+    "id": "71df8423-6786-4ca5-8e09-b6e24e77ea00",
+    "bookId": "b3",
+    "readerId": "36d69b32-3eaf-43ed-85d3-d00816573705",
+    "borrowedAt": "2025-06-04T18:11:03.431Z",
+    "dueAt": "2025-06-21T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "5251a348-7307-4970-814e-046b7c3237a7",
+    "bookId": "e883d381-4561-47a2-a037-2ed868e1535a",
+    "readerId": "c4d69752-7a9d-413a-a0e1-d5168523ca02",
+    "borrowedAt": "2025-09-12T18:11:03.431Z",
+    "dueAt": "2025-09-28T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-09-15T18:11:03.431Z"
+  },
+  {
+    "id": "e653c7fb-49b0-4ee2-aad9-0987e465f3ba",
+    "bookId": "db64ccae-f167-4689-82e9-d2b8230a99f2",
+    "readerId": "7e76a960-231c-4fec-acd7-1991e6a1d6ec",
+    "borrowedAt": "2026-02-23T18:11:03.431Z",
+    "dueAt": "2026-03-12T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "7bb4cc6f-289a-4c50-8a92-e1fd2fe9aaf0",
+    "bookId": "db64ccae-f167-4689-82e9-d2b8230a99f2",
+    "readerId": "8b7dc7d2-cddf-49dd-80cf-736e8d19e9bc",
+    "borrowedAt": "2026-03-21T18:11:03.431Z",
+    "dueAt": "2026-04-20T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "718f8a98-8cd4-46fe-a83f-77dbdf09d06b",
+    "bookId": "182eb238-0962-41f9-9649-8935da137ba6",
+    "readerId": "9e824456-40df-47a9-a0bd-9b690753d68a",
+    "borrowedAt": "2025-07-03T18:11:03.431Z",
+    "dueAt": "2025-07-21T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-16T18:11:03.431Z"
+  },
+  {
+    "id": "3b561250-9aa2-4fb8-a0e0-3e7a8d4ea9d6",
+    "bookId": "928ead14-331e-4b1d-af2a-445556d46caf",
+    "readerId": "4de07d07-b45d-4ed9-a5ea-7c9994bb1669",
+    "borrowedAt": "2025-07-11T18:11:03.431Z",
+    "dueAt": "2025-08-06T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-10-23T18:11:03.431Z"
+  },
+  {
+    "id": "95f5e14b-2672-4de3-9864-8838cd8e48d9",
+    "bookId": "e1e6ede8-160b-416f-a15c-c55ba3c5c7b2",
+    "readerId": "673f6520-7806-410f-9945-23560f53ff69",
+    "borrowedAt": "2026-01-31T18:11:03.431Z",
+    "dueAt": "2026-02-22T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "ce9e1106-3062-4a16-8020-19fe91100ae9",
+    "bookId": "c9e253d6-c526-45df-bd7d-df056c74b712",
+    "readerId": "3e2bef90-824a-4eb2-9eb5-10a713ea7139",
+    "borrowedAt": "2025-09-18T18:11:03.431Z",
+    "dueAt": "2025-09-27T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "069f259d-e7dc-49ff-acd4-06165f74bcfb",
+    "bookId": "182eb238-0962-41f9-9649-8935da137ba6",
+    "readerId": "85aa274a-67ab-4a24-8a92-bdc0ee6ecdc0",
+    "borrowedAt": "2025-10-11T18:11:03.431Z",
+    "dueAt": "2025-10-24T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-31T18:11:03.431Z"
+  },
+  {
+    "id": "758e2af0-6324-49a9-bca4-7be22b98d31d",
+    "bookId": "37e38d5f-3fea-4a97-b78b-c59a2f538752",
+    "readerId": "cae4fe83-32b1-4dbe-9502-7bf13a0f1f93",
+    "borrowedAt": "2026-02-10T18:11:03.431Z",
+    "dueAt": "2026-02-28T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-06T18:11:03.431Z"
+  },
+  {
+    "id": "38d325cc-4fd1-4b44-ba2e-c57204e09e87",
+    "bookId": "e1e6ede8-160b-416f-a15c-c55ba3c5c7b2",
+    "readerId": "56b8333a-e7df-4136-b234-a1ae1caafeef",
+    "borrowedAt": "2026-04-08T18:11:03.431Z",
+    "dueAt": "2026-04-29T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-18T18:11:03.431Z"
+  },
+  {
+    "id": "f6723f1c-7968-4d83-a90f-958988052799",
+    "bookId": "ee6dac38-cf3a-4fbf-8b4f-5991797ec051",
+    "readerId": "3ab15f22-17b6-49ba-af55-8986fa360e2c",
+    "borrowedAt": "2026-02-26T18:11:03.431Z",
+    "dueAt": "2026-03-22T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "e917063d-2e8c-483c-a34e-6454286afd8f",
+    "bookId": "a8c19552-12eb-439c-b66c-2b07966484b2",
+    "readerId": "78c9ffec-f818-45cf-bb59-a3fe010a09d3",
+    "borrowedAt": "2025-10-09T18:11:03.431Z",
+    "dueAt": "2025-10-18T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-29T18:11:03.431Z"
+  },
+  {
+    "id": "6da19e58-e0c6-4be1-82bd-bd532ad06243",
+    "bookId": "34a81a8b-a6e5-457e-a40f-87d9f555b65e",
+    "readerId": "135c58de-6a0b-4e7e-bb08-05225a007411",
+    "borrowedAt": "2025-08-14T18:11:03.431Z",
+    "dueAt": "2025-09-09T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "5045c7a5-c6a4-418d-9f2c-d240865871b7",
+    "bookId": "94e8401a-689c-40f9-90c4-540b1e3ef0c2",
+    "readerId": "a5799443-5905-4122-b49c-b625d3d1fd21",
+    "borrowedAt": "2025-12-10T18:11:03.431Z",
+    "dueAt": "2026-01-07T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-09T18:11:03.431Z"
+  },
+  {
+    "id": "7d0d44b1-b96f-4e04-b9b8-0525c2937853",
+    "bookId": "2b249e83-c479-48bd-9755-09a95e6bce5f",
+    "readerId": "61736322-855c-4cb0-a2ec-daacc86fb7c9",
+    "borrowedAt": "2025-06-16T18:11:03.431Z",
+    "dueAt": "2025-06-27T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "70f370f0-2f2a-4397-a85e-4278b73b6128",
+    "bookId": "37e38d5f-3fea-4a97-b78b-c59a2f538752",
+    "readerId": "ed9d28b6-8b18-47da-bc53-239d596927cf",
+    "borrowedAt": "2025-04-24T18:11:03.431Z",
+    "dueAt": "2025-05-18T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-30T18:11:03.431Z"
+  },
+  {
+    "id": "157053e0-d6b4-46db-b6f8-fad863e04469",
+    "bookId": "0e2397ae-31f1-4bc9-8b57-17ef35401547",
+    "readerId": "59cfd207-328f-4edb-a73f-203fe86f73b2",
+    "borrowedAt": "2025-12-29T18:11:03.431Z",
+    "dueAt": "2026-01-07T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-22T18:11:03.431Z"
+  },
+  {
+    "id": "f40f6607-abb2-4f9b-b14e-f66f4725d7b6",
+    "bookId": "636b55ab-0cc8-4af3-a2e1-f10b18f74cf2",
+    "readerId": "22aa1a3b-aeb1-4198-9f94-29367e7eb936",
+    "borrowedAt": "2025-09-10T18:11:03.431Z",
+    "dueAt": "2025-09-22T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "e5c6d74a-fe81-496c-aa90-5b89f61a16f2",
+    "bookId": "46865fb1-3268-4cd9-9a15-4470dd3fa214",
+    "readerId": "66314557-d372-4bf2-b649-276cab4b7cbc",
+    "borrowedAt": "2025-08-29T18:11:03.431Z",
+    "dueAt": "2025-09-09T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "42a65966-e221-4bc5-80eb-283443e5c9a0",
+    "bookId": "53ed9ba8-447f-48fa-9963-a624a76503df",
+    "readerId": "32df714c-ab1f-4e61-ad65-f61e14a40dd7",
+    "borrowedAt": "2025-08-19T18:11:03.431Z",
+    "dueAt": "2025-09-08T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "1e21e281-4401-4682-a6ba-22576c6328da",
+    "bookId": "e6f9a557-9d54-4eb3-a1fa-0e443e3a4570",
+    "readerId": "c92de706-22b4-4400-95a2-7db248aec829",
+    "borrowedAt": "2025-09-10T18:11:03.431Z",
+    "dueAt": "2025-10-02T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-03T18:11:03.431Z"
+  },
+  {
+    "id": "71c02167-02a1-47cf-9b60-2ac636581e76",
+    "bookId": "636b55ab-0cc8-4af3-a2e1-f10b18f74cf2",
+    "readerId": "565de28e-0a9f-47fb-877a-a3ba12b5fef5",
+    "borrowedAt": "2025-06-25T18:11:03.431Z",
+    "dueAt": "2025-07-16T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "9e5da182-0385-4eef-ba0b-d9a54ce1ac6d",
+    "bookId": "93993d5c-bd40-4879-b129-67b2ab7774df",
+    "readerId": "28b81b38-b95a-4133-872f-0f519a88139a",
+    "borrowedAt": "2026-04-02T18:11:03.431Z",
+    "dueAt": "2026-04-23T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-12T18:11:03.431Z"
+  },
+  {
+    "id": "8406c3cd-24d7-4ca3-aa30-82891af91d69",
+    "bookId": "db64ccae-f167-4689-82e9-d2b8230a99f2",
+    "readerId": "00b0186f-e0f4-4a8c-8796-699bb63af412",
+    "borrowedAt": "2025-05-17T18:11:03.431Z",
+    "dueAt": "2025-06-06T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "dfa3d256-5aab-469a-957f-95a5f90fefd6",
+    "bookId": "112f0d82-03c3-4872-adba-dbb5af48e0f4",
+    "readerId": "85aa274a-67ab-4a24-8a92-bdc0ee6ecdc0",
+    "borrowedAt": "2026-01-26T18:11:03.431Z",
+    "dueAt": "2026-02-15T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "ed8e6ea5-c6e9-45cc-b07f-4e338a13f533",
+    "bookId": "c9e253d6-c526-45df-bd7d-df056c74b712",
+    "readerId": "98190add-da07-47a6-aabc-561118314a9d",
+    "borrowedAt": "2026-03-11T18:11:03.431Z",
+    "dueAt": "2026-04-04T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "28c34367-2ba0-4130-853b-fda04bdc78a6",
+    "bookId": "b73cf3e8-3ca3-488b-b1b4-ac00c9bbe2b6",
+    "readerId": "629a5f60-d945-452a-b7a2-fb5ba9c08562",
+    "borrowedAt": "2026-03-25T18:11:03.431Z",
+    "dueAt": "2026-04-19T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-15T18:11:03.431Z"
+  },
+  {
+    "id": "e854fe63-4be9-4410-9f1d-428dcc9c1cd7",
+    "bookId": "0fe7f746-860a-4cf1-b343-462945518890",
+    "readerId": "6968b212-8d54-4743-8e29-c8d1bea6f203",
+    "borrowedAt": "2026-01-18T18:11:03.431Z",
+    "dueAt": "2026-02-14T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "62231ec4-2657-421c-8ffc-7302dd00eb7f",
+    "bookId": "e3bd57e8-8812-42f4-a15e-9ced0fed28a8",
+    "readerId": "15842df4-2832-4e90-b0b4-d7d7a59cd568",
+    "borrowedAt": "2025-08-30T18:11:03.431Z",
+    "dueAt": "2025-09-25T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-28T18:11:03.431Z"
+  },
+  {
+    "id": "f703ac2b-7135-47ad-a55e-9deebbc34c4e",
+    "bookId": "1ce24762-35a2-48ad-86f1-eb7c2885d7ec",
+    "readerId": "5e53ece8-687b-493a-b864-984f6fe97b88",
+    "borrowedAt": "2025-07-23T18:11:03.431Z",
+    "dueAt": "2025-08-16T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "1c31049b-3bd3-47dd-95e4-6454b97ad7bc",
+    "bookId": "f6156f37-4dd4-4a0f-89fb-0db56cc27bd7",
+    "readerId": "bd738ea1-9b2d-4059-a901-38d8d41e6067",
+    "borrowedAt": "2026-03-20T18:11:03.431Z",
+    "dueAt": "2026-04-18T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-30T18:11:03.431Z"
+  },
+  {
+    "id": "f9bf5a0d-e2fd-4886-9839-90ddb17e1d5a",
+    "bookId": "34a81a8b-a6e5-457e-a40f-87d9f555b65e",
+    "readerId": "b1b76bcb-5020-46c4-bca8-d177d4f457d5",
+    "borrowedAt": "2026-02-07T18:11:03.431Z",
+    "dueAt": "2026-03-08T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-02-25T18:11:03.431Z"
+  },
+  {
+    "id": "014a8783-2fc1-4193-aedc-3ac463ab14b4",
+    "bookId": "0296ce0c-21ce-4dc4-bda0-ec354143ca18",
+    "readerId": "e7e4fb8f-775e-4f5b-a028-e642e910d7af",
+    "borrowedAt": "2025-12-25T18:11:03.431Z",
+    "dueAt": "2026-01-17T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "501f8bbb-75e4-4d25-9d7a-a687b1844935",
+    "bookId": "a6806d41-6534-4625-bea0-b42a4594eac4",
+    "readerId": "84357d12-b292-452b-865a-b0067fc3cd7d",
+    "borrowedAt": "2026-03-26T18:11:03.431Z",
+    "dueAt": "2026-04-05T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "4d8feb35-a744-455b-90ab-59243765aa14",
+    "bookId": "ef98f96c-33d5-40c7-a841-432ab2bf808a",
+    "readerId": "0cf9493d-9378-4651-bda4-4ecb0e2129a0",
+    "borrowedAt": "2025-07-11T18:11:03.431Z",
+    "dueAt": "2025-08-08T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-10-31T18:11:03.431Z"
+  },
+  {
+    "id": "1e91e312-c0c0-4b38-9e53-09e06e7fc0c1",
+    "bookId": "4146d0c3-2429-453a-84b8-242d262a071e",
+    "readerId": "d6ab6462-e0f5-448e-978a-d21f8000207f",
+    "borrowedAt": "2026-03-25T18:11:03.431Z",
+    "dueAt": "2026-04-03T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-01T18:11:03.431Z"
+  },
+  {
+    "id": "106e4042-1bc9-4f59-bfc8-030ae58fb65c",
+    "bookId": "2d44c53f-0ca8-460a-b603-552cd44bf947",
+    "readerId": "5fe524aa-2d6c-43db-a284-eb1187c6104f",
+    "borrowedAt": "2025-08-02T18:11:03.431Z",
+    "dueAt": "2025-08-15T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "37f72023-b175-44ef-a4be-80300160cfba",
+    "bookId": "c8607f2c-dac0-4a6e-8a88-f271d99b1954",
+    "readerId": "c6661b6a-3777-4be5-8b3b-c1550bced872",
+    "borrowedAt": "2025-08-17T18:11:03.431Z",
+    "dueAt": "2025-08-24T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "f3f85ed1-b454-4d4c-9de6-71e6136b5efb",
+    "bookId": "7ad78d6f-74d0-4ac8-ac01-220b46128172",
+    "readerId": "c4d69752-7a9d-413a-a0e1-d5168523ca02",
+    "borrowedAt": "2026-04-06T18:11:03.431Z",
+    "dueAt": "2026-05-04T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "bbceedce-806c-4916-97af-0932193dacc8",
+    "bookId": "d46e1607-3b3f-48a6-b87a-fa0b81fb2732",
+    "readerId": "898fffc1-92bc-44bc-a656-8fe79cbda22b",
+    "borrowedAt": "2025-12-29T18:11:03.431Z",
+    "dueAt": "2026-01-16T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "2529c5dd-26f6-4a96-905b-3513414f12dd",
+    "bookId": "53f0695b-4b69-46d2-9e38-a0d89998a5f3",
+    "readerId": "095f3cc0-d2ec-4da6-acbf-89c98bf07306",
+    "borrowedAt": "2026-01-05T18:11:03.431Z",
+    "dueAt": "2026-01-28T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "1f958c27-625a-478f-9234-1e6e3f0b7443",
+    "bookId": "57445d15-e4ae-4ead-b3e1-2bdfcb4e5b95",
+    "readerId": "135c58de-6a0b-4e7e-bb08-05225a007411",
+    "borrowedAt": "2025-09-07T18:11:03.431Z",
+    "dueAt": "2025-09-24T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "5e876a92-466a-4700-a326-cc75e4fb5f89",
+    "bookId": "36cc88ec-9307-4824-91a0-c27fbd9b8283",
+    "readerId": "99e3f90e-5bcd-4503-bd41-98982b2231bb",
+    "borrowedAt": "2026-01-21T18:11:03.431Z",
+    "dueAt": "2026-02-14T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "8401eee9-3004-4717-ac18-68f6f92a3007",
+    "bookId": "0d29aa24-d233-4895-8aed-a4b320744165",
+    "readerId": "5c4571cd-7bd6-4e4d-a2ca-a92e20542ce9",
+    "borrowedAt": "2025-09-09T18:11:03.431Z",
+    "dueAt": "2025-10-05T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "88eae6ea-50b5-43a1-9f2e-a7254fb4e963",
+    "bookId": "b2c437b3-00a4-469e-a6e3-081cfb34b033",
+    "readerId": "c4d69752-7a9d-413a-a0e1-d5168523ca02",
+    "borrowedAt": "2025-06-29T18:11:03.431Z",
+    "dueAt": "2025-07-16T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "b0f7d91c-4add-4aa2-bb38-23d10511520d",
+    "bookId": "4e678b59-1cb0-4e07-89bc-db5f66f4792d",
+    "readerId": "4ee6e5e0-1eb3-4eee-ba82-22c655a18899",
+    "borrowedAt": "2026-03-26T18:11:03.431Z",
+    "dueAt": "2026-04-11T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-10T18:11:03.431Z"
+  },
+  {
+    "id": "b76b99fe-280c-428e-bd7a-b4bdbbf71121",
+    "bookId": "0ab5b023-bdf1-43b9-a582-bcc099de1800",
+    "readerId": "65002d60-d234-48ec-8dd4-ae1c41a0d620",
+    "borrowedAt": "2025-06-07T18:11:03.431Z",
+    "dueAt": "2025-06-16T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "7a4eeb1b-5438-4712-a2b4-96ea8da0fd10",
+    "bookId": "eab6a1f0-4de0-420c-a418-c002598fe8ba",
+    "readerId": "59cfd207-328f-4edb-a73f-203fe86f73b2",
+    "borrowedAt": "2025-07-27T18:11:03.431Z",
+    "dueAt": "2025-08-17T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "a1d9993b-0a0b-4066-a460-fedaceab43f3",
+    "bookId": "2a2b7bbf-25a5-4964-a03e-c03511c398b2",
+    "readerId": "e003699e-6036-4a99-b327-ecd927c8908e",
+    "borrowedAt": "2025-06-14T18:11:03.431Z",
+    "dueAt": "2025-07-09T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "2ad03828-b503-4016-8158-775e9f05bd11",
+    "bookId": "b886165a-7191-4ae9-bacb-5007cade5f52",
+    "readerId": "5842813c-fa53-4039-a1ad-97ec70cb3d3a",
+    "borrowedAt": "2025-08-24T18:11:03.431Z",
+    "dueAt": "2025-09-18T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-09T18:11:03.431Z"
+  },
+  {
+    "id": "3b07eafb-e9db-47fb-b016-0d637da4560d",
+    "bookId": "ce590ddc-69e3-4913-8086-f3277d5261b0",
+    "readerId": "5c4571cd-7bd6-4e4d-a2ca-a92e20542ce9",
+    "borrowedAt": "2025-10-11T18:11:03.431Z",
+    "dueAt": "2025-10-25T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "820ba820-4cd6-44ec-9978-b9a02810e664",
+    "bookId": "138b285e-13e5-4783-929d-05e5a9858160",
+    "readerId": "a1047c26-da02-451a-8487-d49a40fbf53f",
+    "borrowedAt": "2025-11-21T18:11:03.431Z",
+    "dueAt": "2025-11-29T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "709df47f-9f2a-441f-b12d-7a73a692cdf6",
+    "bookId": "f6156f37-4dd4-4a0f-89fb-0db56cc27bd7",
+    "readerId": "91d43b46-af14-48a4-8329-59ada340ce11",
+    "borrowedAt": "2025-12-05T18:11:03.431Z",
+    "dueAt": "2025-12-17T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-28T18:11:03.431Z"
+  },
+  {
+    "id": "147fdcc5-39fe-464b-a350-78578153b331",
+    "bookId": "a9acf3ea-0130-41b5-ac08-e115c34ea8d5",
+    "readerId": "656b9b28-a795-4145-bbaf-ebcce708df4a",
+    "borrowedAt": "2025-11-05T18:11:03.431Z",
+    "dueAt": "2025-11-25T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "2507b3a2-c030-43ac-88ee-5426a0e7ba82",
+    "bookId": "928ead14-331e-4b1d-af2a-445556d46caf",
+    "readerId": "5e71033e-0a60-4803-9179-f93e02b76e42",
+    "borrowedAt": "2025-11-08T18:11:03.431Z",
+    "dueAt": "2025-11-25T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2025-11-11T18:11:03.431Z"
+  },
+  {
+    "id": "f7d54b14-04eb-4e9b-90b2-9777ac4bbbad",
+    "bookId": "b41cd21d-26c9-4bac-972c-32fc8eb84339",
+    "readerId": "36d69b32-3eaf-43ed-85d3-d00816573705",
+    "borrowedAt": "2026-02-16T18:11:03.431Z",
+    "dueAt": "2026-02-23T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-11T18:11:03.431Z"
+  },
+  {
+    "id": "db463089-1758-4da3-a8d2-da65a9eb5206",
+    "bookId": "dfccc767-8547-4bb0-b39d-6b18db534e3b",
+    "readerId": "b013dd27-3c30-4867-a480-c4bd59aacec4",
+    "borrowedAt": "2025-05-22T18:11:03.431Z",
+    "dueAt": "2025-06-11T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "576b9f86-74d8-4c47-aadf-1d4902f03780",
+    "bookId": "57445d15-e4ae-4ead-b3e1-2bdfcb4e5b95",
+    "readerId": "8bf47775-82fe-4750-b6ee-4288aac9b023",
+    "borrowedAt": "2026-04-08T18:11:03.431Z",
+    "dueAt": "2026-05-05T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-12T18:11:03.431Z"
+  },
+  {
+    "id": "28a676b8-8376-4046-980e-433835c07ff1",
+    "bookId": "295a0eab-143b-433c-b0d5-296ded35444d",
+    "readerId": "6eb14542-0c4d-4d8b-92bc-f5b300193d17",
+    "borrowedAt": "2025-08-29T18:11:03.431Z",
+    "dueAt": "2025-09-17T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "bb629179-4de5-40b4-9bc3-88c68044b553",
+    "bookId": "b73cf3e8-3ca3-488b-b1b4-ac00c9bbe2b6",
+    "readerId": "f592314a-55aa-437b-84a5-dc733601794a",
+    "borrowedAt": "2025-10-20T18:11:03.431Z",
+    "dueAt": "2025-11-03T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "b111746a-34f0-4e2a-b7b9-3b57c7bc5b05",
+    "bookId": "3e884ad2-ae89-44f5-8237-f7a484b4679a",
+    "readerId": "4b758f4f-4e8d-4861-8e53-07e4d8780a9b",
+    "borrowedAt": "2026-02-13T18:11:03.431Z",
+    "dueAt": "2026-03-13T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-04-19T18:11:03.431Z"
+  },
+  {
+    "id": "57041da7-7021-467d-ba9d-644453b90a81",
+    "bookId": "3cf602bb-a749-4be8-a937-e46d345dbb25",
+    "readerId": "dc9e0e39-5490-4fb6-85ea-5899303f580e",
+    "borrowedAt": "2025-07-11T18:11:03.431Z",
+    "dueAt": "2025-07-18T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-03-18T18:11:03.431Z"
+  },
+  {
+    "id": "8376d301-f638-4a6e-8528-cd3bd3502ac9",
+    "bookId": "b70cd492-89bf-41f9-993f-ecf078eecd70",
+    "readerId": "56b8333a-e7df-4136-b234-a1ae1caafeef",
+    "borrowedAt": "2025-07-29T18:11:03.431Z",
+    "dueAt": "2025-08-10T18:11:03.431Z",
+    "status": "RETURNED",
+    "returnedAt": "2026-01-07T18:11:03.431Z"
+  },
+  {
+    "id": "df089d27-2be5-4666-82fc-3c5d1aa43902",
+    "bookId": "bc5a74f0-a8af-4fbf-9ad2-08c7dfdcd158",
+    "readerId": "c5760b99-7e7c-4afb-aaa5-80d8173a587f",
+    "borrowedAt": "2026-03-25T18:11:03.431Z",
+    "dueAt": "2026-04-23T18:11:03.431Z",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "b61ddc20-0657-4e0a-a94d-298ef25a42f1",
+    "readerId": "r1",
+    "bookId": "63711af7-7dea-4eb7-8f52-015f6e6bd492",
+    "borrowedAt": "2026-04-19T18:58:00.324Z",
+    "dueAt": "2026-05-03T18:58:00.324Z",
     "status": "ACTIVE"
   }
 ]

@@ -6,6 +6,7 @@ import "./layout.css";
 type AppLayoutProps = {
   activeItem: SidebarItemId;
   onNavigate: (item: SidebarItemId) => void;
+  onQuickAction?: (action: 'new-loan' | 'scan-return' | 'add-reader' | 'add-book') => void;
   isPageTransitioning?: boolean;
   children: ReactNode;
 };
@@ -29,7 +30,7 @@ const sectionDetails: Record<SidebarItemId, { title: string; subtitle: string }>
   },
 };
 
-export function AppLayout({ activeItem, onNavigate, isPageTransitioning = false, children }: AppLayoutProps) {
+export function AppLayout({ activeItem, onNavigate, onQuickAction, isPageTransitioning = false, children }: AppLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isQuickSheetOpen, setIsQuickSheetOpen] = useState(false);
   const [isFocusMode, setIsFocusMode] = useState(false);
@@ -137,10 +138,10 @@ export function AppLayout({ activeItem, onNavigate, isPageTransitioning = false,
           </header>
 
           <div className="quick-sheet-grid">
-            <button type="button" className="ui-btn ui-btn--secondary"><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Nowe wypozyczenie</button>
-            <button type="button" className="ui-btn ui-btn--secondary"><ScanLine size={15} strokeWidth={2.1} aria-hidden="true" />Skanuj zwrot</button>
-            <button type="button" className="ui-btn ui-btn--secondary"><UserRoundPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj czytelnika</button>
-            <button type="button" className="ui-btn ui-btn--secondary"><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj tytul</button>
+            <button type="button" className="ui-btn ui-btn--secondary" onClick={() => { setIsQuickSheetOpen(false); onQuickAction?.('new-loan'); }}><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Nowe wypozyczenie</button>
+            <button type="button" className="ui-btn ui-btn--secondary" onClick={() => { setIsQuickSheetOpen(false); onQuickAction?.('scan-return'); }}><ScanLine size={15} strokeWidth={2.1} aria-hidden="true" />Skanuj zwrot</button>
+            <button type="button" className="ui-btn ui-btn--secondary" onClick={() => { setIsQuickSheetOpen(false); onQuickAction?.('add-reader'); }}><UserRoundPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj czytelnika</button>
+            <button type="button" className="ui-btn ui-btn--secondary" onClick={() => { setIsQuickSheetOpen(false); onQuickAction?.('add-book'); }}><BookPlus size={15} strokeWidth={2.1} aria-hidden="true" />Dodaj tytul</button>
           </div>
         </section>
 

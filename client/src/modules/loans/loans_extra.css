@@ -1,0 +1,336 @@
+/* ── Row actions (table) — never wrap ──────────────────────────── */
+.loans-row-actions {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+/* ── Reader icon-link (suspend shortcut) ───────────────────────── */
+.loans-reader-link {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 0.1rem;
+  font-size: 0.85rem;
+  line-height: 1;
+  opacity: 0.55;
+  transition: opacity 0.15s;
+  vertical-align: middle;
+}
+
+.loans-reader-link:hover {
+  opacity: 1;
+}
+
+/* ── Suspended reader badge ─────────────────────────────────────── */
+.loans-suspended-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #fff0e6;
+  color: #7a3410;
+  border: 1px solid #f0c5a8;
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ── Autocomplete ──────────────────────────────────────────────── */
+
+.ac-wrap {
+  position: relative;
+}
+
+.ac-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ac-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--ink-main);
+  padding: 0.52rem 0.62rem;
+  min-height: 2.2rem;
+  font-size: var(--text-sm);
+  outline: none;
+}
+
+.ac-input-row:focus-within {
+  outline: 2px solid rgba(11, 110, 242, 0.55);
+  outline-offset: 2px;
+}
+
+.ac-clear {
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 0 0.55rem;
+  font-size: 1rem;
+  line-height: 1;
+  min-height: 2.2rem;
+}
+
+.ac-clear:hover {
+  color: var(--ink-main);
+}
+
+.ac-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background: #ffffff;
+  border: 1px solid #ccd6e8;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(10, 18, 36, 0.14);
+  padding: 0.3rem;
+  margin: 0;
+  list-style: none;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.ac-option {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  cursor: pointer;
+  display: grid;
+  gap: 0.12rem;
+  transition: background-color var(--motion-fast) var(--ease-standard);
+}
+
+.ac-option:hover:not(:disabled) {
+  background: var(--accent-soft);
+}
+
+.ac-option:disabled,
+.ac-option--unavailable {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ac-option-main {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--ink-main);
+}
+
+.ac-option-sub {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  padding-left: 1.1rem;
+}
+
+.ac-avail {
+  font-weight: 600;
+  color: #0c6b45;
+}
+
+.ac-avail--none {
+  color: #b24708;
+}
+
+.ac-empty {
+  padding: 0.5rem 0.6rem;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.ac-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #aab8cc;
+}
+
+.ac-dot--ok {
+  background: #0c8a5a;
+}
+
+.ac-dot--none {
+  background: #b24708;
+}
+
+.ac-selected-badge {
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  padding: 0.2rem 0.1rem;
+}
+
+/* ── Extend button ─────────────────────────────────────────────── */
+.loans-extend-btn {
+  border-color: #c2d4e8;
+  background: #f0f6ff;
+  color: #1a56c4;
+}
+
+.loans-extend-btn:hover {
+  background: #daeaff;
+  border-color: #a8c4e0;
+}
+
+.loans-extend-btn--overdue {
+  border-color: #f0c5a8;
+  background: #fff4ec;
+  color: #b24708;
+}
+
+.loans-extend-btn--overdue:hover {
+  background: #fdeede;
+  border-color: #e8c4a8;
+}
+
+/* ── Fee modal ─────────────────────────────────────────────────── */
+.fee-modal {
+  max-width: 440px;
+}
+
+.fee-modal-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.2rem;
+}
+
+.fee-modal-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.fee-modal-info {
+  background: #f7f9fc;
+  border: 1px solid #e0e7f2;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  display: grid;
+  gap: 0.42rem;
+  margin-bottom: 0.9rem;
+}
+
+.fee-modal-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+}
+
+.fee-modal-label {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.fee-modal-value {
+  text-align: right;
+  font-weight: 600;
+}
+
+.fee-modal-breakdown {
+  background: #fff9f4;
+  border: 1px solid #f5d5be;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  display: grid;
+  gap: 0.42rem;
+  margin-bottom: 0.9rem;
+}
+
+.fee-modal-calc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--ink-main);
+}
+
+.fee-modal-calc--total {
+  border-top: 1px solid #f0c5a8;
+  padding-top: 0.42rem;
+  margin-top: 0.1rem;
+  font-weight: 700;
+}
+
+.fee-modal-total {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #7a3410;
+}
+
+.fee-modal-free-note {
+  margin: 0 0 0.9rem;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  background: var(--accent-soft);
+  border: 1px solid rgba(11, 110, 242, 0.2);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+}
+
+.fee-modal-sim-note {
+  margin: 0 0 0.8rem;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.fee-modal-pay-btn {
+  background: linear-gradient(135deg, #1a56c4 0%, #0b6ef2 100%);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.fee-modal-pay-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(11, 110, 242, 0.35);
+}
+
+/* ── Overdue top-3 ─────────────────────────────────────────────── */
+.loans-overdue-expand {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.25rem;
+}
+
+.loans-overdue-expand-btn {
+  border: none;
+  background: transparent;
+  color: #7a3410;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.loans-overdue-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}

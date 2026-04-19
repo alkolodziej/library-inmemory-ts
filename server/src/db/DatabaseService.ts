@@ -286,9 +286,14 @@ export class DatabaseService {
     this.removeFromMultiIndex(this.readersByEmail, existing.email, id);
     this.removeFromMultiIndex(this.readersByStatus, existing.status, id);
 
+    // Strip undefined so partial updates (e.g. status-only) don't overwrite existing fields
+    const safeUpdates = Object.fromEntries(
+      Object.entries(updates).filter(([, v]) => v !== undefined)
+    ) as Partial<Reader>;
+
     const updated: Reader = {
       ...existing,
-      ...updates,
+      ...safeUpdates,
       email: nextEmail,
       status: nextStatus,
       updatedAt: new Date().toISOString(),
@@ -342,6 +347,39 @@ export class DatabaseService {
     this.booksById.set(book.id, book);
 
     return loan;
+  }
+
+  public extendLoan(loanId: string, days: number = 7): Loan {
+    const loan = this.loansById.get(loanId);
+    if (!loan) {
+      throw new Error(`Loan with id=${loanId} not found.`);
+    }
+
+    if (loan.status === "RETURNED") {
+      throw new Error("Nie można przedłużyć już zwróconego wypożyczenia.");
+    }
+
+    // Remove old dueAt key from AVL tree
+    this.loansByDueDate.remove(loan.dueAt, loan.id);
+
+    // For overdue loans start from today, not from the past due date
+    // so the new deadline is always in the future after paying the fee
+    const now = new Date();
+    const currentDue = new Date(loan.dueAt);
+    const base = currentDue < now ? now : currentDue;
+    const newDue = new Date(base);
+    newDue.setDate(newDue.getDate() + days);
+
+    const extended: Loan = {
+      ...loan,
+      dueAt: newDue.toISOString(),
+      status: "ACTIVE", // reset – nowy termin jest w przyszłości
+    };
+
+    this.loansById.set(loan.id, extended);
+    this.loansByDueDate.insert(extended.dueAt, extended.id);
+
+    return extended;
   }
 
   public returnBook(command: ReturnBookCommand): Loan {

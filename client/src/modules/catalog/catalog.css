@@ -96,8 +96,9 @@
 
 .catalog-book-actions {
   display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
+  flex-wrap: nowrap;
+  gap: 0.3rem;
+  flex-shrink: 0;
 }
 
 .catalog-action-btn {

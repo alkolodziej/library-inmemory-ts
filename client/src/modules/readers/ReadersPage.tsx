@@ -24,9 +24,11 @@ type CreateReaderForm = {
 
 type ReadersPageProps = {
   isLoading?: boolean;
+  pendingAction?: string | null;
+  onPendingActionConsumed?: () => void;
 };
 
-export function ReadersPage({ isLoading = false }: ReadersPageProps) {
+export function ReadersPage({ isLoading = false, pendingAction, onPendingActionConsumed }: ReadersPageProps) {
   const [readers, setReaders] = useState<ReaderDto[]>([]);
   const [apiLoading, setApiLoading] = useState(true);
   const [apiError, setApiError] = useState<string | null>(null);
@@ -122,6 +124,19 @@ export function ReadersPage({ isLoading = false }: ReadersPageProps) {
       setPage(totalPages);
     }
   }, [page, totalPages]);
+
+  // Quick action: scroll to and focus the reader create form
+  useEffect(() => {
+    if (pendingAction === 'add-reader') {
+      onPendingActionConsumed?.();
+      setTimeout(() => {
+        const form = document.querySelector<HTMLElement>('.reader-create');
+        const input = form?.querySelector<HTMLInputElement>('input');
+        form?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        input?.focus();
+      }, 100);
+    }
+  }, [pendingAction]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCreateInput = (field: keyof CreateReaderForm, value: string) => {
     setCreateError(null);
