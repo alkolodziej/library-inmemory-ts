@@ -648,15 +648,6 @@
     "updatedAt": "2024-05-07T09:00:00.000Z"
   },
   {
-    "id": "26626fb1-4e4f-4460-a598-3411b7ccd50f",
-    "firstName": "Robert",
-    "lastName": "Adamczyk",
-    "email": "robert.adamczyk485@interia.pl",
-    "status": "ACTIVE",
-    "createdAt": "2024-03-04T10:00:00.000Z",
-    "updatedAt": "2024-03-04T10:00:00.000Z"
-  },
-  {
     "id": "fd7a16b4-1651-4e83-955e-ce19575ca6e2",
     "firstName": "Pawel",
     "lastName": "Grabowski",
@@ -1170,15 +1161,6 @@
     "updatedAt": "2024-03-28T10:00:00.000Z"
   },
   {
-    "id": "572ea96e-4275-4c0e-99b2-c2f883088b54",
-    "firstName": "Jacek",
-    "lastName": "Andrzejewski",
-    "email": "jacek.andrzejewski22@o2.pl",
-    "status": "ACTIVE",
-    "createdAt": "2024-12-19T10:00:00.000Z",
-    "updatedAt": "2024-12-19T10:00:00.000Z"
-  },
-  {
     "id": "4de07d07-b45d-4ed9-a5ea-7c9994bb1669",
     "firstName": "Lucyna",
     "lastName": "Stachowiak",
@@ -1365,7 +1347,7 @@
     "email": "adam.adamczyk391@gmail.com",
     "status": "SUSPENDED",
     "createdAt": "2024-03-08T10:00:00.000Z",
-    "updatedAt": "2024-03-08T10:00:00.000Z"
+    "updatedAt": "2026-04-19T20:34:06.773Z"
   },
   {
     "id": "0c9677da-6255-4ecd-9df2-b6ffd945f417",

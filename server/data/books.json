@@ -393,10 +393,10 @@
       "Literatura piękna"
     ],
     "publishedYear": 1986,
-    "totalCopies": 2,
-    "availableCopies": 2,
+    "totalCopies": 3,
+    "availableCopies": 3,
     "createdAt": "2024-05-30T09:00:00.000Z",
-    "updatedAt": "2024-05-30T09:00:00.000Z"
+    "updatedAt": "2026-04-19T20:32:01.230Z"
   },
   {
     "id": "57445d15-e4ae-4ead-b3e1-2bdfcb4e5b95",
@@ -1024,10 +1024,10 @@
       "Chemia"
     ],
     "publishedYear": 1993,
-    "totalCopies": 1,
-    "availableCopies": 0,
+    "totalCopies": 5,
+    "availableCopies": 4,
     "createdAt": "2024-06-23T09:00:00.000Z",
-    "updatedAt": "2024-06-23T09:00:00.000Z"
+    "updatedAt": "2026-04-19T20:31:55.484Z"
   },
   {
     "id": "46da1de2-0b30-46fa-8da4-4ba0fbeff5a2",
@@ -1724,10 +1724,10 @@
       "Literatura piękna"
     ],
     "publishedYear": 2005,
-    "totalCopies": 4,
-    "availableCopies": 3,
+    "totalCopies": 5,
+    "availableCopies": 4,
     "createdAt": "2024-11-05T10:00:00.000Z",
-    "updatedAt": "2024-11-05T10:00:00.000Z"
+    "updatedAt": "2026-04-19T20:31:51.513Z"
   },
   {
     "id": "ca29c478-0280-4514-91a3-d25ea5f7602e",
@@ -3117,7 +3117,7 @@
     "totalCopies": 13,
     "availableCopies": 12,
     "createdAt": "2024-08-18T09:00:00.000Z",
-    "updatedAt": "2024-08-18T09:00:00.000Z"
+    "updatedAt": "2026-04-19T20:32:16.395Z"
   },
   {
     "id": "1ce24762-35a2-48ad-86f1-eb7c2885d7ec",
@@ -3149,10 +3149,10 @@
       "Dla dzieci"
     ],
     "publishedYear": 1995,
-    "totalCopies": 9,
-    "availableCopies": 6,
+    "totalCopies": 10,
+    "availableCopies": 7,
     "createdAt": "2024-07-21T09:00:00.000Z",
-    "updatedAt": "2024-07-21T09:00:00.000Z"
+    "updatedAt": "2026-04-19T20:33:41.092Z"
   },
   {
     "id": "23ea6a46-7226-417c-ae6c-544f96cc886f",

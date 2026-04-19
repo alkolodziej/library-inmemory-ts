@@ -187,6 +187,19 @@ export class DatabaseService {
     // Prepare updated book
     const updated: Book = { ...existing, ...updates, updatedAt: new Date().toISOString() };
 
+    // If totalCopies changed, recalculate availableCopies based on active loans
+    if (updates.totalCopies !== undefined && updates.totalCopies !== existing.totalCopies) {
+      const loanIds = this.loanIdsByBookId.get(id) ?? new Set<string>();
+      let activeLoansCount = 0;
+      for (const loanId of loanIds) {
+        const loan = this.loansById.get(loanId);
+        if (loan && (loan.status === "ACTIVE" || loan.status === "OVERDUE")) {
+          activeLoansCount += 1;
+        }
+      }
+      updated.availableCopies = Math.max(0, updated.totalCopies - activeLoansCount);
+    }
+
     if (updated.availableCopies > updated.totalCopies) {
       throw new Error("availableCopies cannot exceed totalCopies.");
     }
