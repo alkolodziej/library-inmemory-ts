@@ -253,6 +253,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -263,6 +264,7 @@
     opacity: 0;
     transform: translateY(8px) scale(0.98);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -289,6 +291,7 @@
 }
 
 @media (max-width: 640px) {
+
   .catalog-filters,
   .catalog-form-grid {
     grid-template-columns: 1fr;
@@ -312,6 +315,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .catalog-book-card,
   .catalog-tag,
   .catalog-dialog-backdrop,

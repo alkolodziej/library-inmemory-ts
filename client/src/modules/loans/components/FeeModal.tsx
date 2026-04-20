@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import type { Book, Loan, Reader } from '../../../../../shared/src/models';
 
 const FEE_PER_DAY = 0.5; // PLN
@@ -22,13 +23,22 @@ function calcDaysOverdue(dueAt: string): number {
 }
 
 export function FeeModal({ isOpen, onClose, onConfirm, mode, loan, book, reader, isSubmitting, error }: FeeModalProps) {
+  const [discountDays, setDiscountDays] = useState(0);
+
+  useEffect(() => {
+    if (isOpen) setDiscountDays(0);
+  }, [isOpen, loan]);
+
   if (!isOpen || !loan) return null;
 
   const daysOverdue = calcDaysOverdue(loan.dueAt);
   const isOverdue = daysOverdue > 0;
 
-  const returnFee = +(daysOverdue * FEE_PER_DAY).toFixed(2);
-  const extendFee = isOverdue ? +(EXTEND_ADMIN_FEE + daysOverdue * FEE_PER_DAY).toFixed(2) : 0;
+  // Effective overdue days after discount
+  const effectiveDays = Math.max(0, daysOverdue - discountDays);
+
+  const returnFee = +(effectiveDays * FEE_PER_DAY).toFixed(2);
+  const extendFee = isOverdue ? +(EXTEND_ADMIN_FEE + effectiveDays * FEE_PER_DAY).toFixed(2) : 0;
   const fee = mode === 'return' ? returnFee : extendFee;
 
   const readerName = reader ? `${reader.firstName} ${reader.lastName}` : loan.readerId;
@@ -38,6 +48,8 @@ export function FeeModal({ isOpen, onClose, onConfirm, mode, loan, book, reader,
   const isReturnOverdue = mode === 'return' && isOverdue;
   const isExtendOverdue = mode === 'extend' && isOverdue;
   const isExtendFree = mode === 'extend' && !isOverdue;
+
+  const showDiscount = isOverdue && (isReturnOverdue || isExtendOverdue);
 
   return (
     <div
@@ -92,12 +104,53 @@ export function FeeModal({ isOpen, onClose, onConfirm, mode, loan, book, reader,
           )}
         </div>
 
+        {/* Discount section */}
+        {showDiscount && (
+          <div className="fee-modal-discount">
+            <div className="fee-modal-discount-header">
+              <span className="fee-modal-discount-label">
+                🏥 Ulga (np. zwolnienie lekarskie)
+              </span>
+              <span className="fee-modal-discount-days">
+                -{discountDays} {discountDays === 1 ? 'dzień' : 'dni'}
+              </span>
+            </div>
+            <div className="fee-modal-discount-row">
+              <span className="fee-modal-discount-hint">0</span>
+              <input
+                id="discount-slider"
+                type="range"
+                min={0}
+                max={daysOverdue}
+                value={discountDays}
+                onChange={e => setDiscountDays(Number(e.target.value))}
+                className="fee-modal-slider"
+                disabled={isSubmitting}
+              />
+              <span className="fee-modal-discount-hint">{daysOverdue}</span>
+            </div>
+            {discountDays > 0 && (
+              <p className="fee-modal-discount-note">
+                Odjęto {discountDays} {discountDays === 1 ? 'dzień' : 'dni'} przetrzymania.
+                {effectiveDays > 0
+                  ? ` Płatne pozostaje ${effectiveDays} ${effectiveDays === 1 ? 'dzień' : 'dni'}.`
+                  : ' Kara za przetrzymanie wynosi 0 zł.'}
+              </p>
+            )}
+          </div>
+        )}
+
         {/* Fee breakdown */}
         {!isExtendFree && (
           <div className="fee-modal-breakdown">
             {isReturnOverdue && (
               <div className="fee-modal-calc">
-                <span>{daysOverdue} dni × {FEE_PER_DAY.toFixed(2)} PLN/dzień</span>
+                <span>
+                  {effectiveDays} dni × {FEE_PER_DAY.toFixed(2)} PLN/dzień
+                  {discountDays > 0 && (
+                    <span className="fee-modal-discount-badge"> (ulga: -{discountDays} dni)</span>
+                  )}
+                </span>
                 <span className="fee-modal-total">{fee.toFixed(2)} PLN</span>
               </div>
             )}
@@ -108,8 +161,13 @@ export function FeeModal({ isOpen, onClose, onConfirm, mode, loan, book, reader,
                   <span>{EXTEND_ADMIN_FEE.toFixed(2)} PLN</span>
                 </div>
                 <div className="fee-modal-calc">
-                  <span>Kara za {daysOverdue} dni × {FEE_PER_DAY.toFixed(2)} PLN</span>
-                  <span>{(daysOverdue * FEE_PER_DAY).toFixed(2)} PLN</span>
+                  <span>
+                    Kara za {effectiveDays} dni × {FEE_PER_DAY.toFixed(2)} PLN
+                    {discountDays > 0 && (
+                      <span className="fee-modal-discount-badge"> (ulga: -{discountDays} dni)</span>
+                    )}
+                  </span>
+                  <span>{(effectiveDays * FEE_PER_DAY).toFixed(2)} PLN</span>
                 </div>
                 <div className="fee-modal-calc fee-modal-calc--total">
                   <span>Łącznie do zapłaty</span>
@@ -154,6 +212,8 @@ export function FeeModal({ isOpen, onClose, onConfirm, mode, loan, book, reader,
               ? 'Przetwarzanie…'
               : isExtendFree
               ? 'Przedłuż o 7 dni'
+              : fee === 0
+              ? 'Kontynuuj'
               : `Zapłacono ${fee.toFixed(2)} PLN — kontynuuj`}
           </button>
         </div>

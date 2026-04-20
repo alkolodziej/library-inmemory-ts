@@ -334,3 +334,74 @@
   gap: 0.4rem;
   flex-shrink: 0;
 }
+
+/* ── Fee modal — discount slider ───────────────────────────────── */
+.fee-modal-discount {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  margin-bottom: 0.75rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.fee-modal-discount-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fee-modal-discount-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #166534;
+}
+
+.fee-modal-discount-days {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+}
+
+.fee-modal-discount-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.fee-modal-slider {
+  flex: 1;
+  accent-color: #16a34a;
+  cursor: pointer;
+  height: 4px;
+}
+
+.fee-modal-slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fee-modal-discount-hint {
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  min-width: 1.4rem;
+  text-align: center;
+}
+
+.fee-modal-discount-note {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #166534;
+  font-style: italic;
+}
+
+.fee-modal-discount-badge {
+  color: #166534;
+  font-style: italic;
+  font-size: 0.78em;
+}
