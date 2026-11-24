@@ -1,0 +1,19 @@
+[
+  {
+    "id": "loan-demo-1",
+    "bookId": "book-demo-1",
+    "readerId": "reader-demo-1",
+    "borrowedAt": "2026-01-10T10:00:00.000Z",
+    "dueAt": "2026-01-24T10:00:00.000Z",
+    "status": "OVERDUE"
+  },
+  {
+    "id": "loan-demo-2",
+    "bookId": "book-demo-2",
+    "readerId": "reader-demo-2",
+    "borrowedAt": "2026-01-10T10:00:00.000Z",
+    "dueAt": "2026-01-24T10:00:00.000Z",
+    "returnedAt": "2026-01-17T10:00:00.000Z",
+    "status": "RETURNED"
+  }
+]

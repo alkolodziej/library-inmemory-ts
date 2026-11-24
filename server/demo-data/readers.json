@@ -1,0 +1,20 @@
+[
+  {
+    "id": "reader-demo-1",
+    "firstName": "Czytelnik",
+    "lastName": "Demo A",
+    "email": "reader-a@example.com",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-10T10:00:00.000Z",
+    "updatedAt": "2026-01-10T10:00:00.000Z"
+  },
+  {
+    "id": "reader-demo-2",
+    "firstName": "Czytelnik",
+    "lastName": "Demo B",
+    "email": "reader-b@example.com",
+    "status": "ACTIVE",
+    "createdAt": "2026-01-10T10:00:00.000Z",
+    "updatedAt": "2026-01-10T10:00:00.000Z"
+  }
+]
